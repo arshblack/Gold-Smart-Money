@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Refined Liquidity — Trade the Cycle</title>
-<meta name="description" content="Refined Liquidity — the Liquidity Cycle methodology for institutional gold trading, taught by Arshly Phiri and executed by the MMM algorithm. Education, psychology, automation.">
+<meta name="description" content="Refined Liquidity is a gold-first research and education platform documenting the MMM Liquidity Cycle methodology, EA engineering, and controlled forward testing.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -44,11 +45,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(8,9,13,.6);b
 .brand .mk{width:26px;height:26px;flex-shrink:0}
 .brand b{font-weight:600}
 .brand span{color:var(--gold)}
-.nlinks{display:flex;gap:34px}
+.nlinks{display:flex;gap:22px}
 .nlinks a{font-size:13px;color:var(--ink2);letter-spacing:.01em;position:relative;padding:4px 0;transition:color .2s}
 .nlinks a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--aqua);transition:width .25s}
 .nlinks a:hover{color:var(--ink)}.nlinks a:hover::after{width:100%}
-.nav-cta{display:flex;align-items:center;gap:22px}
+.nav-cta{display:flex;align-items:center;gap:14px}
 .nav-cta .sign{font-size:13px;color:var(--mut)}
 .nav-cta .join{font-size:13px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 18px;border-radius:100px;transition:all .25s;background:linear-gradient(180deg,rgba(233,201,122,.08),transparent)}
 .nav-cta .join:hover{border-color:var(--gold);box-shadow:0 0 24px -6px rgba(233,201,122,.5);color:var(--goldl)}
@@ -182,6 +183,50 @@ section{position:relative;padding:88px 0}
 .formula{margin-top:32px;padding:20px 26px;border:1px solid var(--line);border-radius:14px;background:var(--surf);display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--display);font-size:24px;font-style:italic}
 .formula .fk{color:var(--ink)}.formula .fg{color:var(--aqua)}.formula .fr{color:var(--gold)}
 .formula .tag{margin-left:auto;font-family:var(--mono);font-size:10.5px;font-style:normal;letter-spacing:.1em;color:var(--mut)}
+
+/* ─────────── GOLD DESK ─────────── */
+#gold-desk{background:linear-gradient(180deg,var(--bg),var(--bg2));border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.desk-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:30px}
+.desk-head h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.02;margin-top:18px}
+.desk-head h2 em{font-style:italic;color:var(--gold)}
+.desk-intro{max-width:470px;color:var(--ink2);font-size:14px;line-height:1.7}
+.desk-strip{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line2);background:var(--surf);margin-bottom:22px}
+.desk-stat{padding:15px 17px;border-right:1px solid var(--line2);min-width:0}
+.desk-stat:last-child{border-right:none}
+.desk-stat small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--mut);text-transform:uppercase;margin-bottom:5px}
+.desk-stat strong{display:block;font-size:12.5px;font-weight:600;color:var(--ink);white-space:normal}
+.desk-stat strong.aq{color:var(--aqua)}.desk-stat strong.gd{color:var(--gold)}
+.desk-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(290px,.55fr);gap:24px;align-items:stretch}
+.market-tool{border:1px solid var(--line2);background:#08090d;min-width:0}
+.tool-head{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:52px;padding:12px 16px;border-bottom:1px solid var(--line2);background:var(--surf)}
+.tool-title{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink2)}
+.tool-title b{color:var(--gold);font-weight:600}
+.tool-feed{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.tv-shell{height:580px;position:relative}
+.tv-shell .tradingview-widget-container,.tv-shell .tradingview-widget-container__widget{height:100%;width:100%}
+.desk-panel{border-top:1px solid var(--gold);border-bottom:1px solid var(--line2);padding:2px 0;display:flex;flex-direction:column}
+.desk-panel-top{padding:22px 0 18px;border-bottom:1px solid var(--line2)}
+.mode-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:6px 10px}
+.mode-badge i{width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px rgba(233,201,122,.7)}
+.desk-panel h3{font-family:var(--display);font-size:32px;font-weight:500;line-height:1.05;margin:15px 0 8px}
+.desk-panel-top p{font-size:13px;line-height:1.65;color:var(--mut)}
+.state-list{display:grid}
+.state-row{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line2);font-family:var(--mono);font-size:11px}
+.state-row span{color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.state-row b{color:var(--ink2);font-weight:500;text-align:right}
+.state-row b.aq{color:var(--aqua)}.state-row b.gd{color:var(--gold)}
+.desk-note{margin-top:auto;padding:18px 0 4px;color:var(--mut);font-size:11.5px;line-height:1.65}
+.desk-note a{color:var(--aqua);border-bottom:1px solid var(--line3)}
+.lifecycle{display:grid;grid-template-columns:repeat(6,1fr);margin-top:28px;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.life-step{position:relative;padding:18px 14px;min-height:90px;border-right:1px solid var(--line2)}
+.life-step:last-child{border-right:none}
+.life-step small{display:block;font-family:var(--mono);font-size:9px;color:var(--mut2);letter-spacing:.12em;margin-bottom:7px}
+.life-step strong{font-size:12px;color:var(--ink2);font-weight:600}
+.life-step.active strong{color:var(--aqua)}
+.life-step.active::before{content:'';position:absolute;top:-1px;left:0;right:0;height:1px;background:var(--aqua);box-shadow:0 0 12px var(--aqua)}
+.data-note{font-family:var(--mono);font-size:9.5px;line-height:1.6;color:var(--mut2);margin-top:14px}
+@media(max-width:980px){.desk-grid{grid-template-columns:1fr}.desk-strip{grid-template-columns:repeat(3,1fr)}.desk-stat:nth-child(3){border-right:none}.desk-stat:nth-child(-n+3){border-bottom:1px solid var(--line2)}.desk-panel{padding-bottom:12px}.desk-head{align-items:flex-start;flex-direction:column}.tv-shell{height:520px}}
+@media(max-width:640px){.desk-strip{grid-template-columns:1fr 1fr}.desk-stat,.desk-stat:nth-child(3){border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}.desk-stat:nth-child(even){border-right:none}.desk-stat:last-child{grid-column:1/-1;border-right:none;border-bottom:none}.lifecycle{grid-template-columns:repeat(2,1fr)}.life-step{border-bottom:1px solid var(--line2)}.life-step:nth-child(even){border-right:none}.life-step:nth-last-child(-n+2){border-bottom:none}.tv-shell{height:460px}.tool-head{align-items:flex-start;flex-direction:column;gap:3px}.state-row{grid-template-columns:96px 1fr}}
 
 /* ─────────── AUTOMATION (console) ─────────── */
 #automation{background:linear-gradient(180deg,var(--bg),var(--bg2))}
@@ -377,19 +422,18 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <span>Refined</span>&nbsp;<b>Liquidity</b>
     </a>
     <div class="nlinks">
-      <a href="#cycle">The Cycle</a>
+      <a href="#gold-desk">Gold Desk</a>
       <a href="#methodology">Methodology</a>
       <a href="#automation">Automation</a>
-      <a href="#curriculum">Curriculum</a>
-      <a href="#founder">Founder</a>
+      <a href="#curriculum">Academy</a>
     </div>
     <div class="nav-cta">
-      <a href="#community" class="sign">Sign in</a>
       <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="join">Join the Community →</a>
       <button class="burger" id="burger" aria-label="Menu" onclick="toggleMenu()">☰</button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
+    <a href="#gold-desk" onclick="toggleMenu()">Gold Desk</a>
     <a href="#cycle" onclick="toggleMenu()">The Cycle</a>
     <a href="#methodology" onclick="toggleMenu()">Methodology</a>
     <a href="#automation" onclick="toggleMenu()">Automation</a>
@@ -408,7 +452,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     <span style="top:14%;left:7%">ACCUMULATION</span>
     <span style="top:22%;left:80%">0xLIQ·SWEEP</span>
     <span style="top:34%;left:12%">CHoCH → BOS</span>
-    <span style="top:30%;left:68%">RR ≥ 1:4.0</span>
+    <span style="top:30%;left:68%">T1 · T2 · T3</span>
     <span style="top:62%;left:9%">MANIPULATION</span>
     <span style="top:70%;left:78%">EXPANSION</span>
     <span style="top:78%;left:20%">XAUUSD</span>
@@ -422,20 +466,100 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <span class="l2 rv" style="transition-delay:.08s">Liquidity</span>
     </h1>
     <p class="hsub rv" style="transition-delay:.16s">
-      Master how institutions move <span class="gold">gold</span> — the accumulation, the sweep, the expansion — and the <b>algorithm that trades the cycle for you.</b> Education. Psychology. Automation.
+      Study how liquidity moves <span class="gold">gold</span> — the accumulation, the sweep, the confirmation and expansion — through a <b>research framework being engineered and forward-tested in public.</b>
     </p>
     <div class="hcta rv" style="transition-delay:.24s">
       <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="btn btn-p">Join the Community <span class="ar">→</span></a>
       <a href="#cycle" class="btn btn-g">See the Cycle <span class="ar">→</span></a>
     </div>
     <div class="hmeta rv" style="transition-delay:.32s">
-      <span>Built on <b>ICT / SMC</b></span>
+      <span>Method <b>Liquidity Cycle</b></span>
       <span>Specialised in <b>XAUUSD · Gold</b></span>
-      <span>Powered by <b>MMM EA</b></span>
+      <span>Mode <b>Demo Forward Test</b></span>
     </div>
   </div>
   <div class="hscroll"><span>Scroll</span><i></i></div>
 </header>
+
+<!-- GOLD DESK -->
+<section id="gold-desk">
+  <div class="w">
+    <div class="desk-head">
+      <div>
+        <div class="ey rv">Gold Desk · Market + System State</div>
+        <h2 class="rv">See the market.<br><em>Know the evidence.</em></h2>
+      </div>
+      <p class="desk-intro rv">TradingView provides market context. MetaTrader 5 remains the authority for EA execution, trade management and realized results. Research states never become public signals until the EA confirms an entry.</p>
+    </div>
+    <div class="desk-strip rv" aria-label="System overview">
+      <div class="desk-stat"><small>Instrument</small><strong class="gd" id="statusSymbol">XAUUSD · Gold</strong></div>
+      <div class="desk-stat"><small>Mode</small><strong id="statusMode">Demo forward test</strong></div>
+      <div class="desk-stat"><small>Execution</small><strong>MetaTrader 5 EA</strong></div>
+      <div class="desk-stat"><small>Public updates</small><strong>EA-confirmed only</strong></div>
+      <div class="desk-stat"><small>Current state</small><strong class="aq" id="statusState">Monitoring</strong></div>
+    </div>
+    <div class="desk-grid">
+      <div class="market-tool rv">
+        <div class="tool-head">
+          <div class="tool-title"><b>XAUUSD</b> · 15-minute market context</div>
+          <div class="tool-feed">Market data by TradingView</div>
+        </div>
+        <div class="tv-shell">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+              "autosize": true,
+              "symbol": "OANDA:XAUUSD",
+              "interval": "15",
+              "timezone": "Europe/Warsaw",
+              "theme": "dark",
+              "style": "1",
+              "locale": "en",
+              "backgroundColor": "#08090D",
+              "gridColor": "rgba(255,255,255,0.05)",
+              "hide_top_toolbar": false,
+              "hide_side_toolbar": true,
+              "hide_legend": false,
+              "hide_volume": false,
+              "allow_symbol_change": false,
+              "save_image": false,
+              "calendar": false,
+              "details": false,
+              "hotlist": false,
+              "withdateranges": true
+            }
+            </script>
+          </div>
+        </div>
+      </div>
+      <aside class="desk-panel rv" aria-label="MMM system state">
+        <div class="desk-panel-top">
+          <span class="mode-badge"><i></i><span id="statusBadge">Controlled research</span></span>
+          <h3 id="statusHeadline">Waiting for a qualified gold setup</h3>
+          <p id="statusDetail">Potential setups can appear on TradingView. Only an MT5-confirmed EA entry is published to the Telegram signal record.</p>
+        </div>
+        <div class="state-list">
+          <div class="state-row"><span>Risk / trade</span><b class="gd">$100 fixed · demo</b></div>
+          <div class="state-row"><span>Daily cap</span><b>$400</b></div>
+          <div class="state-row"><span>Research cap</span><b>$800</b></div>
+          <div class="state-row"><span>Telegram</span><b class="aq" id="statusTelegram">EA-only lifecycle</b></div>
+          <div class="state-row"><span>Last status</span><b id="statusUpdated">Repository snapshot</b></div>
+        </div>
+        <p class="desk-note">System status is public operational metadata, not an execution feed. <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">Review the public engineering notes</a>.</p>
+      </aside>
+    </div>
+    <div class="lifecycle rv" aria-label="Public signal lifecycle">
+      <div class="life-step active"><small>01</small><strong>Research setup</strong></div>
+      <div class="life-step"><small>02</small><strong>EA confirmed</strong></div>
+      <div class="life-step"><small>03</small><strong>T1 protected</strong></div>
+      <div class="life-step"><small>04</small><strong>T2 managed</strong></div>
+      <div class="life-step"><small>05</small><strong>T3 / closed</strong></div>
+      <div class="life-step"><small>06</small><strong>Evidence archived</strong></div>
+    </div>
+    <p class="data-note rv">TradingView widget data may be real-time or delayed depending on the selected market feed and viewer entitlements. It is independent from the broker prices used by the MT5 EA. System status is currently a repository snapshot and is designed to move to a sanitized Cloudflare endpoint later.</p>
+  </div>
+</section>
 
 <!-- CYCLE ENGINE (signature) -->
 <section id="cycle">
@@ -473,7 +597,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <div class="cyc-nav rv" id="cNav"></div>
         <div class="cyc-meta rv">
           <div><b>5</b>phases per cycle</div>
-          <div><b>1:4+</b>minimum reward</div>
+          <div><b>3</b>planned targets</div>
           <div><b>3</b>sessions tracked</div>
         </div>
       </div>
@@ -526,42 +650,42 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <div class="auto-l">
         <div class="ey rv">The Tool · MMM EA</div>
         <h2 class="rv">The methodology,<br><em>automated.</em></h2>
-        <p class="rv">Every rule we teach — structure, the liquidity sweep, the killzone — is encoded into an MQL5 expert advisor running live on MetaTrader 5. It waits for the cycle, manages risk, and never trades on emotion. The code is open for members to study.</p>
+        <p class="rv">The MMM Expert Advisor converts the research framework into repeatable execution rules on MetaTrader 5. It is currently being evaluated through controlled demo forward testing. Public architecture and testing notes are open; proprietary implementation and credentials remain private.</p>
         <div class="codeblock rv">
           <span class="cm">// the cycle, in logic</span><br>
           <span class="kw">IF</span> structure == HH/HL  →  bias = <span class="go">BULLISH</span><br>
           <span class="kw">IF</span> liquidity_sweep + CHoCH  →  confirmation++<br>
           <span class="kw">IF</span> session == London | NY  →  <span class="go">EXECUTE()</span><br>
-          risk = 0.5%   ·   min_RR = <span class="go">1:4</span><br>
+          risk = FIXED_RESEARCH_RISK   ·   targets = <span class="go">T1 / T2 / T3</span><br>
           <span class="cm">→ else: wait for next cycle ✓</span>
         </div>
         <div class="feat-list rv">
           <div class="feat"><span class="fi">01</span><div><h4>Risk guard, always on</h4><p>Hard daily-loss cap and per-trade risk ceiling. The account survives the bad days.</p></div></div>
-          <div class="feat"><span class="fi">02</span><div><h4>Session-filtered</h4><p>Only hunts during the windows that actually pay. Sits out the noise.</p></div></div>
-          <div class="feat"><span class="fi">03</span><div><h4>Gold specialist</h4><p>Tuned specifically for XAUUSD — with GBPJPY joining the system in the next six weeks.</p></div></div>
+          <div class="feat"><span class="fi">02</span><div><h4>Session-aware</h4><p>London and New York are evaluated as research windows while Asia remains visible as liquidity context.</p></div></div>
+          <div class="feat"><span class="fi">03</span><div><h4>Gold specialist</h4><p>The current engineering, forward test and community reporting are focused exclusively on XAUUSD.</p></div></div>
         </div>
       </div>
       <div>
         <div class="console rv">
           <div class="con-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="path">MT5 · MMM_Liquidity_EA.ex5</span></div>
           <div class="con-body">
-            <div class="con-row"><span class="con-k">ENGINE</span><span class="con-v aq">LIVE · WATCHING<span class="con-cursor"></span></span></div>
+            <div class="con-row"><span class="con-k">ENGINE</span><span class="con-v gd">DEMO FORWARD TEST<span class="con-cursor"></span></span></div>
             <div class="con-row"><span class="con-k">METHOD</span><span class="con-v">ICT / SMC liquidity cycle</span></div>
             <div class="con-row"><span class="con-k">SYMBOL</span><span class="con-v">XAUUSD · Gold spot</span></div>
-            <div class="con-row"><span class="con-k">RISK / TRADE</span><span class="con-v gd">0.5%</span></div>
-            <div class="con-row"><span class="con-k">MIN REWARD</span><span class="con-v gd">1 : 4</span></div>
+            <div class="con-row"><span class="con-k">RISK / TRADE</span><span class="con-v gd">$100 · DEMO</span></div>
+            <div class="con-row"><span class="con-k">DAILY CAP</span><span class="con-v">$400</span></div>
             <div class="con-row"><span class="con-k">SESSION FILTER</span><span class="con-v">London + NY killzone</span></div>
-            <div class="con-row"><span class="con-k">NEXT PAIR</span><span class="con-v aq">GBPJPY · ~6 weeks</span></div>
-            <div class="con-row"><span class="con-k">STATE</span><span class="con-v aq">Awaiting clean sweep</span></div>
+            <div class="con-row"><span class="con-k">PUBLIC RECORD</span><span class="con-v aq">EA EVENTS ONLY</span></div>
+            <div class="con-row"><span class="con-k">STATE</span><span class="con-v aq">MONITORING GOLD</span></div>
           </div>
         </div>
         <div class="gh rv">
           <div class="gh-top">
             <svg width="18" height="18" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            arshblack / Gold-GU-AJ-Research-model
+            arshblack / MMM-REFINED-Liquidity-Cycle
           </div>
-          <p>MQL5 expert advisor built on the Liquidity Cycle method. Structure-aware, liquidity-hunting, session-timed — with Python analysis tools included.</p>
-          <a href="https://github.com/arshblack/Gold-GU-AJ-Research-model" target="_blank" rel="noopener">View repository →</a>
+          <p>Public architecture, methodology, disclosure boundaries and engineering progress. Proprietary EA source and research parameters remain private.</p>
+          <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">View public repository →</a>
         </div>
       </div>
     </div>
@@ -613,10 +737,10 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <div class="comm-l">
         <div class="ey rv">Community · Learning · Live Access</div>
         <h2 class="rv">Learn the cycle.<br>Trade it in <em>company.</em></h2>
-        <p class="rv">Join traders learning the Refined Liquidity method together. Daily teaching breakdowns, the methodology in plain language, the open system to study, and the accountability that actually changes how you trade.</p>
+        <p class="rv">Join traders learning the Refined Liquidity method together. Follow gold education, controlled EA forward-test updates, honest invalidations and the evidence trail behind each confirmed setup.</p>
         <div class="comm-feats rv">
           <div class="cfeat"><span class="n">01</span><div><h4>Daily teaching</h4><p>Plain-language breakdowns of structure, liquidity and timing — one concept at a time.</p></div></div>
-          <div class="cfeat"><span class="n">02</span><div><h4>Open system</h4><p>Study the MQL5 EA and Python tools. Learn exactly how the cycle is coded.</p></div></div>
+          <div class="cfeat"><span class="n">02</span><div><h4>Public engineering</h4><p>Follow the architecture, testing discipline and dated improvements without exposing private strategy parameters.</p></div></div>
           <div class="cfeat"><span class="n">03</span><div><h4>Psychology &amp; journaling</h4><p>Discipline check-ins and review habits. The mind must match the method.</p></div></div>
           <div class="cfeat"><span class="n">04</span><div><h4>Built for two homes</h4><p>A community rooted between Southern Africa and Europe — your timezone, your context.</p></div></div>
         </div>
@@ -627,10 +751,10 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <p class="jc-sub">Step inside the community on Telegram — daily gold breakdowns, the Liquidity Cycle method, and the traders learning it with you.</p>
         <div class="jc-items">
           <div class="jc-item">Daily Liquidity Cycle teaching on XAUUSD</div>
-          <div class="jc-item">Open EA source &amp; Python tools to study</div>
-          <div class="jc-item">Structured academy curriculum</div>
+          <div class="jc-item">EA-confirmed entries and lifecycle updates</div>
+          <div class="jc-item">Structured gold education and academy curriculum</div>
           <div class="jc-item">Trading psychology &amp; journaling habits</div>
-          <div class="jc-item">First look when GBPJPY joins the system</div>
+          <div class="jc-item">Weekly forward-test evidence and engineering notes</div>
         </div>
         <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="jc-cta">
           <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
@@ -654,8 +778,8 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <div class="ey rv">The Founder</div>
         <h2 class="rv">From the charts to the <em>code.</em></h2>
         <p class="rv">I'm Arshly Phiri — a gold trader and engineer building between Zimbabwe and Poland. I spent years learning how institutions actually move price, then did the obvious thing: I encoded the method into an algorithm so the logic never bends under emotion.</p>
-        <p class="rv">Refined Liquidity is where I teach that method in the open — the structure, the liquidity, the timing — and let the system prove it. No promises of riches. Just the cycle, explained clearly, by someone who came from where you're coming from.</p>
-        <div class="fquote rv">"Most traders chase the move. I teach you to wait for the cycle — and let the cycle pay you."</div>
+        <p class="rv">Refined Liquidity is where I teach that method in the open — the structure, the liquidity, the timing — and document how the system performs. No promises of riches. Just the cycle, explained clearly, by someone who came from where you're coming from.</p>
+        <div class="fquote rv">"Most traders chase the move. I teach you to wait for the cycle — and let the evidence speak."</div>
         <div class="fsign rv">Arshly Phiri<small>Founder · Refined Liquidity</small></div>
       </div>
     </div>
@@ -667,7 +791,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
   <div class="aurora2"></div>
   <div class="final-in rv">
     <h2>Trade the <em>cycle,</em><br>not the noise.</h2>
-    <p>Step into the community, learn the method free during beta, and watch the system work on gold — before everyone else catches on.</p>
+    <p>Step into the community, learn the method during beta, and follow the gold system through transparent forward-test evidence.</p>
     <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="btn btn-p" style="font-size:15px;padding:16px 30px">Enter the Matrix <span class="ar">→</span></a>
   </div>
 </section>
@@ -681,7 +805,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     </div>
     <div class="foot-links">
       <a href="#cycle">Cycle</a><a href="#curriculum">Curriculum</a>
-      <a href="https://github.com/arshblack/Gold-GU-AJ-Research-model" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">GitHub</a>
       <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener">Telegram</a>
     </div>
   </div>
@@ -708,12 +832,37 @@ function toggleMenu(){
   b.textContent=open?'✕':'☰';
 }
 
+/* public system status: safe metadata only, never credentials or execution commands */
+async function loadSystemStatus(){
+  try{
+    const response=await fetch('data/system-status.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('status unavailable');
+    const status=await response.json();
+    const put=(id,value)=>{const el=document.getElementById(id);if(el&&value)el.textContent=value};
+    put('statusSymbol',status.symbol);
+    put('statusMode',status.mode);
+    put('statusState',status.state);
+    put('statusBadge',status.badge);
+    put('statusHeadline',status.headline);
+    put('statusDetail',status.detail);
+    put('statusTelegram',status.telegram);
+    if(status.updatedAt){
+      const stamp=new Date(status.updatedAt);
+      put('statusUpdated',Number.isNaN(stamp.getTime())?'Repository snapshot':stamp.toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'}));
+    }
+  }catch(error){
+    const updated=document.getElementById('statusUpdated');
+    if(updated)updated.textContent='Repository snapshot';
+  }
+}
+loadSystemStatus();
+
 /* ---------- CYCLE ENGINE ---------- */
 const phases=[
  {t:'Accumulation', s:'Smart money builds a position quietly', b:'Price coils in a tight range. Volume builds while retail traders lose interest. This is where institutions load orders — patiently, without moving price. Every clean setup begins here.'},
  {t:'Manipulation', s:'The stop-hunt that fuels the move', b:'Price spikes through an obvious level — equal highs or lows — triggering retail stops and tempting breakout traders. This is the liquidity grab. It looks like the move; it is the trap that funds the real one.'},
  {t:'Confirmation', s:'The market shows its hand', b:'After the sweep, price rejects and shifts character — a CHoCH then a Break of Structure. This is the cycle confirming direction. The EA waits for exactly this sequence before it will execute.'},
- {t:'Expansion', s:'The real move, where you get paid', b:'With liquidity taken and structure confirmed, price expands in the true direction toward the next pool. This is the leg that carries 1:4 and beyond — the only part most traders ever see, and the part they enter too late.'},
+ {t:'Expansion', s:'The directional move develops', b:'With liquidity taken and structure confirmed, price can expand toward the next pool. This is the phase where the trade plan manages T1, T2 and the possibility of a larger continuation without assuming the extension must happen.'},
  {t:'Reset', s:'The cycle closes and reloads', b:'Momentum fades into a new range. Risk comes off, the books rebalance, and a fresh accumulation quietly begins. Discipline here — knowing the cycle is over — is what protects the gains from the last one.'}
 ];
 const ringNodes=document.getElementById('cNodes');
@@ -845,10 +994,10 @@ const pillarData={
        <circle cx="366" cy="140" r="5" fill="${CL.aqua}"/><text x="366" y="160" text-anchor="middle" font-size="10" fill="${CL.aqua}" font-family="monospace">ENTRY</text>
      </svg></div>
    <h3>What you'll be able to do</h3>
-   <ul><li>Identify equal highs / lows where stops are resting</li><li>Tell a real breakout from a liquidity grab</li><li>Enter after the sweep, with a tight stop and 1:4+ target</li><li>Stop donating your stop-loss to the next candle</li></ul>
+   <ul><li>Identify equal highs / lows where stops are resting</li><li>Tell a real breakout from a liquidity grab</li><li>Plan an entry, invalidation and multiple structural targets</li><li>Stop donating your stop-loss to the next candle</li></ul>
    <p class="modal-foot">Pillar II of the Refined Liquidity method.</p>`,
  timing:`<h2>Timing</h2><span class="ptg">Strike in the killzone</span>
-   <p>Volatility isn't constant. The cleanest moves happen when London and New York are live, and the overlap — the killzone — is where the biggest, most reliable expansions fire. Same setup, better hour, far better odds.</p>
+   <p>Volatility isn't constant. London and New York often produce more activity, while the overlap can create faster expansion and sharper invalidation. Session context is recorded as evidence; it does not guarantee that a setup will succeed.</p>
    <div class="chart-box"><strong>Session volatility profile (GMT)</strong>
      <svg viewBox="0 0 560 180" style="width:100%">
        <line x1="30" y1="150" x2="540" y2="150" stroke="${CL.grid}"/>
@@ -859,7 +1008,7 @@ const pillarData={
        <polyline fill="none" stroke="${CL.mut}" stroke-width="2" points="360,108 410,132 470,140 520,144"/><text x="450" y="166" text-anchor="middle" font-size="10" fill="${CL.mut}" font-family="monospace">CLOSE</text>
      </svg></div>
    <h3>What you'll be able to do</h3>
-   <ul><li>Trade the London &amp; New York windows that actually pay</li><li>Exploit the 12:00–15:00 GMT killzone overlap</li><li>Align entries with session bias for higher probability</li><li>Sit out the dead hours without FOMO</li></ul>
+   <ul><li>Study London &amp; New York as higher-activity windows</li><li>Observe the 12:00–15:00 GMT overlap</li><li>Record whether session alignment improves each setup family</li><li>Sit out low-quality conditions without FOMO</li></ul>
    <p class="modal-foot">Pillar III of the Refined Liquidity method.</p>`
 };
 
@@ -883,7 +1032,7 @@ const courseData={
    ${L(2,'Equal highs &amp; equal lows','The magnets for price. Marking the levels where the sweep is most likely to fire.')}
    ${L(3,'The sweep &amp; reversal pattern','Accumulation → sweep → rejection → expansion. The institutional playbook, decoded.')}
    ${L(4,'Stop-hunt mechanics','How banks trigger retail stops and why price rejects so violently afterward.')}
-   ${L(5,'The liquidity entry','The exact checklist to enter after a sweep, with tight risk and a 1:4+ target.')}
+   ${L(5,'The liquidity entry','A repeatable checklist for entry, invalidation and staged structural targets after a sweep.')}
    <p class="modal-foot">Builds directly on Track 01.</p>`,
  timing:`<h2>Time the Killzone</h2><span class="ptg">Track 03 · Intermediate · 4 lessons</span>
    <p class="detail-text">Trade when the market actually moves and avoid the noise the rest of the day. Timing alone can lift the same setup's win rate dramatically.</p>

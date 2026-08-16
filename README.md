@@ -63,6 +63,7 @@ MetaTrader 5 remains the execution authority. TradingView is used for analysis a
 - Keep the public documentation clean and professional
 - Maintain clear separation between showcase material and private research code
 - Document the gold-first architecture and lifecycle states
+- Move sanitized system status to a read-only Cloudflare endpoint
 - Add non-sensitive screenshots or dated evidence summaries when approved
 - Continue validating the EA through demo forward testing and structured review
 - Improve the public website without overstating performance
