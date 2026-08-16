@@ -26,6 +26,48 @@ Everything else you have ever read about a chart is inference laid on top of tho
 Some of that inference is reasonable. Some is decoration. The purpose of this lesson is to help you tell which is which on your own chart, because the industry that teaches this material has almost no incentive to draw the line for you — confident explanations sell better than accurate ones.
 
 ---
+<div class="market-lab">
+  <header>
+    <div>
+      <small>Evidence boundary</small>
+      <strong>The chart gives observations before it gives explanations</strong>
+    </div>
+    <span>Use before sizing</span>
+  </header>
+  <div class="inference-meter">
+    <div>
+      <small>Observed</small>
+      <strong>High, low, close</strong>
+      <p>Price traded beyond `EQH1`, closed back below it, and later moved away.</p>
+    </div>
+    <div>
+      <small>Reasonable inference</small>
+      <strong>Resting orders were likely nearby</strong>
+      <p>Visible levels often attract stops and limit orders, so the level was worth watching.</p>
+    </div>
+    <div>
+      <small>Unsupported claim</small>
+      <strong>Who caused it and why</strong>
+      <p>The candle does not prove a specific participant, intention, or future outcome.</p>
+    </div>
+  </div>
+  <div class="lab-steps">
+    <details open>
+      <summary>Actionable version</summary>
+      <p>Price swept `EQH1`, closed back inside, and moved away. Bias remains lower while the level holds.</p>
+    </details>
+    <details>
+      <summary>Dangerous version</summary>
+      <p>They trapped retail, so the move must continue. This language adds confidence without adding evidence.</p>
+    </details>
+    <details>
+      <summary>Risk translation</summary>
+      <p>The less you can prove, the more important fixed risk and pre-written invalidation become.</p>
+    </details>
+  </div>
+</div>
+
+---
 ## The claim, and the honest version of it
 
 The standard claim runs roughly: *banks need liquidity to fill large orders, so they drive price into obvious stop clusters to trigger them, then reverse into the real move.*

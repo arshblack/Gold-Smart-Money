@@ -24,6 +24,49 @@ A rule is useful only if it can be broken in a way you could later detect. *I wi
 Same test applies to everything in this lesson. If an entry cannot be scored against your own record, it is a diary, not a journal.
 
 ---
+<div class="market-lab">
+  <header>
+    <div>
+      <small>Journal lab</small>
+      <strong>A setup should survive being written down</strong>
+    </div>
+    <span>Before entry</span>
+  </header>
+  <div class="journal-card">
+    <div class="journal-row">
+      <span>Setup</span>
+      <p>H1 bias down. M15 reached `EQH1`; wick and close passed. Follow-through pending.</p>
+    </div>
+    <div class="journal-row">
+      <span>Invalidation</span>
+      <p>M15 close back above `EQH1`. H1 close above `HH1` invalidates the broader read.</p>
+    </div>
+    <div class="journal-row">
+      <span>Why now</span>
+      <p>Level marked before approach. London active. No high-impact release inside the horizon.</p>
+    </div>
+    <div class="journal-row">
+      <span>Do not take if</span>
+      <p>Follow-through does not arrive, or price stalls inside the prior range.</p>
+    </div>
+  </div>
+  <div class="lab-steps">
+    <details open>
+      <summary>Readable</summary>
+      <p>Another trader can understand what you were waiting for.</p>
+    </details>
+    <details>
+      <summary>Scorable</summary>
+      <p>The record can later prove whether you followed your own decision.</p>
+    </details>
+    <details>
+      <summary>Protective</summary>
+      <p>The trade that cannot fill the invalidation field is stopped before it becomes money.</p>
+    </details>
+  </div>
+</div>
+
+---
 ## The problem with the post-trade journal
 
 Almost every trading journal is written after the position closes. That is when the outcome is known — which is precisely what makes the record unreliable.

@@ -37,6 +37,68 @@ The version taught almost everywhere goes: price sweeps liquidity, then reverses
 So this lesson is built the other way round. Instead of asking *was that a sweep*, it asks three separate questions with three separate answers, and treats a no on any one of them as information rather than as an inconvenience.
 
 ---
+<div class="market-lab">
+  <header>
+    <div>
+      <small>Interactive market lab</small>
+      <strong>A sweep is a sequence, not one candle</strong>
+    </div>
+    <span>Schematic XAUUSD</span>
+  </header>
+  <div class="lab-stage" aria-label="Animated schematic of a liquidity sweep above equal highs, close back below the level, and follow-through lower.">
+    <svg viewBox="0 0 820 360" role="img">
+      <line class="lab-grid" x1="60" y1="80" x2="760" y2="80"/>
+      <line class="lab-grid" x1="60" y1="145" x2="760" y2="145"/>
+      <line class="lab-grid" x1="60" y1="210" x2="760" y2="210"/>
+      <line class="lab-grid" x1="60" y1="275" x2="760" y2="275"/>
+      <rect class="lab-zone" x="108" y="88" width="226" height="20"/>
+      <line class="lab-line" x1="86" y1="98" x2="758" y2="98"/>
+      <text class="lab-label gold" x="94" y="84">EQH1 / resting liquidity</text>
+      <path class="lab-path" d="M80 215 C128 168, 166 204, 206 154 S286 182, 318 111"/>
+      <path class="lab-sweep" d="M318 111 C350 72, 384 54, 418 78 C452 104, 468 126, 492 142"/>
+      <path class="lab-path" d="M492 142 C536 190, 570 178, 604 214 S684 236, 738 286"/>
+      <g class="lab-candle c1">
+        <line x1="270" y1="126" x2="270" y2="182" stroke="#3FE0C5" stroke-width="2"/>
+        <rect x="262" y="144" width="16" height="28" fill="#3FE0C5"/>
+      </g>
+      <g class="lab-candle c2">
+        <line x1="340" y1="82" x2="340" y2="162" stroke="#E0683F" stroke-width="2"/>
+        <rect x="332" y="104" width="16" height="44" fill="#E0683F"/>
+        <text class="lab-label rust" x="360" y="64">1 wick beyond</text>
+      </g>
+      <g class="lab-candle c3">
+        <line x1="416" y1="54" x2="416" y2="158" stroke="#E0683F" stroke-width="2"/>
+        <rect x="408" y="84" width="16" height="54" fill="#E0683F"/>
+        <text class="lab-label gold" x="438" y="126">2 close back inside</text>
+      </g>
+      <g class="lab-candle c4">
+        <line x1="545" y1="148" x2="545" y2="226" stroke="#3FE0C5" stroke-width="2"/>
+        <rect x="537" y="168" width="16" height="40" fill="#3FE0C5"/>
+      </g>
+      <g class="lab-candle c5">
+        <line x1="650" y1="202" x2="650" y2="288" stroke="#3FE0C5" stroke-width="2"/>
+        <rect x="642" y="220" width="16" height="52" fill="#3FE0C5"/>
+        <text class="lab-label aqua" x="574" y="318">3 follow-through away</text>
+      </g>
+    </svg>
+  </div>
+  <div class="lab-steps">
+    <details open>
+      <summary>Part 1 · Wick</summary>
+      <p>Price must trade beyond the marked level. Near the level is not a sweep.</p>
+    </details>
+    <details>
+      <summary>Part 2 · Close</summary>
+      <p>The candle must close back inside the level on the timeframe chosen before the setup.</p>
+    </details>
+    <details>
+      <summary>Part 3 · Follow-through</summary>
+      <p>Movement away from the level is what separates an observation from a candidate setup.</p>
+    </details>
+  </div>
+</div>
+
+---
 ## The three-part test
 
 ### Part 1 — The wick: did price actually reach beyond the level?

@@ -31,6 +31,47 @@ On your own chart that last clause is a number. In this lesson it stays a label 
 The specialist vocabulary — break of structure, change of character, displacement — is a compression of that sentence, not a replacement for it. If you find yourself unable to state a bias in plain English, the terminology is covering a gap rather than filling one.
 
 ---
+<div class="market-lab">
+  <header>
+    <div>
+      <small>Structure lab</small>
+      <strong>H1 decides context before M15 searches for timing</strong>
+    </div>
+    <span>Labels, not signals</span>
+  </header>
+  <div class="lab-stage" aria-label="Schematic showing H1 higher highs and higher lows above HL1, with M15 pullback noise inside the higher-timeframe bias.">
+    <svg viewBox="0 0 820 360" role="img">
+      <line class="lab-grid" x1="60" y1="80" x2="760" y2="80"/>
+      <line class="lab-grid" x1="60" y1="145" x2="760" y2="145"/>
+      <line class="lab-grid" x1="60" y1="210" x2="760" y2="210"/>
+      <line class="lab-grid" x1="60" y1="275" x2="760" y2="275"/>
+      <text class="lab-label gold" x="76" y="50">H1 structure</text>
+      <path class="lab-path" d="M90 260 C150 190, 196 226, 242 166 S338 190, 392 112 S492 138, 560 76"/>
+      <line class="lab-line" x1="122" y1="210" x2="715" y2="210"/>
+      <text class="lab-label gold" x="630" y="196">HL1 invalidation level</text>
+      <circle cx="242" cy="166" r="5" fill="#3FE0C5"/><text class="lab-label aqua" x="232" y="148">HH1</text>
+      <circle cx="338" cy="190" r="5" fill="#E9C97A"/><text class="lab-label gold" x="328" y="228">HL1</text>
+      <circle cx="560" cy="76" r="5" fill="#3FE0C5"/><text class="lab-label aqua" x="546" y="58">HH2</text>
+      <rect class="lab-zone" x="528" y="122" width="190" height="128"/>
+      <text class="lab-label" x="548" y="148">M15 pullback</text>
+      <path class="lab-sweep" d="M548 166 C580 196, 604 174, 632 205 S686 176, 716 220"/>
+    </svg>
+  </div>
+  <div class="bias-panels">
+    <div class="bias-panel">
+      <small>H1 sentence</small>
+      <strong>Bullish while above HL1</strong>
+      <p>The higher-timeframe read is valid until the named structural level is lost on H1.</p>
+    </div>
+    <div class="bias-panel">
+      <small>M15 task</small>
+      <strong>Wait for conditions</strong>
+      <p>The lower timeframe does not create the bias. It only gives or withholds a reason to act.</p>
+    </div>
+  </div>
+</div>
+
+---
 ## Why two timeframes and not one
 
 An M15 gold chart shows you roughly a day and a half of price at a glance. That is enough to see a move and not nearly enough to see what the move is part of. A sequence of higher highs on M15 can sit comfortably inside an H1 pullback within an H1 downtrend, and the M15 chart will not tell you which one you are looking at. It cannot: the information is off-screen.

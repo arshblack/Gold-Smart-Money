@@ -31,6 +31,56 @@ Two facts about the instrument itself, from primary sources:
 Hold on to that second fact. It comes back.
 
 ---
+<div class="market-lab">
+  <header>
+    <div>
+      <small>Clock lab</small>
+      <strong>The window is not one fixed clock time</strong>
+    </div>
+    <span>2026 DST example</span>
+  </header>
+  <div class="lab-stage" aria-label="Schematic timeline showing Asia, London, New York, overlap, LBMA auctions, and daylight saving misalignment periods.">
+    <svg viewBox="0 0 820 360" role="img">
+      <line class="lab-grid" x1="70" y1="90" x2="750" y2="90"/>
+      <line class="lab-grid" x1="70" y1="160" x2="750" y2="160"/>
+      <line class="lab-grid" x1="70" y1="230" x2="750" y2="230"/>
+      <text class="lab-label" x="72" y="62">London local day</text>
+      <rect class="lab-zone" x="118" y="92" width="190" height="42"/>
+      <rect class="lab-zone" x="286" y="150" width="250" height="42"/>
+      <rect class="lab-zone" x="454" y="208" width="250" height="42"/>
+      <text class="lab-label gold" x="138" y="120">Asia</text>
+      <text class="lab-label aqua" x="310" y="178">London</text>
+      <text class="lab-label aqua" x="476" y="236">New York</text>
+      <rect x="454" y="150" width="82" height="100" fill="rgba(63,224,197,.09)" stroke="rgba(63,224,197,.32)" stroke-width="1"/>
+      <text class="lab-label aqua" x="438" y="286">Overlap changes when clocks shift</text>
+      <line class="lab-line" x1="384" y1="78" x2="384" y2="262"/>
+      <text class="lab-label gold" x="356" y="76">10:30 LBMA</text>
+      <line class="lab-line" x1="560" y1="78" x2="560" y2="262"/>
+      <text class="lab-label gold" x="530" y="76">15:00 LBMA</text>
+      <path class="lab-path" d="M110 318 H310"/>
+      <path class="lab-sweep" d="M310 318 H420"/>
+      <path class="lab-path" d="M420 318 H704"/>
+      <text class="lab-label rust" x="314" y="304">8-29 Mar: 4h gap</text>
+      <text class="lab-label rust" x="514" y="304">25 Oct-1 Nov: 4h gap</text>
+    </svg>
+  </div>
+  <div class="lab-steps">
+    <details open>
+      <summary>London local</summary>
+      <p>Useful for the session itself and the LBMA auction references.</p>
+    </details>
+    <details>
+      <summary>UTC</summary>
+      <p>Useful for comparison, but the London window moves against UTC when the UK changes clocks.</p>
+    </details>
+    <details>
+      <summary>Broker server</summary>
+      <p>The only clock your MT5 candles actually use. Derive it, do not assume it.</p>
+    </details>
+  </div>
+</div>
+
+---
 ## The problem with "London opens at 8"
 
 London opens at 08:00 London time. That is true year-round and almost useless on its own, because three different clocks are involved in your actually being at the chart at the right moment:
