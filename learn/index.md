@@ -18,6 +18,44 @@ The public curriculum is a controlled preview of the full Refined Liquidity educ
 Setups marked on TradingView are research until the MT5 EA confirms execution. Manual trades stay outside the public record.
 </div>
 
+## How the course is structured
+
+There are **four method tracks**. Read them left to right: first learn to read structure, then learn where liquidity sits, then learn when session context matters, then learn how to keep the execution record honest.
+
+<div class="course-path">
+  <div class="course-step">
+    <small>Track 01</small>
+    <strong>Read Structure</strong>
+    <p>Direction and invalidation. H1 context before M15 execution.</p>
+  </div>
+  <div class="course-step">
+    <small>Track 02</small>
+    <strong>Hunt Liquidity</strong>
+    <p>Equal highs/lows, sweeps, follow-through, and failed setups.</p>
+  </div>
+  <div class="course-step">
+    <small>Track 03</small>
+    <strong>Time the Killzone</strong>
+    <p>London, New York, news timing, and broker-server clock discipline.</p>
+  </div>
+  <div class="course-step">
+    <small>Track 04</small>
+    <strong>Master the Mind</strong>
+    <p>Rules, risk, pre-trade journaling, and reviewable execution.</p>
+  </div>
+</div>
+
+<div class="status-row">
+  <div class="status-box">
+    <small>Available now</small>
+    <p>Five public flagship previews with visual labs. These teach the standard and show the tone of the full curriculum.</p>
+  </div>
+  <div class="status-box">
+    <small>Member beta later</small>
+    <p>The remaining seventeen method lessons are mapped but not published as full pages yet.</p>
+  </div>
+</div>
+
 <div class="learn-grid">
   <a class="learn-card" href="{{ '/learn/tracks/read-structure/' | relative_url }}">
     <small>Track 01 · Foundation</small>
