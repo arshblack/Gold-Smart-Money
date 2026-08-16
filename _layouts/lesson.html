@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | Refined Liquidity</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08090D; --bg2:#0C0E14; --surf:#12151E; --surf2:#191D28;
+  --line:rgba(233,201,122,.16); --line2:rgba(255,255,255,.07); --line3:rgba(63,224,197,.18);
+  --gold:#E9C97A; --goldl:#F4E3B0; --aqua:#3FE0C5;
+  --ink:#F3F2EC; --ink2:#C9CCD4; --mut:#878D9C;
+  --display:'Cormorant Garamond',Georgia,serif;
+  --sans:'Space Grotesk',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.72;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.w{max-width:1040px;margin:0 auto;padding:0 34px}
+nav{position:sticky;top:0;z-index:20;background:rgba(8,9,13,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line2)}
+.nav-in{height:66px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:600;font-size:15px}
+.brand svg{width:24px;height:24px;flex:0 0 auto}
+.brand span{color:var(--gold)}
+.nlinks{display:flex;gap:22px;align-items:center}
+.nlinks a{font-size:13px;color:var(--ink2);text-decoration:none}
+.nlinks a:hover{color:var(--goldl)}
+.shell{padding:76px 0 92px}
+.crumb{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--aqua)}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 24px}
+.meta span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--line2);background:var(--surf);padding:6px 9px}
+article{max-width:790px}
+article h1{font-family:var(--display);font-size:clamp(42px,7vw,76px);line-height:.98;font-weight:500;margin:0 0 24px;letter-spacing:0}
+article h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);line-height:1.1;font-weight:500;margin:46px 0 14px;color:var(--goldl)}
+article h3{font-size:18px;line-height:1.3;margin:30px 0 10px;color:var(--ink)}
+article p,article li{font-size:16px;color:var(--ink2)}
+article strong{color:var(--ink)}
+article em{color:var(--goldl)}
+article hr{border:0;border-top:1px solid var(--line2);margin:32px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:8px 0}
+article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+article th,article td{border:1px solid var(--line2);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink2)}
+article th{color:var(--gold);background:var(--surf)}
+code{font-family:var(--mono);font-size:.92em;color:var(--aqua);background:rgba(63,224,197,.08);padding:.1em .3em;border-radius:4px}
+.learn-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}
+.learn-card{display:block;text-decoration:none;border:1px solid var(--line2);background:var(--surf);padding:20px;min-height:150px}
+.learn-card:hover{border-color:var(--line);background:var(--surf2)}
+.learn-card small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin-bottom:8px}
+.learn-card strong{display:block;font-size:19px;color:var(--ink);margin-bottom:6px}
+.learn-card p{margin:0;color:var(--mut);font-size:13px;line-height:1.55}
+.notice{border-left:2px solid var(--gold);background:rgba(233,201,122,.07);padding:14px 16px;color:var(--ink2)}
+footer{border-top:1px solid var(--line2);padding:28px 0;color:var(--mut);font-size:12px}
+@media(max-width:760px){.w{padding:0 22px}.nlinks{display:none}.shell{padding-top:50px}.learn-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="w nav-in">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke="#E9C97A" stroke-width="1.2"/><circle cx="16" cy="16" r="3" fill="#E9C97A"/></svg>
+      <b>Refined <span>Liquidity</span></b>
+    </a>
+    <div class="nlinks">
+      <a href="{{ '/#gold-desk' | relative_url }}">Gold Desk</a>
+      <a href="{{ '/#methodology' | relative_url }}">Methodology</a>
+      <a href="{{ '/learn/' | relative_url }}">Learn</a>
+      <a href="{{ '/#automation' | relative_url }}">Automation</a>
+    </div>
+  </div>
+</nav>
+<main class="w shell">
+  <article>
+    <div class="crumb"><a href="{{ '/learn/' | relative_url }}">Learn</a>{% if page.track %} / {{ page.track | replace: '-', ' ' }}{% endif %}</div>
+    <div class="meta">
+      {% if page.content_id %}<span>{{ page.content_id }}</span>{% endif %}
+      {% if page.level %}<span>{{ page.level }}</span>{% endif %}
+      {% if page.reading_time %}<span>{{ page.reading_time }} min read</span>{% endif %}
+      {% if page.status %}<span>{{ page.status }}</span>{% endif %}
+    </div>
+    {{ content }}
+  </article>
+</main>
+<footer>
+  <div class="w">Refined Liquidity is educational research, not financial advice or a guarantee of profit.</div>
+</footer>
+</body>
+</html>

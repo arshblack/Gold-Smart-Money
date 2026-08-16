@@ -369,6 +369,8 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
 .lesson strong{color:var(--ink);font-size:14px}
 .lesson p{font-size:12.5px;color:var(--mut);margin:5px 0 0}
 .lesson .lnum{font-family:var(--mono);font-size:10px;color:var(--aqua);letter-spacing:.1em}
+.lesson-link{display:inline-flex;margin-top:9px;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:5px 8px;border-radius:100px;background:rgba(233,201,122,.06)}
+.lesson-link:hover{border-color:var(--gold);color:var(--goldl)}
 .modal-foot{margin-top:24px;font-family:var(--mono);font-size:11px;color:var(--mut2);font-style:italic}
 
 /* toast for cycle pill info */
@@ -431,6 +433,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <a href="#methodology">Methodology</a>
       <a href="#automation">Automation</a>
       <a href="#curriculum">Academy</a>
+      <a href="learn/">Learn</a>
     </div>
     <div class="nav-cta">
       <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="join">Join the Community →</a>
@@ -443,6 +446,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     <a href="#methodology" onclick="toggleMenu()">Methodology</a>
     <a href="#automation" onclick="toggleMenu()">Automation</a>
     <a href="#curriculum" onclick="toggleMenu()">Curriculum</a>
+    <a href="learn/" onclick="toggleMenu()">Learn</a>
     <a href="#founder" onclick="toggleMenu()">Founder</a>
     <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener">Join the Community →</a>
   </div>
@@ -606,7 +610,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <div class="cyc-step rv" id="cStep" style="margin-top:18px">Phase 01 / 05</div>
         <h3 class="rv" id="cTitle">Accumulation</h3>
         <div class="ph-sub rv" id="cSub">Smart money builds a position quietly</div>
-        <p class="rv" id="cBody">Price coils in a tight range. Volume builds while retail traders lose interest. This is where institutions load orders — patiently, without moving price. Every clean setup begins here.</p>
+        <p class="rv" id="cBody">Price coils in a tight range. Tick activity can build while attention fades. This is where the next setup starts to form, but the chart alone cannot tell you who is building it.</p>
         <div class="cyc-nav rv" id="cNav"></div>
         <div class="cyc-meta rv">
           <div><b>5</b>phases per cycle</div>
@@ -638,15 +642,15 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <div class="pnum">PILLAR II</div>
         <div class="ptitle">Liquidity <span class="ar">→</span></div>
         <div class="ptag">Follow the smart money</div>
-        <p>Banks need liquidity to fill size. They sweep stops to get it — then reverse. Learn to spot the trap before you become it.</p>
+        <p>Large orders need resting liquidity to fill against. Price often reaches beyond obvious highs and lows before reversing; the pattern is observable, the intent behind it is not.</p>
         <ul><li>Equal highs / lows as targets</li><li>Stop-hunt mechanics</li><li>Sweep → reversal entries</li></ul>
       </div>
       <div class="pillar" onclick="openPillar('timing')">
         <div class="pnum">PILLAR III</div>
         <div class="ptitle">Timing <span class="ar">→</span></div>
         <div class="ptag">Strike in the killzone</div>
-        <p>The best moves happen when London and New York are live. Session timing is what separates discipline from gambling.</p>
-        <ul><li>London open · 07:00 GMT</li><li>New York open · 12:00 GMT</li><li>Killzone overlap · 12:00–15:00</li></ul>
+        <p>London and New York often bring higher activity, but the clock is context, not an edge by itself. Session timing helps filter when a setup is worth studying.</p>
+        <ul><li>London open · local time matters</li><li>New York open · data calendar matters</li><li>Overlap shifts with DST</li></ul>
       </div>
     </div>
     <div class="formula rv">
@@ -739,7 +743,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <div class="cur-foot"><span>7 lessons · ongoing</span><span class="open">Open track →</span></div>
       </div>
     </div>
-    <div class="cur-note">New lessons added every month · Free foundation tier for community members</div>
+    <div class="cur-note">Full track planned for The Matrix member beta.</div>
   </div>
 </section>
 
@@ -773,7 +777,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
           <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
           Enter the Matrix →
         </a>
-        <p class="jc-note">Free during beta · Telegram required · Education, not financial advice</p>
+        <p class="jc-note">Beta community · Telegram required · Education, not financial advice</p>
       </div>
     </div>
   </div>
@@ -790,7 +794,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <div class="founder-r">
         <div class="ey rv">The Founder</div>
         <h2 class="rv">From the charts to the <em>code.</em></h2>
-        <p class="rv">I'm Arshly Phiri — a gold trader and engineer building between Zimbabwe and Poland. I spent years learning how institutions actually move price, then did the obvious thing: I encoded the method into an algorithm so the logic never bends under emotion.</p>
+        <p class="rv">I'm Arshly Phiri — a gold trader and engineer building between Zimbabwe and Poland. I spent years studying how gold moves around structure, liquidity and timing, then did the obvious thing: I encoded the decision process into an algorithm so the logic never bends under emotion.</p>
         <p class="rv">Refined Liquidity is where I teach that method in the open — the structure, the liquidity, the timing — and document how the system performs. No promises of riches. Just the cycle, explained clearly, by someone who came from where you're coming from.</p>
         <div class="fquote rv">"Most traders chase the move. I teach you to wait for the cycle — and let the evidence speak."</div>
         <div class="fsign rv">Arshly Phiri<small>Founder · Refined Liquidity</small></div>
@@ -872,8 +876,8 @@ loadSystemStatus();
 
 /* ---------- CYCLE ENGINE ---------- */
 const phases=[
- {t:'Accumulation', s:'Smart money builds a position quietly', b:'Price coils in a tight range. Volume builds while retail traders lose interest. This is where institutions load orders — patiently, without moving price. Every clean setup begins here.'},
- {t:'Manipulation', s:'The stop-hunt that fuels the move', b:'Price spikes through an obvious level — equal highs or lows — triggering retail stops and tempting breakout traders. This is the liquidity grab. It looks like the move; it is the trap that funds the real one.'},
+ {t:'Accumulation', s:'Range-building before expansion', b:'Price coils in a tight range. Tick activity can build while attention fades. This is where the next setup starts to form, but the chart alone cannot tell you who is building it.'},
+ {t:'Manipulation', s:'The stop-run before the move', b:'Price spikes through an obvious level — equal highs or lows — triggering stops and tempting breakout traders. It can look like the move; the skill is waiting for evidence after the sweep.'},
  {t:'Confirmation', s:'The market shows its hand', b:'After the sweep, price rejects and shifts character — a CHoCH then a Break of Structure. This is the cycle confirming direction. The EA waits for exactly this sequence before it will execute.'},
  {t:'Expansion', s:'The directional move develops', b:'With liquidity taken and structure confirmed, price can expand toward the next pool. This is the phase where the trade plan manages T1, T2 and the possibility of a larger continuation without assuming the extension must happen.'},
  {t:'Reset', s:'The cycle closes and reloads', b:'Momentum fades into a new range. Risk comes off, the books rebalance, and a fresh accumulation quietly begins. Discipline here — knowing the cycle is over — is what protects the gains from the last one.'}
@@ -993,7 +997,7 @@ const pillarData={
    <ul><li>Mark swing highs and lows on any timeframe in seconds</li><li>Call a Break of Structure (BOS) the moment it confirms momentum</li><li>Read a Change of Character (CHoCH) before the trend flips</li><li>Locate order blocks and fair value gaps as precision entry zones</li></ul>
    <p class="modal-foot">Pillar I of the Refined Liquidity method.</p>`,
  liquidity:`<h2>Liquidity</h2><span class="ptg">Follow the smart money</span>
-   <p>Banks can't fill large orders without someone to trade against. So they engineer liquidity — sweeping the obvious stops above equal highs or below equal lows — then reverse into the real move. Learn the trap and you stop being the fuel.</p>
+   <p>Large orders need counterparties. Price often extends beyond obvious stops above equal highs or below equal lows, then either rejects or continues. The sequence is observable; the motive is not.</p>
    <div class="chart-box"><strong>The sweep &amp; reversal</strong>
      <svg viewBox="0 0 560 210" style="width:100%">
        <polyline fill="none" stroke="${CL.mut}" stroke-width="1.6" stroke-dasharray="5 5" points="60,120 110,116 160,124 200,118"/>
@@ -1010,8 +1014,8 @@ const pillarData={
    <ul><li>Identify equal highs / lows where stops are resting</li><li>Tell a real breakout from a liquidity grab</li><li>Plan an entry, invalidation and multiple structural targets</li><li>Stop donating your stop-loss to the next candle</li></ul>
    <p class="modal-foot">Pillar II of the Refined Liquidity method.</p>`,
  timing:`<h2>Timing</h2><span class="ptg">Strike in the killzone</span>
-   <p>Volatility isn't constant. London and New York often produce more activity, while the overlap can create faster expansion and sharper invalidation. Session context is recorded as evidence; it does not guarantee that a setup will succeed.</p>
-   <div class="chart-box"><strong>Session volatility profile (GMT)</strong>
+   <p>Volatility is not constant. London and New York often produce more activity, while the overlap can create faster expansion and sharper invalidation. Session context is recorded as evidence; it does not guarantee that a setup will succeed.</p>
+   <div class="chart-box"><strong>Session context profile</strong>
      <svg viewBox="0 0 560 180" style="width:100%">
        <line x1="30" y1="150" x2="540" y2="150" stroke="${CL.grid}"/>
        <polyline fill="none" stroke="${CL.mut}" stroke-width="2" points="50,142 90,138 130,140"/><text x="90" y="166" text-anchor="middle" font-size="10" fill="${CL.mut}" font-family="monospace">ASIAN</text>
@@ -1021,51 +1025,54 @@ const pillarData={
        <polyline fill="none" stroke="${CL.mut}" stroke-width="2" points="360,108 410,132 470,140 520,144"/><text x="450" y="166" text-anchor="middle" font-size="10" fill="${CL.mut}" font-family="monospace">CLOSE</text>
      </svg></div>
    <h3>What you'll be able to do</h3>
-   <ul><li>Study London &amp; New York as higher-activity windows</li><li>Observe the 12:00–15:00 GMT overlap</li><li>Record whether session alignment improves each setup family</li><li>Sit out low-quality conditions without FOMO</li></ul>
+   <ul><li>Study London &amp; New York as higher-activity windows</li><li>Account for daylight-saving shifts and broker-server time</li><li>Record whether session context supports each setup family</li><li>Sit out low-quality conditions without FOMO</li></ul>
    <p class="modal-foot">Pillar III of the Refined Liquidity method.</p>`
 };
 
 /* ============ CURRICULUM DATA ============ */
-function L(n,t,d){return `<div class="lesson"><span class="lnum">LESSON ${n}</span><br><strong>${t}</strong><p>${d}</p></div>`}
+function L(n,t,d,href){
+  const link=href?`<br><a class="lesson-link" href="${href}">Available now</a>`:'';
+  return `<div class="lesson"><span class="lnum">LESSON ${n}</span><br><strong>${t}</strong><p>${d}</p>${link}</div>`;
+}
 const courseData={
  structure:`<h2>Read Structure</h2><span class="ptg">Track 01 · Foundation · 6 lessons</span>
-   <p class="detail-text">Master reading market structure like a professional. By the end you'll mark any chart's bias in seconds and know exactly where the high-probability zones sit.</p>
+   <p class="detail-text">Build a repeatable sequence for establishing directional bias before searching for an entry. Structure is context first, execution second.</p>
    <h3>Lessons</h3>
-   ${L(1,'What is market structure?','HH/HL for uptrends, LH/LL for downtrends. The foundation everything else is built on.')}
-   ${L(2,'Break of Structure (BOS)','How to confirm momentum when price violates a prior swing — and how to trade the retest.')}
-   ${L(3,'Change of Character (CHoCH)','The first warning a trend is ending, before the full break. Where the best reversals begin.')}
-   ${L(4,'Order Blocks','The candles where institutions loaded. Why price returns to them and how to use them as entries.')}
-   ${L(5,'Fair Value Gaps (FVG)','Imbalances price tends to fill. Reading them for entries, exits and confluence.')}
-   ${L(6,'Your structure checklist','A repeatable, step-by-step framework you can run on any pair, any timeframe.')}
-   <p class="modal-foot">Free foundation tier for community members.</p>`,
+   ${L(1,'What Market Structure Actually Tells You','Higher highs and higher lows, lower highs and lower lows — and the swing-labelling discipline that keeps two traders reading the same chart the same way.')}
+   ${L(2,'Break of Structure: Confirmation, Not Prediction','What a violated swing point confirms about momentum, what it does not confirm about continuation, and how the retest is read.')}
+   ${L(3,'Change of Character: The First Warning','The first structural signal that a trend may be weakening, and why it precedes rather than replaces a full break.')}
+   ${L(4,'Order Blocks: What the Candle Can and Cannot Prove','Reading the candle that preceded a displacement move as a zone of interest, with honest limits on what a chart can prove about who traded there.')}
+   ${L(5,'Fair Value Gaps: The Three-Candle Test','The three-candle non-overlap test, mitigation, and the conditions that invalidate a gap rather than fill it.')}
+   ${L(6,'H1 Bias Before M15 Execution','Establishing directional context on H1 before looking for an M15 entry — the full top-down sequence, end to end.','learn/tracks/read-structure/h1-bias-before-m15/')}
+   <p class="modal-foot">Full track planned for The Matrix member beta.</p>`,
  liquidity:`<h2>Hunt Liquidity</h2><span class="ptg">Track 02 · Intermediate · 5 lessons</span>
-   <p class="detail-text">Learn where banks hide their orders and how to follow them in. This is the core edge of the whole method — the difference between guessing and reading intent.</p>
+   <p class="detail-text">Learn where resting orders tend to cluster, and how price behaves when it reaches them. This is the core observation the method is built on — the difference between a marked level and a confirmed one.</p>
    <h3>Lessons</h3>
-   ${L(1,'What liquidity really is','Why banks need it, where retail stops cluster, and how to see the pools on a chart.')}
-   ${L(2,'Equal highs &amp; equal lows','The magnets for price. Marking the levels where the sweep is most likely to fire.')}
-   ${L(3,'The sweep &amp; reversal pattern','Accumulation → sweep → rejection → expansion. The institutional playbook, decoded.')}
-   ${L(4,'Stop-hunt mechanics','How banks trigger retail stops and why price rejects so violently afterward.')}
-   ${L(5,'The liquidity entry','A repeatable checklist for entry, invalidation and staged structural targets after a sweep.')}
+   ${L(1,'Where Resting Orders Cluster','Why obvious price levels attract resting stop and limit orders, and how to mark the pools on an XAUUSD chart without inventing them.')}
+   ${L(2,'Equal Highs and Equal Lows','Identifying equal-highs and equal-lows formations, grading how clean they are, and the failure mode of marking every minor pair of highs.')}
+   ${L(3,'The Sweep That Isn&rsquo;t: Wick, Close, Follow-Through','The qualitative three-part test — wick beyond the level, where the candle closed, whether follow-through arrived — and the sweeps that fail it.','learn/tracks/hunt-liquidity/sweep-that-isnt/')}
+   ${L(4,'What a Sweep Does Not Prove','The honest boundary: a sweep is an observation about price, not evidence about intent.','learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/')}
+   ${L(5,'Entry, Invalidation, and Staged Targets','Building the post-sweep plan — where the idea is wrong, where structural targets sit, and how the setup is tracked to expiry.')}
    <p class="modal-foot">Builds directly on Track 01.</p>`,
  timing:`<h2>Time the Killzone</h2><span class="ptg">Track 03 · Intermediate · 4 lessons</span>
-   <p class="detail-text">Trade when the market actually moves and avoid the noise the rest of the day. Timing alone can lift the same setup's win rate dramatically.</p>
+   <p class="detail-text">Session context is one input into whether a setup is worth taking. It is not, by itself, an edge.</p>
    <h3>Lessons</h3>
-   ${L(1,'The three sessions','Asian, London, New York — their personalities, volatility and where money flows.')}
-   ${L(2,'The London session','European liquidity, strong directional moves, and the setups that suit it.')}
-   ${L(3,'New York &amp; the killzone','Peak volatility in the 12:00–15:00 GMT overlap — where the biggest moves live.')}
-   ${L(4,'Session bias &amp; alignment','Using how the last session closed to stack probability on the next entry.')}
-   <p class="modal-foot">Pairs with the EA's built-in session filter.</p>`,
+   ${L(1,'The Three Sessions, in Three Clocks','Asia, London and New York expressed in London local time, broker-server time and UTC simultaneously.')}
+   ${L(2,'When the London Window Matters, and When It Doesn&rsquo;t','The conditions under which the London window has historically carried elevated activity in gold, and the days it demonstrably does not.','learn/tracks/time-the-killzone/when-london-matters/')}
+   ${L(3,'The New York Overlap, Daylight Saving Included','The overlap window, why its clock time shifts twice a year on two different national schedules, and what that does to a fixed session filter.')}
+   ${L(4,'Reading the Previous Session Close','Using the prior session close as one input into the next session context — and the sample-size problem with treating it as more than that.')}
+   <p class="modal-foot">Designed to be read alongside session context and forward-test notes.</p>`,
  psychology:`<h2>Master the Mind</h2><span class="ptg">Track 04 · Ongoing · 7 lessons</span>
    <p class="detail-text">The best method fails without discipline. This track builds the psychology, rules and review habits that make your edge survive you on a bad day — the reason the EA exists at all.</p>
    <h3>Lessons</h3>
-   ${L(1,'The psychology of profitable trading','Why most traders fail with a working edge, and the mindset that fixes it.')}
-   ${L(2,'Fear, greed &amp; FOMO','How these three wreck accounts and the rules that override them.')}
-   ${L(3,'Your trading rules &amp; checklist','Written rules you never break. Pre-trade checklist, post-trade review.')}
-   ${L(4,'Position sizing &amp; risk','The 1% rule, the daily-loss cap, and the maths of staying in the game.')}
-   ${L(5,'Surviving losing streaks','Why drawdown is normal, how to respond, and when to step away.')}
-   ${L(6,'The trading journal','Documenting every trade so your reviews compound into real improvement.')}
-   ${L(7,'Demo to live','Scaling from micro lots to live confidence without blowing up.')}
-   <p class="modal-foot">New psychology lessons added monthly.</p>`
+   ${L(1,'Why a Working Method Still Loses Money','The gap between having a rule set and executing it, and the specific decision points where discretion leaks back in.')}
+   ${L(2,'Naming the Pressure Before It Moves Your Hand','Recognising the three most common emotional pressures at the moment they arrive, rather than in the post-mortem.')}
+   ${L(3,'Written Rules and the Pre-Trade Checklist','Writing rules specific enough to be violated — which is the only kind that can be reviewed.')}
+   ${L(4,'Position Sizing From Your Broker&rsquo;s Numbers','Calculating risk from the values in your MT5 symbol specification, because contract size and tick value are broker-specific.')}
+   ${L(5,'Drawdown as an Expected Outcome','Why a sequence of losses is a normal property of any probabilistic method, and what a pre-agreed response looks like.')}
+   ${L(6,'The Journal Entry You Write Before the Trade','The pre-trade journal entry: what gets written before the position exists, and why the EA is best understood as that entry, codified.','learn/tracks/master-the-mind/pre-trade-journal/')}
+   ${L(7,'Moving From Demo to Live Without Changing the Method','Changing account size without changing the method — and the specific behaviours that tend to change anyway.')}
+   <p class="modal-foot">Full track planned for The Matrix member beta.</p>`
 };
 setPhase(0);
 </script>

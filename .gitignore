@@ -48,3 +48,7 @@ tester/**/*.html
 # Private implementation and unpublished research
 private/
 research-private/
+# Jekyll local build output
+_site/
+.jekyll-cache/
+.sass-cache/

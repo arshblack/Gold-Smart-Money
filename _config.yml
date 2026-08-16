@@ -1,0 +1,18 @@
+title: Refined Liquidity
+description: Gold-first research and education for the Refined Liquidity methodology.
+baseurl: "/MMM-REFINED-Liquidity-Cycle"
+url: "https://arshblack.github.io"
+
+exclude:
+  - README.md
+  - PUBLIC_DISCLOSURE.md
+  - notes/
+  - _internal/
+  - _backlog/
+  - foundations/_audit.md
+
+defaults:
+  - scope:
+      path: "learn"
+    values:
+      layout: "lesson"
