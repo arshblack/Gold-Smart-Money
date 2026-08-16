@@ -220,6 +220,21 @@ section{position:relative;padding:88px 0}
 .state-row span{color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
 .state-row b{color:var(--ink2);font-weight:500;text-align:right}
 .state-row b.aq{color:var(--aqua)}.state-row b.gd{color:var(--gold)}
+.mt5-monitor{margin:16px 0;border:1px solid var(--line2);background:#08090d;box-shadow:0 18px 46px -30px rgba(63,224,197,.45)}
+.mt5-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 11px;border-bottom:1px solid var(--line2);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.mt5-head b{color:var(--gold);font-weight:600}.mt5-head span{color:var(--aqua)}
+.mt5-body{padding:12px}
+.mt5-signal{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--line2)}
+.mt5-signal strong{font-family:var(--display);font-size:25px;font-weight:500;line-height:1;color:var(--ink)}
+.mt5-signal span{font-family:var(--mono);font-size:9px;color:var(--gold);border:1px solid var(--line);padding:5px 7px}
+.mt5-bars{display:grid;gap:7px;margin:12px 0}
+.mt5-row{display:grid;grid-template-columns:76px 1fr 26px;gap:8px;align-items:center;font-family:var(--mono);font-size:9px;color:var(--mut)}
+.mt5-track{height:6px;background:rgba(255,255,255,.06);overflow:hidden}
+.mt5-fill{height:100%;background:linear-gradient(90deg,var(--aqua),var(--gold));animation:monitorPulse 3.8s ease-in-out infinite}
+.mt5-row:nth-child(2) .mt5-fill{animation-delay:.45s}.mt5-row:nth-child(3) .mt5-fill{animation-delay:.9s}
+.mt5-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2)}
+.mt5-cell{background:var(--surf);padding:9px 7px}.mt5-cell small{display:block;font-family:var(--mono);font-size:8px;color:var(--mut);letter-spacing:.12em;text-transform:uppercase}.mt5-cell b{display:block;margin-top:3px;font-family:var(--mono);font-size:10px;color:var(--ink2)}
+@keyframes monitorPulse{0%,100%{opacity:.55;transform:scaleX(.86);transform-origin:left}50%{opacity:1;transform:scaleX(1)}}
 .desk-note{margin-top:auto;padding:18px 0 4px;color:var(--mut);font-size:11.5px;line-height:1.65}
 .desk-note a{color:var(--aqua);border-bottom:1px solid var(--line3)}
 .lifecycle{display:grid;grid-template-columns:repeat(6,1fr);margin-top:28px;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
@@ -274,7 +289,7 @@ section{position:relative;padding:88px 0}
 #curriculum{background:var(--bg2)}
 .cur-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media(max-width:760px){.cur-grid{grid-template-columns:1fr}}
-.cur-card{position:relative;background:var(--surf);border:1px solid var(--line2);border-radius:18px;padding:30px 30px 26px;cursor:pointer;overflow:hidden;transition:all .3s cubic-bezier(.2,.7,.2,1)}
+.cur-card{display:block;text-decoration:none;color:inherit;position:relative;background:var(--surf);border:1px solid var(--line2);border-radius:18px;padding:30px 30px 26px;cursor:pointer;overflow:hidden;transition:all .3s cubic-bezier(.2,.7,.2,1)}
 .cur-card::after{content:'';position:absolute;inset:0;border-radius:18px;padding:1px;background:linear-gradient(130deg,var(--gold),transparent 40%,transparent 60%,var(--aqua));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s}
 .cur-card:hover{transform:translateY(-4px);background:var(--surf2)}
 .cur-card:hover::after{opacity:1}
@@ -561,6 +576,22 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
           <div class="state-row"><span>Telegram</span><b class="aq" id="statusTelegram">EA-only lifecycle</b></div>
           <div class="state-row"><span>Last status</span><b id="statusUpdated">Repository snapshot</b></div>
         </div>
+        <div class="mt5-monitor" aria-label="Schematic MT5 monitoring panel">
+          <div class="mt5-head"><b>MMM Regime Candidate</b><span>MT5 monitor</span></div>
+          <div class="mt5-body">
+            <div class="mt5-signal"><strong>WAIT</strong><span>Research only</span></div>
+            <div class="mt5-bars">
+              <div class="mt5-row"><span>Bias</span><div class="mt5-track"><div class="mt5-fill" style="width:72%"></div></div><b>H1</b></div>
+              <div class="mt5-row"><span>Liquidity</span><div class="mt5-track"><div class="mt5-fill" style="width:48%"></div></div><b>M15</b></div>
+              <div class="mt5-row"><span>Session</span><div class="mt5-track"><div class="mt5-fill" style="width:61%"></div></div><b>NY</b></div>
+            </div>
+            <div class="mt5-foot">
+              <div class="mt5-cell"><small>Signal</small><b>No trade</b></div>
+              <div class="mt5-cell"><small>Block</small><b>Waiting</b></div>
+              <div class="mt5-cell"><small>Public</small><b>Quiet</b></div>
+            </div>
+          </div>
+        </div>
         <p class="desk-note">System status is public operational metadata, not an execution feed. <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">Review the public engineering notes</a>.</p>
       </aside>
     </div>
@@ -713,33 +744,33 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     <div class="shead rv">
       <div class="ey">Complete Curriculum · Master the System</div>
       <h2>From confused to <em>composed.</em></h2>
-      <p class="intro">Four structured tracks take you from reading a candle to running the full method with discipline. Tap any track to see every lesson inside.</p>
+      <p class="intro">Four structured tracks take you from reading a candle to running the full method with discipline. Open any track to see the lessons directly.</p>
     </div>
     <div class="cur-grid rv">
-      <div class="cur-card" onclick="openCourse('structure')">
+      <a class="cur-card" href="learn/tracks/read-structure/">
         <div class="cur-top"><span class="cur-no">01</span><span class="cur-tag">Foundation</span></div>
         <h3>Read Structure</h3>
         <p>BOS, CHoCH, order blocks and fair value gaps — until naming them is instant and automatic.</p>
         <div class="cur-foot"><span>6 lessons · ~5 hrs</span><span class="open">Open track →</span></div>
-      </div>
-      <div class="cur-card" onclick="openCourse('liquidity')">
+      </a>
+      <a class="cur-card" href="learn/tracks/hunt-liquidity/">
         <div class="cur-top"><span class="cur-no">02</span><span class="cur-tag">Intermediate</span></div>
         <h3>Hunt Liquidity</h3>
         <p>Spot the sweep before the move. Stop being the stop-loss that funds the next candle.</p>
         <div class="cur-foot"><span>5 lessons · ~6 hrs</span><span class="open">Open track →</span></div>
-      </div>
-      <div class="cur-card" onclick="openCourse('timing')">
+      </a>
+      <a class="cur-card" href="learn/tracks/time-the-killzone/">
         <div class="cur-top"><span class="cur-no">03</span><span class="cur-tag">Intermediate</span></div>
         <h3>Time the Killzone</h3>
         <p>Trade the sessions that pay. Sit on your hands through the noise in between.</p>
         <div class="cur-foot"><span>4 lessons · ~3 hrs</span><span class="open">Open track →</span></div>
-      </div>
-      <div class="cur-card" onclick="openCourse('psychology')">
+      </a>
+      <a class="cur-card" href="learn/tracks/master-the-mind/">
         <div class="cur-top"><span class="cur-no">04</span><span class="cur-tag">Ongoing</span></div>
         <h3>Master the Mind</h3>
         <p>Risk rules, journaling and the self-reviews that make your edge survive a bad day.</p>
         <div class="cur-foot"><span>7 lessons · ongoing</span><span class="open">Open track →</span></div>
-      </div>
+      </a>
     </div>
     <div class="cur-note">Full track planned for The Matrix member beta.</div>
   </div>

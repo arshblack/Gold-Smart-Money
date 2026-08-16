@@ -9,6 +9,10 @@ reading_time: 10
 last_reviewed: 2026-08-16
 status: public
 prerequisites: []
+previous_title: "What a Sweep Does Not Prove"
+previous_url: /learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/
+next_title: "The Journal Entry You Write Before the Trade"
+next_url: /learn/tracks/master-the-mind/pre-trade-journal/
 ---
 # When the London Window Matters, and When It Doesn't
 

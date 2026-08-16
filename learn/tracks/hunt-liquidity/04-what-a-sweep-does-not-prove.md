@@ -9,6 +9,10 @@ reading_time: 8
 last_reviewed: 2026-08-16
 status: public
 prerequisites: [RL-LIQ-03]
+previous_title: "The Sweep That Isn't: Wick, Close, Follow-Through"
+previous_url: /learn/tracks/hunt-liquidity/sweep-that-isnt/
+next_title: "When the London Window Matters, and When It Doesn't"
+next_url: /learn/tracks/time-the-killzone/when-london-matters/
 ---
 # What a Sweep Does Not Prove
 

@@ -9,6 +9,8 @@ reading_time: 9
 last_reviewed: 2026-08-16
 status: public
 prerequisites: []
+previous_title: "When the London Window Matters, and When It Doesn't"
+previous_url: /learn/tracks/time-the-killzone/when-london-matters/
 ---
 # The Journal Entry You Write Before the Trade
 

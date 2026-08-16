@@ -9,32 +9,16 @@ reading_time: 9
 last_reviewed: 2026-08-16
 status: public
 prerequisites: []
+previous_title: "H1 Bias Before M15 Execution"
+previous_url: /learn/tracks/read-structure/h1-bias-before-m15/
+next_title: "What a Sweep Does Not Prove"
+next_url: /learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/
 ---
 # The Sweep That Isn't: Wick, Close, Follow-Through
 
 **Learning objective.** By the end of this lesson you will be able to apply a three-part qualitative test to any candidate liquidity sweep on XAUUSD, and — more importantly — say which specific part failed when one fails.
 
 **Prerequisite.** Hunt Liquidity lessons 1 and 2, plus structure labelling from Read Structure. The recap below covers the minimum.
-
----
-## Recap: what you need from lessons 1 and 2
-
-A **liquidity pool** is a price area where resting orders plausibly cluster. You do not need special data to locate one. Ask where you would put a stop if you were long, and you have found where most people put theirs: just beyond an obvious high or low that many traders can see.
-
-**Equal highs** (`EQH`) form when price reaches roughly the same level twice or more and turns away each time. Equal lows (`EQL`) are the mirror. The tighter and more obvious the level, the more visible it is — and visibility is the point. A level nobody can see holds nobody's stops.
-
-That is the entire setup for this lesson: an obvious level, with orders plausibly resting beyond it.
-
----
-## The thing this lesson is actually about
-
-Price reaches beyond an obvious level and comes back. Every day, on every timeframe, on every instrument.
-
-Most of the time it means nothing.
-
-The version taught almost everywhere goes: price sweeps liquidity, then reverses, so enter on the reversal. Stated that way it is unfalsifiable — any reach beyond a level followed by any return can be called a sweep after the fact, and any reach that keeps going gets quietly excluded as "not a real sweep." A rule that can only be applied backwards is not a rule.
-
-So this lesson is built the other way round. Instead of asking *was that a sweep*, it asks three separate questions with three separate answers, and treats a no on any one of them as information rather than as an inconvenience.
 
 ---
 <div class="market-lab">
@@ -97,6 +81,26 @@ So this lesson is built the other way round. Instead of asking *was that a sweep
     </details>
   </div>
 </div>
+
+---
+## Recap: what you need from lessons 1 and 2
+
+A **liquidity pool** is a price area where resting orders plausibly cluster. You do not need special data to locate one. Ask where you would put a stop if you were long, and you have found where most people put theirs: just beyond an obvious high or low that many traders can see.
+
+**Equal highs** (`EQH`) form when price reaches roughly the same level twice or more and turns away each time. Equal lows (`EQL`) are the mirror. The tighter and more obvious the level, the more visible it is — and visibility is the point. A level nobody can see holds nobody's stops.
+
+That is the entire setup for this lesson: an obvious level, with orders plausibly resting beyond it.
+
+---
+## The thing this lesson is actually about
+
+Price reaches beyond an obvious level and comes back. Every day, on every timeframe, on every instrument.
+
+Most of the time it means nothing.
+
+The version taught almost everywhere goes: price sweeps liquidity, then reverses, so enter on the reversal. Stated that way it is unfalsifiable — any reach beyond a level followed by any return can be called a sweep after the fact, and any reach that keeps going gets quietly excluded as "not a real sweep." A rule that can only be applied backwards is not a rule.
+
+So this lesson is built the other way round. Instead of asking *was that a sweep*, it asks three separate questions with three separate answers, and treats a no on any one of them as information rather than as an inconvenience.
 
 ---
 ## The three-part test
