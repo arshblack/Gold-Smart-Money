@@ -1,20 +1,20 @@
-# REFINED Liquidity Cycle
+# MMM Refined Liquidity Cycle
 
-REFINED Liquidity Cycle is the public showcase for an ongoing MetaTrader 5 trading research project. It documents the project direction, architecture, and collaboration boundaries without exposing the private Expert Advisor source code or proprietary signal logic.
+MMM Refined Liquidity Cycle is the public engineering and education layer for an ongoing MetaTrader 5 research project focused on gold (XAUUSD). It documents the project direction, architecture, testing discipline, and collaboration boundaries without exposing private Expert Advisor source code or proprietary signal logic.
 
 ## Overview
 
-This project explores structured market analysis, multi-timeframe context, liquidity concepts, dashboard design, alert workflows, and disciplined testing for an MT5 research EA.
+The project explores structured market analysis, multi-timeframe context, liquidity behavior, dashboard design, alert workflows, and disciplined testing for a rule-based MT5 Expert Advisor.
 
 The public repository is intentionally limited. It is designed for presentation, collaboration, and safe documentation only.
 
 ## What This Project Is About
 
-- MetaTrader 5 Expert Advisor research
-- Market structure and liquidity-based study
-- Multi-symbol research scope including XAUUSD, GBPUSD, and AUDJPY
-- Visual dashboards and signal communication workflows
-- Backtesting, demo testing, and documentation discipline
+- Gold-first MetaTrader 5 Expert Advisor research
+- Market structure, session, and liquidity-based study
+- TradingView research visualization and multi-timeframe context
+- Telegram communication for EA-confirmed trade events
+- Backtesting, demo forward testing, and documentation discipline
 - Educational research around automated trading systems
 
 ## What Is Public
@@ -29,8 +29,7 @@ The public repository is intentionally limited. It is designed for presentation,
 ## What Remains Private
 
 - Full EA source code
-- Exact entry and exit rules
-- Exact scoring and filtering logic
+- Exact entry, exit, scoring, and filtering rules
 - Risk sizing formulas and account-specific settings
 - Broker details, account identifiers, API keys, and Telegram tokens
 - Raw backtest exports, private research logs, and optimization files
@@ -41,6 +40,7 @@ The public repository is intentionally limited. It is designed for presentation,
 - MQL5
 - GitHub
 - Markdown documentation
+- TradingView charting and alert workflows
 - Telegram alert integration, configured privately
 - Strategy Tester and demo forward testing
 
@@ -48,27 +48,28 @@ The public repository is intentionally limited. It is designed for presentation,
 
 The private research system is organized around these broad layers:
 
-- Market context layer
+- Market context and multi-timeframe layer
 - Session and liquidity observation layer
-- Signal research layer
-- Risk control layer
-- Trade management layer
-- Dashboard and alert layer
-- Documentation and testing layer
+- Signal research and setup lifecycle layer
+- MetaTrader execution and risk-control layer
+- Trade management and result-recording layer
+- TradingView visualization and Telegram notification layer
+- Website presentation, documentation, and testing layer
 
-This public repo describes those layers at a safe level only. Implementation details remain private.
+MetaTrader 5 remains the execution authority. TradingView is used for analysis and research setup visualization; a TradingView setup is not a public executed signal until the EA confirms a trade. Telegram is a communication layer, not an execution authority.
 
 ## Roadmap
 
 - Keep the public documentation clean and professional
 - Maintain clear separation between showcase material and private research code
-- Expand safe notes as the research process matures
-- Add non-sensitive screenshots or summaries when appropriate
-- Continue validating the EA through demo testing and structured review
+- Document the gold-first architecture and lifecycle states
+- Add non-sensitive screenshots or dated evidence summaries when approved
+- Continue validating the EA through demo forward testing and structured review
+- Improve the public website without overstating performance
 
 ## Collaboration
 
-Collaboration is welcome around documentation, research process, testing structure, UI presentation, and high-level architecture. Private trading logic, exact signals, credentials, and account data are not shared through this repository.
+Collaboration is welcome around documentation, research process, testing structure, UI presentation, and high-level architecture. Private trading logic, exact signals, credentials, raw account data, and unreleased research remain outside this repository.
 
 ## Disclaimer
 
