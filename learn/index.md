@@ -85,7 +85,7 @@ There are **four method tracks**. Read them left to right: first learn to read s
   </a>
 </div>
 
-## Full 22-lesson map
+<h2 id="full-22-lesson-map">Full 22-lesson map</h2>
 
 <div class="full-map">
   <div class="map-track">

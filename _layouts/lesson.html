@@ -36,6 +36,9 @@ nav{position:sticky;top:0;z-index:20;background:rgba(8,9,13,.78);backdrop-filter
 .w.shell{padding:76px 34px 92px}
 .crumb{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
 .crumb a{text-decoration:none;color:var(--aqua)}
+.back-row{display:flex;gap:10px;flex-wrap:wrap;margin:-4px 0 26px}
+.back-row a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;border:1px solid var(--line2);background:rgba(18,21,30,.72);padding:8px 10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.back-row a:hover{border-color:var(--line);color:var(--goldl)}
 .meta{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 24px}
 .meta span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--line2);background:var(--surf);padding:6px 9px}
 article{max-width:790px;margin:0 auto}
@@ -157,6 +160,10 @@ footer{border-top:1px solid var(--line2);padding:28px 0;color:var(--mut);font-si
 <main class="w shell">
   <article>
     <div class="crumb"><a href="{{ '/learn/' | relative_url }}">Learn</a>{% if page.track %} / {{ page.track | replace: '-', ' ' }}{% endif %}</div>
+    <div class="back-row" aria-label="Page navigation">
+      <a href="{{ '/learn/' | relative_url }}">← Back to Learn</a>
+      <a href="{{ '/' | relative_url }}">Home</a>
+    </div>
     <div class="meta">
       {% if page.content_id %}<span>{{ page.content_id }}</span>{% endif %}
       {% if page.level %}<span>{{ page.level }}</span>{% endif %}
