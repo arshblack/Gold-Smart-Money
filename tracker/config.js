@@ -1,0 +1,2 @@
+window.REFINED_SUPABASE_URL = 'https://oddiyreupoqobckwerxv.supabase.co';
+window.REFINED_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9kZGl5cmV1cG9xb2Jja3dlcnh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNjI3MjUsImV4cCI6MjA4ODgzODcyNX0.h5qLi9x9KENWSu-YlOLHChjqRW-aQuwvEN3NnSKerTA';
