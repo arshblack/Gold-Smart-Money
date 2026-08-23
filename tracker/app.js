@@ -143,9 +143,22 @@ function renderTrades() {
 async function handleMagicLink(event) {
   event.preventDefault();
   const email = $('email').value.trim();
+  const submitButton = event.target.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.setAttribute('aria-busy', 'true');
+  window.setTimeout(() => {
+    submitButton.disabled = false;
+    submitButton.removeAttribute('aria-busy');
+  }, 10000);
   showMessage('authMessage', 'Sending your secure link...');
   const { error } = await db.auth.signInWithOtp({ email, options: { emailRedirectTo: `${window.location.origin}${window.location.pathname}` } });
-  if (error) { showMessage('authMessage', error.message, true); return; }
+  if (error) {
+    const message = /rate limit|too many requests/i.test(error.message || '')
+      ? 'Email delivery is temporarily rate-limited. Please wait before requesting another link, or connect custom SMTP for production access.'
+      : error.message || 'We could not send your sign-in link. Please try again.';
+    showMessage('authMessage', message, true);
+    return;
+  }
   showMessage('authMessage', 'Check your email. The link will return you to your private tracker.');
 }
 
