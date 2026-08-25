@@ -583,7 +583,6 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
           <div class="state-row"><span>Daily cap</span><b>$400</b></div>
           <div class="state-row"><span>Research cap</span><b>$800</b></div>
           <div class="state-row"><span>Telegram</span><b class="aq" id="statusTelegram">EA-only lifecycle</b></div>
-          <div class="state-row"><span>Last status</span><b id="statusUpdated">Repository snapshot</b></div>
         </div>
         <div class="mt5-monitor" aria-label="Schematic MT5 monitoring panel">
           <div class="mt5-head"><b>MMM Regime Candidate</b><span>MT5 monitor</span></div>
@@ -612,7 +611,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <button class="life-step" type="button" data-life="closed"><small>05</small><strong>T3 / closed</strong><span>View state</span></button>
       <button class="life-step" type="button" data-life="archived"><small>06</small><strong>Evidence archived</strong><span>View state</span></button>
     </div>
-    <p class="data-note rv">TradingView widget data may be real-time or delayed depending on the selected market feed and viewer entitlements. It is independent from the broker prices used by the MT5 EA. System status is currently a repository snapshot and is designed to move to a sanitized Cloudflare endpoint later.</p>
+    <p class="data-note rv">TradingView widget data may be real-time or delayed depending on the selected market feed and viewer entitlements. It is independent from the broker prices used by the MT5 EA. Public system state is sanitized operational context and is designed to move to a Cloudflare endpoint later.</p>
   </div>
 </section>
 
@@ -906,14 +905,7 @@ async function loadSystemStatus(){
     put('statusHeadline',status.headline);
     put('statusDetail',status.detail);
     put('statusTelegram',status.telegram);
-    if(status.updatedAt){
-      const stamp=new Date(status.updatedAt);
-      put('statusUpdated',Number.isNaN(stamp.getTime())?'Repository snapshot':stamp.toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'}));
-    }
-  }catch(error){
-    const updated=document.getElementById('statusUpdated');
-    if(updated)updated.textContent='Repository snapshot';
-  }
+  }catch(error){}
 }
 loadSystemStatus();
 
