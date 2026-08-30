@@ -14,6 +14,8 @@ last_reviewed: 2026-08-16
 
 You do not need to understand the whole system before you begin. The beginner path teaches the order mechanics first. The 22-lesson method map then moves from structure to liquidity, timing, and review.
 
+Prefer to answer one question before starting a track? [Gold Notes]({{ '/gold-notes/' | relative_url }}) covers XAUUSD, gold pips and points, and the forces that move gold in a shorter editorial format. Articles are the reading desk; the curriculum below remains the structured method.
+
 <div class="notice">
 Setups marked on TradingView are research until the MT5 EA confirms execution. Manual trades stay outside the public record.
 </div>

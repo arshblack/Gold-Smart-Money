@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://refined.automationssaas.com/sitemap.xml

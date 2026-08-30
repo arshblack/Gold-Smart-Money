@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title }} | Refined Liquidity</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title }} | Refined Liquidity">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,6 +186,7 @@ footer{border-top:1px solid var(--line2);padding:28px 0;color:var(--mut);font-si
       <a href="{{ '/#gold-desk' | relative_url }}">Gold Desk</a>
       <a href="{{ '/#methodology' | relative_url }}">Methodology</a>
       <a href="{{ '/learn/' | relative_url }}">Learn</a>
+      <a href="{{ '/gold-notes/' | relative_url }}">Gold Notes</a>
       <a href="{{ '/#automation' | relative_url }}">Automation</a>
     </div>
     <a class="nav-start" href="{{ '/learn/start-here/' | relative_url }}">Start here</a>

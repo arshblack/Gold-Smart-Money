@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Refined Liquidity — Trade the Cycle</title>
 <meta name="description" content="Refined Liquidity is a gold-first research and education platform documenting the MMM Liquidity Cycle methodology, EA engineering, and controlled forward testing.">
+<link rel="canonical" href="https://refined.automationssaas.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Refined Liquidity — Trade the Cycle">
+<meta property="og:description" content="Gold-first education, market context, and controlled MMM EA engineering.">
+<meta property="og:url" content="https://refined.automationssaas.com/">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -322,6 +328,25 @@ section{position:relative;padding:88px 0}
 .cur-card:hover .cur-foot .open{gap:11px}
 .cur-note{text-align:center;margin-top:30px;font-family:var(--mono);font-size:11px;color:var(--mut2);letter-spacing:.06em}
 
+/* ─────────── GOLD NOTES ─────────── */
+#gold-notes{background:var(--bg2);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.notes-home-head{display:grid;grid-template-columns:1fr .65fr;gap:70px;align-items:end;margin-bottom:42px}
+.notes-home-head h2{font-family:var(--display);font-size:clamp(42px,6vw,70px);font-weight:500;line-height:.96;margin:18px 0 0}
+.notes-home-head h2 em{font-weight:400;color:var(--gold)}
+.notes-home-head p{color:var(--ink2);font-size:15px;margin:0 0 4px}
+.notes-home-ledger{border-top:1px solid var(--line)}
+.notes-home-row{display:grid;grid-template-columns:58px minmax(0,1fr) 180px 24px;gap:22px;align-items:center;padding:25px 0;border-bottom:1px solid var(--line2);transition:padding .2s,background .2s}
+.notes-home-row:hover{padding-left:10px;background:rgba(255,255,255,.018)}
+.notes-home-row .nn{font-family:var(--display);font-size:31px;font-style:italic;color:var(--mut2)}
+.notes-home-row h3{font-family:var(--display);font-size:29px;font-weight:500;line-height:1.05;margin:0 0 5px}
+.notes-home-row p{font-size:12.5px;color:var(--mut);margin:0;max-width:620px}
+.notes-home-row .nm{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);text-align:right}
+.notes-home-row .na{color:var(--gold);font-size:18px;text-align:right}
+.notes-home-foot{display:flex;justify-content:space-between;gap:22px;align-items:center;margin-top:28px}
+.notes-home-foot p{font-family:var(--mono);font-size:10px;letter-spacing:.07em;color:var(--mut);max-width:680px}
+.notes-home-foot a{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:4px}
+@media(max-width:760px){.notes-home-head{grid-template-columns:1fr;gap:18px}.notes-home-row{grid-template-columns:38px 1fr 20px;gap:12px}.notes-home-row .nm{grid-column:2;text-align:left}.notes-home-row .na{grid-column:3;grid-row:1/3}.notes-home-row h3{font-size:25px}.notes-home-foot{display:block}.notes-home-foot a{display:inline-block;margin-top:14px}}
+
 /* ─────────── COMMUNITY ─────────── */
 #community{background:linear-gradient(180deg,var(--bg2),var(--bg))}
 .comm-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
@@ -465,10 +490,9 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     <div class="nlinks">
       <a href="learn/start-here/">Start Here</a>
       <a href="#gold-desk">Gold Desk</a>
-      <a href="#methodology">Methodology</a>
-      <a href="#automation">Automation</a>
       <a href="learn/">Learn</a>
-      <a href="tracker/">30-Day Tracker</a>
+      <a href="gold-notes/">Gold Notes</a>
+      <a href="#automation">Automation</a>
     </div>
     <div class="nav-cta">
       <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="join">Join the Community →</a>
@@ -482,6 +506,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     <a href="#methodology" onclick="toggleMenu()">Methodology</a>
     <a href="#automation" onclick="toggleMenu()">Automation</a>
     <a href="learn/" onclick="toggleMenu()">Learn</a>
+    <a href="gold-notes/" onclick="toggleMenu()">Gold Notes</a>
     <a href="tracker/" onclick="toggleMenu()">30-Day Tracker</a>
     <a href="#founder" onclick="toggleMenu()">Founder</a>
     <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener">Join the Community →</a>
@@ -783,6 +808,31 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
   </div>
 </section>
 
+<!-- GOLD NOTES -->
+<section id="gold-notes">
+  <div class="w">
+    <div class="notes-home-head">
+      <div>
+        <div class="ey rv">Gold Notes · Search-led education</div>
+        <h2 class="rv">One clear question.<br><em>One useful answer.</em></h2>
+      </div>
+      <p class="rv">Gold Notes is the public reading desk: plain-language answers for traders who are not ready for a full course track yet. Each note continues into the right lesson when the foundation is clear.</p>
+    </div>
+    <div class="notes-home-ledger rv">
+      <a class="notes-home-row" href="gold-notes/what-is-xauusd/">
+        <span class="nn">01</span><div><h3>What Is XAUUSD?</h3><p>The quote, the feed, and the broker details a beginner actually needs.</p></div><span class="nm">Foundations · 7 min</span><span class="na">→</span>
+      </a>
+      <a class="notes-home-row" href="gold-notes/gold-pips-points/">
+        <span class="nn">02</span><div><h3>Gold Pips, Points, and Dollars</h3><p>Why two traders can describe the same move with different pip counts.</p></div><span class="nm">Risk mechanics · 8 min</span><span class="na">→</span>
+      </a>
+      <a class="notes-home-row" href="gold-notes/what-moves-gold/">
+        <span class="nn">03</span><div><h3>What Moves Gold?</h3><p>A pressure map for the dollar, real yields, risk, news, and participation.</p></div><span class="nm">Market context · 10 min</span><span class="na">→</span>
+      </a>
+    </div>
+    <div class="notes-home-foot rv"><p>Articles answer search questions. Lessons teach the method. TradingView marks research context. MT5 remains the execution record.</p><a href="gold-notes/">Open all Gold Notes →</a></div>
+  </div>
+</section>
+
 <!-- CURRICULUM -->
 <section id="curriculum">
   <div class="w">
@@ -898,7 +948,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       Refined Liquidity · Arshly Phiri · Education + Automation
     </div>
     <div class="foot-links">
-      <a href="#cycle">Cycle</a><a href="#curriculum">Curriculum</a>
+      <a href="#cycle">Cycle</a><a href="#curriculum">Curriculum</a><a href="gold-notes/">Gold Notes</a>
       <a href="tracker/">30-Day Tracker</a>
       <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">GitHub</a>
       <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener">Telegram</a>

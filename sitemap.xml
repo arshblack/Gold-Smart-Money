@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ '/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/learn/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/learn/start-here/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/gold-notes/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/gold-notes/what-is-xauusd/' | absolute_url }}</loc><lastmod>2026-08-30</lastmod></url>
+  <url><loc>{{ '/gold-notes/gold-pips-points/' | absolute_url }}</loc><lastmod>2026-08-30</lastmod></url>
+  <url><loc>{{ '/gold-notes/what-moves-gold/' | absolute_url }}</loc><lastmod>2026-08-30</lastmod></url>
+  <url><loc>{{ '/learn/tracks/read-structure/h1-bias-before-m15/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/learn/tracks/hunt-liquidity/sweep-that-isnt/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/learn/tracks/time-the-killzone/when-london-matters/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/learn/tracks/master-the-mind/pre-trade-journal/' | absolute_url }}</loc></url>
+</urlset>

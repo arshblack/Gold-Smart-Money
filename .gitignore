@@ -41,6 +41,8 @@ reports/**/*.html
 backtest-results/**/*.html
 tester/**/*.html
 *.xml
+!sitemap.xml
+!feed.xml
 *.tst
 *.csv
 *.xlsx

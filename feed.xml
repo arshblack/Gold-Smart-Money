@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Refined Liquidity Gold Notes</title>
+  <link href="{{ '/feed.xml' | absolute_url }}" rel="self"/>
+  <link href="{{ '/gold-notes/' | absolute_url }}"/>
+  <updated>2026-08-30T18:00:00Z</updated>
+  <id>{{ '/gold-notes/' | absolute_url }}</id>
+  <entry><title>What Moves Gold?</title><link href="{{ '/gold-notes/what-moves-gold/' | absolute_url }}"/><id>{{ '/gold-notes/what-moves-gold/' | absolute_url }}</id><updated>2026-08-30T18:00:00Z</updated><summary>A practical map of the dollar, real yields, uncertainty, positioning, news, and volume.</summary></entry>
+  <entry><title>Gold Pips, Points, and Dollars</title><link href="{{ '/gold-notes/gold-pips-points/' | absolute_url }}"/><id>{{ '/gold-notes/gold-pips-points/' | absolute_url }}</id><updated>2026-08-30T18:00:00Z</updated><summary>Why gold pip counts differ and how to communicate price distance and risk clearly.</summary></entry>
+  <entry><title>What Is XAUUSD?</title><link href="{{ '/gold-notes/what-is-xauusd/' | absolute_url }}"/><id>{{ '/gold-notes/what-is-xauusd/' | absolute_url }}</id><updated>2026-08-30T18:00:00Z</updated><summary>A beginner guide to the XAUUSD quote, feeds, and broker specifications.</summary></entry>
+</feed>

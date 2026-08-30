@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | Refined Liquidity</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="{% if page.page_type == 'article' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page.title }} | Refined Liquidity">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title }} | Refined Liquidity">
+<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+<link rel="alternate" type="application/atom+xml" title="Refined Liquidity Gold Notes" href="{{ '/feed.xml' | absolute_url }}">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/editorial.css' | relative_url }}">
+{% if page.page_type == 'article' %}
+<script type="application/ld+json">{
+  "@context":"https://schema.org","@type":"Article",
+  "headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},
+  "datePublished":{{ page.published | jsonify }},"dateModified":{{ page.updated | default: page.published | jsonify }},
+  "author":{"@type":"Person","name":"Arshly Phiri"},
+  "publisher":{"@type":"Organization","name":"Refined Liquidity"},
+  "mainEntityOfPage":{{ page.url | absolute_url | jsonify }}
+}</script>
+{% endif %}
+</head>
+<body>
+<nav class="editorial-nav">
+  <div class="w editorial-nav-in">
+    <a class="editorial-brand" href="{{ '/' | relative_url }}">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke="#E9C97A" stroke-width="1.2"/><circle cx="16" cy="16" r="3" fill="#E9C97A"/></svg>
+      <b>Refined <span>Liquidity</span></b>
+    </a>
+    <div class="editorial-links">
+      <a href="{{ '/learn/start-here/' | relative_url }}">Start Here</a>
+      <a href="{{ '/learn/' | relative_url }}">Learn</a>
+      <a href="{{ '/gold-notes/' | relative_url }}" aria-current="page">Gold Notes</a>
+      <a href="{{ '/#gold-desk' | relative_url }}">Gold Desk</a>
+      <a href="{{ '/#automation' | relative_url }}">Automation</a>
+    </div>
+    <a class="editorial-start" href="{{ '/learn/start-here/' | relative_url }}">Start here</a>
+  </div>
+</nav>
+<div class="read-progress" aria-hidden="true"></div>
+<main class="w editorial-main">
+  <div class="editorial-crumb"><a href="{{ '/' | relative_url }}">Home</a><i></i><a href="{{ '/gold-notes/' | relative_url }}">Gold Notes</a>{% if page.page_type == 'article' %}<i></i><span>{{ page.topic }}</span>{% endif %}</div>
+  {% if page.page_type == 'article' %}
+  <header class="article-header">
+    <div class="article-index"><b>Gold Note {{ page.note_number }}</b><span>{{ page.topic }}</span><span>{{ page.reading_time }} min read</span><span>{{ page.published }}</span></div>
+    <div>
+      <div class="article-kicker">{{ page.query }}</div>
+      <h1>{{ page.title }}</h1>
+      <p class="article-dek">{{ page.dek }}</p>
+      <div class="article-meta"><span>Written by Arshly Phiri</span><span>Reviewed {{ page.updated | default: page.published }}</span><span>Education, not a signal</span></div>
+    </div>
+  </header>
+  <div class="article-shell">
+    <aside class="article-rail" aria-label="Article route">
+      <small>Continue learning</small>
+      <a href="{{ page.lesson_url | relative_url }}">{{ page.lesson_title }}</a>
+      <a href="{{ '/learn/start-here/' | relative_url }}">Gold Foundations</a>
+      <a href="{{ '/#gold-desk' | relative_url }}">Gold Desk</a>
+    </aside>
+    <article class="article-body">
+      {{ content }}
+      <div class="article-next">
+        <div><small>Next step</small><strong>{{ page.lesson_title }}</strong></div>
+        <a href="{{ page.lesson_url | relative_url }}">Open lesson →</a>
+      </div>
+    </article>
+  </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</main>
+<footer class="editorial-footer"><div class="w editorial-footer-in"><span>Refined Liquidity · Gold-first education and engineering</span><span><a href="{{ '/learn/' | relative_url }}">Curriculum</a> · <a href="https://t.me/+C0YWOPmOFu02YmVk">Telegram</a> · Education, not financial advice</span></div></footer>
+<script src="{{ '/assets/editorial.js' | relative_url }}" defer></script>
+</body>
+</html>

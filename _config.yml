@@ -16,3 +16,7 @@ defaults:
       path: "learn"
     values:
       layout: "lesson"
+  - scope:
+      path: "gold-notes"
+    values:
+      layout: "editorial"
