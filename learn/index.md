@@ -9,13 +9,33 @@ last_reviewed: 2026-08-16
 # Learn Refined Liquidity
 
 <div class="learn-hero">
-  <p>The curriculum is built like a trading desk: context first, setup second, execution record last. Each public preview includes a schematic lab so you can see the idea before you try to name it on your own chart.</p>
+  <p>Choose the path that matches what you know today. Start with platform mechanics, learn the four-part method, or go directly to the public gold research desk.</p>
 </div>
 
-The public curriculum is a controlled preview of the full Refined Liquidity education path. The first release keeps the 22-lesson map intact, publishes five flagship previews, and holds the remaining lessons for The Matrix member beta.
+You do not need to understand the whole system before you begin. The beginner path teaches the order mechanics first. The 22-lesson method map then moves from structure to liquidity, timing, and review.
 
 <div class="notice">
 Setups marked on TradingView are research until the MT5 EA confirms execution. Manual trades stay outside the public record.
+</div>
+
+## Choose your starting point
+
+<div class="path-picker" id="start-here">
+  <a class="path-card" href="{{ '/learn/start-here/' | relative_url }}">
+    <small>New to trading or MT5</small>
+    <strong>Start with Gold Foundations</strong>
+    <p>Learn XAUUSD, points and pips, lot size, entry, stop loss, take profit, and demo checks.</p>
+  </a>
+  <a class="path-card" href="{{ '/learn/tracks/read-structure/' | relative_url }}">
+    <small>I know the mechanics</small>
+    <strong>Learn the Method</strong>
+    <p>Begin with H1 structure, then add liquidity, session context, and an honest execution record.</p>
+  </a>
+  <a class="path-card" href="{{ '/#gold-desk' | relative_url }}">
+    <small>I follow the research</small>
+    <strong>Open the Gold Desk</strong>
+    <p>See the public chart, system state, and the boundary between TradingView research and MT5 execution.</p>
+  </a>
 </div>
 
 ## How the course is structured
@@ -56,10 +76,10 @@ There are **four method tracks**. Read them left to right: first learn to read s
   </div>
 </div>
 
-<div class="start-here" id="start-here">
-  <small>Start here</small>
-  <p>If you already know MT5 basics, start with Track 01 and read the five public previews in order. If you are still learning pips, lots, SL/TP, or MT5 history, the Gold Trading Foundations pathway is planned next.</p>
-  <a href="{{ '/learn/tracks/read-structure/h1-bias-before-m15/' | relative_url }}">Begin with H1 bias</a>
+<div class="start-here">
+  <small>Recommended order</small>
+  <p>Foundations → Read Structure → Hunt Liquidity → Time the Killzone → Master the Mind. The five live previews are complete lessons; beta labels mean the remaining lesson is mapped but not yet published.</p>
+  <a href="{{ '/learn/start-here/' | relative_url }}">Begin at Foundations</a>
 </div>
 
 <div class="learn-grid">
@@ -86,6 +106,8 @@ There are **four method tracks**. Read them left to right: first learn to read s
 </div>
 
 <h2 id="full-22-lesson-map">Full 22-lesson map</h2>
+
+The map below contains the **22 method lessons**. Gold Foundations sits before Track 01 and is available now as the beginner entry point.
 
 <div class="full-map">
   <div class="map-track">

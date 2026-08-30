@@ -43,7 +43,7 @@ Lessons 1–5: **Full track planned for The Matrix member beta.**
 
 None. This is the entry point to the Refined Liquidity method — every other track assumes it.
 
-If you are new to MetaTrader 5 itself, or unsure how pips, lots, and contract size work on your broker, start with **Gold Trading Foundations** first. That track teaches the platform and the mechanics. This one teaches the method.
+If you are new to MetaTrader 5 itself, or unsure how pips, lots, and contract size work on your broker, start with [Gold Trading Foundations]({{ '/learn/start-here/' | relative_url }}) first. That path teaches the platform and the mechanics. This track teaches the method.
 
 ## Editorial note
 
