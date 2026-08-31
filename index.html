@@ -579,17 +579,17 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
   <div class="w">
     <div class="desk-head">
       <div>
-        <div class="ey rv">Gold Desk · Market + System State</div>
-        <h2 class="rv">See the market.<br><em>Know the evidence.</em></h2>
+        <div class="ey rv">Gold Desk · Public Research View</div>
+        <h2 class="rv">Live chart.<br><em>Honest system model.</em></h2>
       </div>
-      <p class="desk-intro rv">TradingView provides market context. MetaTrader 5 remains the authority for EA execution, trade management and realized results. Research states never become public signals until the EA confirms an entry.</p>
+      <p class="desk-intro rv">The TradingView chart below is live or feed-delayed according to each viewer's market entitlement. The adjacent MetaTrader panel is an educational model of the EA workflow, not live account telemetry. MT5 remains the authority for actual execution and realized results.</p>
     </div>
     <div class="desk-strip rv" aria-label="System overview">
       <div class="desk-stat"><small>Instrument</small><strong class="gd" id="statusSymbol">XAUUSD · Gold</strong></div>
       <div class="desk-stat"><small>Mode</small><strong id="statusMode">Demo forward test</strong></div>
       <div class="desk-stat"><small>Execution</small><strong>MetaTrader 5 EA</strong></div>
       <div class="desk-stat"><small>Public updates</small><strong>EA-confirmed only</strong></div>
-      <div class="desk-stat"><small>Current state</small><strong class="aq" id="statusState">Monitoring</strong></div>
+      <div class="desk-stat"><small>Page state</small><strong class="aq" id="statusState">Public research view</strong></div>
     </div>
     <div class="desk-grid">
       <div class="market-tool rv">
@@ -636,9 +636,9 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       </div>
       <aside class="desk-panel rv" aria-label="MMM system state">
         <div class="desk-panel-top">
-          <span class="mode-badge"><i></i><span id="statusBadge">Controlled research</span></span>
-          <h3 id="statusHeadline">Waiting for a qualified gold setup</h3>
-          <p id="statusDetail">Potential setups can appear on TradingView. Only an MT5-confirmed EA entry is published to the Telegram signal record.</p>
+          <span class="mode-badge"><i></i><span id="statusBadge">Illustrative workflow</span></span>
+          <h3 id="statusHeadline">How a setup becomes public</h3>
+          <p id="statusDetail">Use the lifecycle below to inspect each stage. This panel explains the reporting logic; it does not claim that the EA is currently entering or monitoring a New York setup.</p>
         </div>
         <div class="state-list">
           <div class="state-row"><span>Risk / trade</span><b class="gd">$100 fixed · demo</b></div>
@@ -646,23 +646,23 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
           <div class="state-row"><span>Research cap</span><b>$800</b></div>
           <div class="state-row"><span>Telegram</span><b class="aq" id="statusTelegram">EA-only lifecycle</b></div>
         </div>
-        <div class="mt5-monitor" aria-label="Schematic MT5 monitoring panel">
-          <div class="mt5-head"><b>MMM Regime Candidate</b><span>MT5 monitor</span></div>
+        <div class="mt5-monitor" aria-label="Illustrative MT5 workflow panel">
+          <div class="mt5-head"><b>MMM Regime Candidate</b><span>Illustrative panel</span></div>
           <div class="mt5-body">
-            <div class="mt5-signal"><strong>WAIT</strong><span>Research only</span></div>
+            <div class="mt5-signal"><strong>MODEL</strong><span>Not live account data</span></div>
             <div class="mt5-bars">
               <div class="mt5-row"><span>Bias</span><div class="mt5-track"><div class="mt5-fill" style="width:72%"></div></div><b>H1</b></div>
               <div class="mt5-row"><span>Liquidity</span><div class="mt5-track"><div class="mt5-fill" style="width:48%"></div></div><b>M15</b></div>
-              <div class="mt5-row"><span>Session</span><div class="mt5-track"><div class="mt5-fill" style="width:61%"></div></div><b>NY</b></div>
+              <div class="mt5-row"><span>Timing</span><div class="mt5-track"><div class="mt5-fill" style="width:61%"></div></div><b>Context</b></div>
             </div>
             <div class="mt5-foot">
-              <div class="mt5-cell"><small>Signal</small><b>No trade</b></div>
-              <div class="mt5-cell"><small>Block</small><b>Waiting</b></div>
-              <div class="mt5-cell"><small>Public</small><b>Quiet</b></div>
+              <div class="mt5-cell"><small>Research</small><b>Context</b></div>
+              <div class="mt5-cell"><small>Authority</small><b>MT5 EA</b></div>
+              <div class="mt5-cell"><small>Public</small><b>After entry</b></div>
             </div>
           </div>
         </div>
-        <p class="desk-note">System status is public operational metadata, not an execution feed. <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">Review the public engineering notes</a>.</p>
+        <p class="desk-note">This schematic teaches the decision flow. It will be labelled live only after a sanitized, timestamped MT5 endpoint is connected. <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">Review the public engineering notes</a>.</p>
       </aside>
     </div>
     <div class="lifecycle rv" aria-label="Public signal lifecycle">
@@ -673,7 +673,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <button class="life-step" type="button" data-life="closed"><small>05</small><strong>T3 / closed</strong><span>View state</span></button>
       <button class="life-step" type="button" data-life="archived"><small>06</small><strong>Evidence archived</strong><span>View state</span></button>
     </div>
-    <p class="data-note rv">TradingView widget data may be real-time or delayed depending on the selected market feed and viewer entitlements. It is independent from the broker prices used by the MT5 EA. Public system state is sanitized operational context and is designed to move to a Cloudflare endpoint later.</p>
+    <p class="data-note rv">TradingView widget data may be real-time or delayed depending on the selected market feed and viewer entitlements. It is independent from the broker prices used by the MT5 EA. The lifecycle and MT5 interface shown here are explanatory, not current account status. A future live state requires a sanitized, timestamped Cloudflare endpoint.</p>
   </div>
 </section>
 

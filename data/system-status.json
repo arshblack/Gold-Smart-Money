@@ -1,9 +1,9 @@
 {
   "symbol": "XAUUSD · Gold",
   "mode": "Demo forward test",
-  "state": "Monitoring",
-  "badge": "Controlled research",
-  "headline": "Waiting for a qualified gold setup",
-  "detail": "Potential setups can appear on TradingView. Only an MT5-confirmed EA entry is published to the Telegram signal record.",
+  "state": "Public research view",
+  "badge": "Illustrative workflow",
+  "headline": "How a setup becomes public",
+  "detail": "Use the lifecycle to inspect each reporting stage. This panel explains the EA workflow and is not live account telemetry.",
   "telegram": "EA-only lifecycle"
 }

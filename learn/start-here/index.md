@@ -20,17 +20,32 @@ last_reviewed: 2026-08-30
 
 This page gives you the minimum foundation needed to read an XAUUSD trade plan without guessing. Work from top to bottom on a demo account. The goal is not to place a trade today. The goal is to understand exactly what a trade would risk before you press a button.
 
-<div class="foundation-lab" aria-label="Interactive entry stop and target lab">
+<div class="foundation-lab" aria-label="Visual entry stop and target lab">
   <header>
     <div><small>Visual lab 01</small><strong>Entry, invalidation, and target</strong></div>
-    <span>Demo example</span>
+    <span>Long setup example</span>
   </header>
-  <div class="order-map" role="img" aria-label="A long trade with target above entry and stop below entry">
-    <div class="order-line target" data-label="Target" data-price="2R"></div>
-    <div class="order-line entry" data-label="Entry" data-price="0R"></div>
-    <div class="order-line stop" data-label="Stop / invalidation" data-price="-1R"></div>
-    <div class="order-path"></div>
+  <div class="trade-plan-visual" role="img" aria-label="Candlestick chart showing a long entry after a pullback, invalidation below structure, a partial objective at one R, and a final target at two R">
+    <svg viewBox="0 0 760 330" aria-hidden="true">
+      <defs>
+        <linearGradient id="rewardZone" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3FE0C5" stop-opacity=".04"/><stop offset="1" stop-color="#3FE0C5" stop-opacity=".18"/></linearGradient>
+        <linearGradient id="riskZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0683F" stop-opacity=".04"/><stop offset="1" stop-color="#E0683F" stop-opacity=".18"/></linearGradient>
+        <marker id="planArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#E9C97A"/></marker>
+      </defs>
+      <g class="plan-grid"><path d="M70 42H700M70 96H700M70 150H700M70 204H700M70 258H700M70 312H700"/><path d="M112 28V312M196 28V312M280 28V312M364 28V312M448 28V312M532 28V312M616 28V312"/></g>
+      <rect class="reward-zone" x="70" y="42" width="630" height="138" rx="2"/><rect class="risk-zone" x="70" y="180" width="630" height="92" rx="2"/>
+      <g class="plan-level target-level"><path d="M70 48H700"/><text x="82" y="40">FINAL TARGET · +2R</text><text x="686" y="40" text-anchor="end">TAKE PROFIT</text></g>
+      <g class="plan-level partial-level"><path d="M70 104H700"/><text x="82" y="96">FIRST OBJECTIVE · +1R</text><text x="686" y="96" text-anchor="end">PARTIAL / PROTECT</text></g>
+      <g class="plan-level entry-level"><path d="M70 180H700"/><text x="82" y="171">ENTRY · 0R</text><text x="686" y="171" text-anchor="end">RISK BEGINS HERE</text></g>
+      <g class="plan-level stop-level"><path d="M70 272H700"/><text x="82" y="292">INVALIDATION · -1R</text><text x="686" y="292" text-anchor="end">STOP LOSS</text></g>
+      <g class="candles">
+        <g class="candle up"><path d="M116 242V207"/><rect x="109" y="218" width="14" height="17"/></g><g class="candle up"><path d="M152 230V188"/><rect x="145" y="202" width="14" height="22"/></g><g class="candle down"><path d="M188 198V242"/><rect x="181" y="204" width="14" height="25"/></g><g class="candle up"><path d="M224 226V172"/><rect x="217" y="184" width="14" height="34"/></g><g class="candle up"><path d="M260 192V142"/><rect x="253" y="154" width="14" height="29"/></g><g class="candle down"><path d="M296 145V194"/><rect x="289" y="156" width="14" height="27"/></g><g class="candle down"><path d="M332 166V216"/><rect x="325" y="174" width="14" height="29"/></g><g class="candle up entry-candle"><path d="M368 214V166"/><rect x="361" y="178" width="14" height="27"/></g><g class="candle up"><path d="M404 186V134"/><rect x="397" y="145" width="14" height="34"/></g><g class="candle down"><path d="M440 136V170"/><rect x="433" y="142" width="14" height="19"/></g><g class="candle up"><path d="M476 158V106"/><rect x="469" y="116" width="14" height="34"/></g><g class="candle up"><path d="M512 122V78"/><rect x="505" y="88" width="14" height="28"/></g><g class="candle down"><path d="M548 72V112"/><rect x="541" y="82" width="14" height="21"/></g><g class="candle up"><path d="M584 96V48"/><rect x="577" y="58" width="14" height="31"/></g>
+      </g>
+      <path class="projected-path" d="M368 180 C430 150 486 104 584 48" marker-end="url(#planArrow)"/><circle class="entry-marker" cx="368" cy="180" r="7"/><text class="entry-callout" x="383" y="199">confirmation closes above entry</text>
+      <path class="risk-bracket" d="M718 180h14M725 180v92M718 272h14"/><text class="risk-copy" x="742" y="229" transform="rotate(90 742 229)">1R PLANNED RISK</text>
+    </svg>
   </div>
+  <div class="trade-plan-legend"><div><i class="legend-swatch reward"></i><span><b>Reward zone</b> begins only after entry.</span></div><div><i class="legend-swatch risk"></i><span><b>Risk zone</b> ends where the idea is invalid.</span></div><div><i class="legend-swatch path"></i><span>The path is a <b>scenario</b>, never a promise.</span></div></div>
 </div>
 
 ## 1. What XAUUSD means
