@@ -3,6 +3,11 @@ description: Gold-first research and education for the Refined Liquidity methodo
 baseurl: ""
 url: "https://refined.automationssaas.com"
 
+author:
+  name: Arshly Phiri
+  role: Founder and methodology lead
+  bio: Building Refined Liquidity as a gold-first education and trading-systems research platform. Every public lesson separates observable market evidence from inference and execution claims.
+
 exclude:
   - README.md
   - PUBLIC_DISCLOSURE.md

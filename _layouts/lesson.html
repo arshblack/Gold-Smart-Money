@@ -14,15 +14,23 @@
 <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">{
+  "@context":"https://schema.org","@type":"LearningResource",
+  "name":{{ page.title | jsonify }},"description":{{ page.description | default: site.description | jsonify }},
+  "author":{"@type":"Person","name":{{ site.author.name | jsonify }}},
+  "provider":{"@type":"Organization","name":"Refined Liquidity"},
+  "educationalLevel":{{ page.level | default: "All levels" | jsonify }},
+  "url":{{ page.url | absolute_url | jsonify }}
+}</script>
 <style>
 :root{
   --bg:#08090D; --bg2:#0C0E14; --surf:#12151E; --surf2:#191D28;
   --line:rgba(233,201,122,.16); --line2:rgba(255,255,255,.07); --line3:rgba(63,224,197,.18);
   --gold:#E9C97A; --goldl:#F4E3B0; --aqua:#3FE0C5;
   --ink:#F3F2EC; --ink2:#C9CCD4; --mut:#878D9C;
-  --display:'Cormorant Garamond',Georgia,serif;
-  --sans:'Space Grotesk',system-ui,sans-serif;
+  --display:'Newsreader',Georgia,serif;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
   --mono:'IBM Plex Mono',monospace;
 }
 *{box-sizing:border-box}
@@ -38,7 +46,10 @@ nav{position:sticky;top:0;z-index:20;background:rgba(8,9,13,.78);backdrop-filter
 .nlinks{display:flex;gap:22px;align-items:center}
 .nlinks a{font-size:13px;color:var(--ink2);text-decoration:none}
 .nlinks a:hover{color:var(--goldl)}
-.nav-start{display:none;text-decoration:none;border:1px solid var(--line);padding:7px 10px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--goldl)}
+.menu-toggle{display:none;width:38px;height:38px;border:1px solid var(--line2);background:var(--surf);color:var(--ink);align-items:center;justify-content:center;cursor:pointer}
+.menu-toggle span,.menu-toggle::before,.menu-toggle::after{content:'';display:block;width:16px;height:1px;background:currentColor;transition:transform .2s,opacity .2s}.menu-toggle span{margin:4px 0}
+.menu-toggle[aria-expanded="true"]::before{transform:translateY(5px) rotate(45deg)}.menu-toggle[aria-expanded="true"] span{opacity:0}.menu-toggle[aria-expanded="true"]::after{transform:translateY(-5px) rotate(-45deg)}
+.mobile-nav{display:none;background:var(--bg2);border-bottom:1px solid var(--line2);padding:10px 22px 18px}.mobile-nav a{display:block;padding:11px 0;border-bottom:1px solid var(--line2);text-decoration:none;color:var(--ink2);font-size:14px}.mobile-nav a:last-child{border-bottom:0}.mobile-nav[hidden]{display:none}
 .shell{padding:76px 0 92px}
 .w.shell{padding:76px 34px 92px}
 .crumb{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
@@ -168,11 +179,18 @@ code{font-family:var(--mono);font-size:.92em;color:var(--aqua);background:rgba(6
 .lesson-nav small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua);margin-bottom:5px}
 .lesson-nav strong{font-size:15px;color:inherit}
 .lesson-nav .next{text-align:right}
+.author-signoff{display:grid;grid-template-columns:48px 1fr auto;gap:15px;align-items:center;margin-top:48px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line2)}
+.author-mark{width:48px;height:48px;border:1px solid var(--gold);display:grid;place-items:center;font:500 18px var(--display);color:var(--goldl);background:var(--surf)}
+.author-copy small,.author-review{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--aqua)}.author-copy strong{display:block;margin:3px 0 4px;font-size:15px}.author-copy p{margin:0;font-size:12px;line-height:1.5;color:var(--mut)}.author-review{text-align:right;color:var(--mut);white-space:nowrap}
+.preview-route{display:grid;gap:1px;margin:24px 0 36px;background:var(--line2);border:1px solid var(--line2)}
+.preview-step{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:center;padding:16px;background:var(--surf);text-decoration:none}
+.preview-step:hover{background:var(--surf2)}.preview-step b{font:500 20px var(--display);color:var(--gold)}.preview-step strong{display:block}.preview-step p{margin:3px 0 0;font-size:12px;color:var(--mut)}.preview-step small{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--aqua)}
+.curriculum-disclosure{margin:32px 0;border:1px solid var(--line2);background:rgba(18,21,30,.72)}.curriculum-disclosure>summary{cursor:pointer;padding:16px 18px;font-weight:600;color:var(--goldl)}.curriculum-disclosure[open]>summary{border-bottom:1px solid var(--line2)}.curriculum-disclosure>.full-map{margin:18px}
 @keyframes drawPath{0%{stroke-dashoffset:850}18%,100%{stroke-dashoffset:0}}
 @keyframes drawSweep{0%,28%{stroke-dashoffset:260}48%,100%{stroke-dashoffset:0}}
 @keyframes candleIn{0%,18%{opacity:0;transform:translateY(10px)}28%,82%{opacity:1;transform:none}100%{opacity:0;transform:none}}
 footer{border-top:1px solid var(--line2);padding:28px 0;color:var(--mut);font-size:12px}
-@media(max-width:760px){.w{padding:0 22px}.w.shell{padding:50px 22px 82px}.nlinks{display:none}.nav-start{display:inline-flex}.shell{padding-top:50px}.learn-grid,.lab-steps,.inference-meter,.bias-panels,.course-path,.status-row,.lesson-nav,.path-picker,.calc-grid,.calc-output,.micro-check{grid-template-columns:1fr}.journal-row{grid-template-columns:1fr}.market-lab,.foundation-lab{padding:14px}.market-lab header,.foundation-lab>header{display:block}.market-lab header span,.foundation-lab>header span{display:inline-block;margin-top:10px}.lesson-list a{display:block}.lesson-list small{display:block;margin-top:6px}.map-grid{grid-template-columns:38px 1fr 72px}.lesson-nav .next{text-align:left}.trade-plan-legend{grid-template-columns:1fr}.trade-plan-legend>div{border-right:none;border-bottom:1px solid var(--line2)}.trade-plan-legend>div:last-child{border-bottom:none}.trade-plan-visual{overflow-x:auto}.trade-plan-visual svg{min-width:620px}}
+@media(max-width:760px){.w{padding:0 22px}.w.shell{padding:50px 22px 82px}.nlinks{display:none}.menu-toggle{display:flex}.mobile-nav:not([hidden]){display:block}.shell{padding-top:50px}.learn-grid,.lab-steps,.inference-meter,.bias-panels,.course-path,.status-row,.lesson-nav,.path-picker,.calc-grid,.calc-output,.micro-check{grid-template-columns:1fr}.journal-row{grid-template-columns:1fr}.market-lab,.foundation-lab{padding:14px}.market-lab header,.foundation-lab>header{display:block}.market-lab header span,.foundation-lab>header span{display:inline-block;margin-top:10px}.lesson-list a{display:block}.lesson-list small{display:block;margin-top:6px}.map-grid{grid-template-columns:38px 1fr 72px}.lesson-nav .next{text-align:left}.trade-plan-legend{grid-template-columns:1fr}.trade-plan-legend>div{border-right:none;border-bottom:1px solid var(--line2)}.trade-plan-legend>div:last-child{border-bottom:none}.trade-plan-visual{overflow-x:auto}.trade-plan-visual svg{min-width:620px}.author-signoff{grid-template-columns:44px 1fr}.author-mark{width:44px;height:44px}.author-review{grid-column:2;text-align:left}.preview-step{grid-template-columns:34px 1fr}.preview-step small{grid-column:2}}
 @media(prefers-reduced-motion:reduce){.lab-path,.lab-sweep,.lab-candle{animation:none;opacity:1;stroke-dashoffset:0}}
 </style>
 </head>
@@ -191,9 +209,17 @@ footer{border-top:1px solid var(--line2);padding:28px 0;color:var(--mut);font-si
       <a href="{{ '/gold-notes/' | relative_url }}">Gold Notes</a>
       <a href="{{ '/#automation' | relative_url }}">Automation</a>
     </div>
-    <a class="nav-start" href="{{ '/learn/start-here/' | relative_url }}">Start here</a>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="lesson-mobile-nav" aria-label="Open navigation"><span></span></button>
   </div>
 </nav>
+<div class="mobile-nav" id="lesson-mobile-nav" hidden>
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/learn/start-here/' | relative_url }}">Start Here</a>
+  <a href="{{ '/learn/' | relative_url }}">Learn</a>
+  <a href="{{ '/gold-notes/' | relative_url }}">Gold Notes</a>
+  <a href="{{ '/#gold-desk' | relative_url }}">Gold Desk</a>
+  <a href="{{ '/tracker/' | relative_url }}">30-Day Tracker</a>
+</div>
 <main class="w shell">
   <article>
     <div class="crumb"><a href="{{ '/learn/' | relative_url }}">Learn</a>{% if page.track %} / {{ page.track | replace: '-', ' ' }}{% endif %}</div>
@@ -208,6 +234,13 @@ footer{border-top:1px solid var(--line2);padding:28px 0;color:var(--mut);font-si
       {% if page.status %}<span>{{ page.status }}</span>{% endif %}
     </div>
     {{ content }}
+    {% unless page.permalink == '/learn/' %}
+    <div class="author-signoff" aria-label="About the author">
+      <div class="author-mark" aria-hidden="true">AP</div>
+      <div class="author-copy"><small>Authored by</small><strong>{{ site.author.name }}</strong><p>{{ site.author.role }}. {{ site.author.bio }}</p></div>
+      <div class="author-review">Reviewed<br>{{ page.last_reviewed | default: "Ongoing" }}</div>
+    </div>
+    {% endunless %}
     {% if page.previous_url or page.next_url %}
     <nav class="lesson-nav" aria-label="Lesson navigation">
       {% if page.previous_url %}
@@ -225,5 +258,6 @@ footer{border-top:1px solid var(--line2);padding:28px 0;color:var(--mut);font-si
 <footer>
   <div class="w">Refined Liquidity is educational research, not financial advice or a guarantee of profit.</div>
 </footer>
+<script src="{{ '/assets/site-nav.js' | relative_url }}" defer></script>
 </body>
 </html>

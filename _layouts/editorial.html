@@ -17,14 +17,14 @@
 <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/editorial.css' | relative_url }}">
 {% if page.page_type == 'article' %}
 <script type="application/ld+json">{
   "@context":"https://schema.org","@type":"Article",
   "headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},
   "datePublished":{{ page.published | jsonify }},"dateModified":{{ page.updated | default: page.published | jsonify }},
-  "author":{"@type":"Person","name":"Arshly Phiri"},
+  "author":{"@type":"Person","name":{{ site.author.name | jsonify }}},
   "publisher":{"@type":"Organization","name":"Refined Liquidity"},
   "mainEntityOfPage":{{ page.url | absolute_url | jsonify }}
 }</script>
@@ -44,9 +44,12 @@
       <a href="{{ '/#gold-desk' | relative_url }}">Gold Desk</a>
       <a href="{{ '/#automation' | relative_url }}">Automation</a>
     </div>
-    <a class="editorial-start" href="{{ '/learn/start-here/' | relative_url }}">Start here</a>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="editorial-mobile-nav" aria-label="Open navigation"><span></span></button>
   </div>
 </nav>
+<div class="mobile-nav" id="editorial-mobile-nav" hidden>
+  <a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/learn/start-here/' | relative_url }}">Start Here</a><a href="{{ '/learn/' | relative_url }}">Learn</a><a href="{{ '/gold-notes/' | relative_url }}">Gold Notes</a><a href="{{ '/#gold-desk' | relative_url }}">Gold Desk</a><a href="{{ '/tracker/' | relative_url }}">30-Day Tracker</a>
+</div>
 <div class="read-progress" aria-hidden="true"></div>
 <main class="w editorial-main">
   <div class="editorial-crumb"><a href="{{ '/' | relative_url }}">Home</a><i></i><a href="{{ '/gold-notes/' | relative_url }}">Gold Notes</a>{% if page.page_type == 'article' %}<i></i><span>{{ page.topic }}</span>{% endif %}</div>
@@ -69,6 +72,7 @@
     </aside>
     <article class="article-body">
       {{ content }}
+      <div class="author-signoff" aria-label="About the author"><div class="author-mark" aria-hidden="true">AP</div><div class="author-copy"><small>Written by</small><strong>{{ site.author.name }}</strong><p>{{ site.author.role }}. {{ site.author.bio }}</p></div><div class="author-review">Reviewed<br>{{ page.updated | default: page.published }}</div></div>
       <div class="article-next">
         <div><small>Next step</small><strong>{{ page.lesson_title }}</strong></div>
         <a href="{{ page.lesson_url | relative_url }}">Open lesson →</a>
@@ -81,5 +85,6 @@
 </main>
 <footer class="editorial-footer"><div class="w editorial-footer-in"><span>Refined Liquidity · Gold-first education and engineering</span><span><a href="{{ '/learn/' | relative_url }}">Curriculum</a> · <a href="https://t.me/+C0YWOPmOFu02YmVk">Telegram</a> · Education, not financial advice</span></div></footer>
 <script src="{{ '/assets/editorial.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/site-nav.js' | relative_url }}" defer></script>
 </body>
 </html>
