@@ -1,6 +1,6 @@
 ---
 permalink: /learn/start-here/
-title: "Start Here: Gold Trading Foundations"
+title: "Gold Trading Mechanics: A Short Guide"
 description: "A plain-language starting point for XAUUSD, pips, lot size, stop loss, take profit, and MT5 risk checks."
 content_id: RL-FND-START
 track: gold-foundations

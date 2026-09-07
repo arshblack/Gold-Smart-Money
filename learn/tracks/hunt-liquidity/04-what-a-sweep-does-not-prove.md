@@ -8,17 +8,17 @@ level: Intermediate
 reading_time: 8
 last_reviewed: 2026-08-16
 status: public
-prerequisites: [RL-LIQ-03]
-previous_title: "The Sweep That Isn't: Wick, Close, Follow-Through"
-previous_url: /learn/tracks/hunt-liquidity/sweep-that-isnt/
-next_title: "When the London Window Matters, and When It Doesn't"
-next_url: /learn/tracks/time-the-killzone/when-london-matters/
+prerequisites: []
+previous_title: "H1 Bias Before M15 Execution"
+previous_url: "/learn/tracks/read-structure/h1-bias-before-m15/"
+next_title: "The Sweep That Isn't: Wick, Close, Follow-Through"
+next_url: "/learn/tracks/hunt-liquidity/sweep-that-isnt/"
 ---
 # What a Sweep Does Not Prove
 
 **Learning objective.** By the end of this lesson you will be able to state precisely where observation ends and inference begins in the liquidity model, and explain why that boundary is a position-sizing decision rather than a philosophical one.
 
-**Prerequisite.** The three-part test from lesson 3. This lesson is its other half.
+**Start here for the evidence boundary.** A candidate sweep reaches beyond a marked level, closes back inside it, and may move away afterwards. The lab below separates that observation from a story about intent. Next, study the three-part test and its failure states.
 
 ---
 ## Start with what is actually on your screen
@@ -30,46 +30,26 @@ Everything else you have ever read about a chart is inference laid on top of tho
 Some of that inference is reasonable. Some is decoration. The purpose of this lesson is to help you tell which is which on your own chart, because the industry that teaches this material has almost no incentive to draw the line for you — confident explanations sell better than accurate ones.
 
 ---
-<div class="market-lab">
-  <header>
-    <div>
-      <small>Evidence boundary</small>
-      <strong>The chart gives observations before it gives explanations</strong>
-    </div>
-    <span>Use before sizing</span>
-  </header>
-  <div class="inference-meter">
-    <div>
-      <small>Observed</small>
-      <strong>High, low, close</strong>
-      <p>Price traded beyond `EQH1`, closed back below it, and later moved away.</p>
-    </div>
-    <div>
-      <small>Reasonable inference</small>
-      <strong>Resting orders were likely nearby</strong>
-      <p>Visible levels often attract stops and limit orders, so the level was worth watching.</p>
-    </div>
-    <div>
-      <small>Unsupported claim</small>
-      <strong>Who caused it and why</strong>
-      <p>The candle does not prove a specific participant, intention, or future outcome.</p>
-    </div>
+<section class="learning-lab" id="labB">
+  <div class="lab-h">
+    <p class="kick">Lab B · Same candle, two readings <span class="src">RL-LIQ-04</span></p>
+    <h2>What a sweep does not prove</h2>
+    <p>One completed sweep. Switch the reading, and watch every word that describes something <em>not on the chart</em> light up — then disappear.</p>
   </div>
-  <div class="lab-steps">
-    <details open>
-      <summary>Actionable version</summary>
-      <p>Price swept `EQH1`, closed back inside, and moved away. Bias remains lower while the level holds.</p>
-    </details>
-    <details>
-      <summary>Dangerous version</summary>
-      <p>They trapped retail, so the move must continue. This language adds confidence without adding evidence.</p>
-    </details>
-    <details>
-      <summary>Risk translation</summary>
-      <p>The less you can prove, the more important fixed risk and pre-written invalidation become.</p>
-    </details>
+  <div class="lab-body">
+    <div class="stage"><svg id="Bsvg" viewBox="0 0 660 250" role="img" aria-label="A single candle that swept EQH1 and closed back below"><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="80" x2="644" y1="80" x1="36" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="74" x="644">EQH1</text><line stroke-width="1.4" stroke="#C9CCD4" y2="188" x2="96.8" y1="160" x1="96.8" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="8" width="26" y="172" x="83.8" /><line stroke-width="1.4" stroke="#C9CCD4" y2="180" x2="218.39999999999998" y1="152" x1="218.39999999999998" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="12" width="26" y="160" x="205.39999999999998" /><line stroke-width="1.4" stroke="#C9CCD4" y2="168" x2="340" y1="48" x1="340" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="16" width="26" y="144" x="327" /><line stroke-linecap="round" stroke-width="3.4" stroke="#E9C97A" y2="48" x2="340" y1="80" x1="340" /><circle fill="#F4E3B0" r="3.4" cy="48" cx="340" /><line stroke-width="2.2" stroke="#3FE0C5" y2="144" x2="357" y1="144" x1="323" /><line stroke-width="1.4" stroke="#C9CCD4" y2="180" x2="461.59999999999997" y1="136" x1="461.59999999999997" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="28" width="26" y="144" x="448.59999999999997" /><line stroke-width="1.4" stroke="#C9CCD4" y2="204" x2="583.1999999999999" y1="164" x1="583.1999999999999" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="24" width="26" y="172" x="570.1999999999999" /></svg></div>
+    <div class="controls">
+      <span class="clabel">Reading</span>
+      <div class="seg" id="Bread" role="group" aria-label="Reading">
+        <button type="button" data-r="A" aria-pressed="true">A · the story</button>
+        <button type="button" data-r="B" aria-pressed="false">B · the observation</button>
+      </div>
+    </div>
+    <div class="reading" id="Btext">Institutions swept the highs <span class="unver">to fill short orders</span> and are now <span class="unver">driving price down</span>. The move up was <span class="unver">fake</span> — <span class="unver">the real move</span> is the one that followed.</div>
+    <p aria-live="polite" role="status" class="countline" id="Bcount"><b>4 highlighted phrases</b> describe things not in the candle. None can be checked by someone who disagrees with you.</p>
+    <p class="honest">Both readings come from the same four numbers. The second survives a bad outcome; the first has to be abandoned or rationalised — and the difference shows up as <b>lot size</b>.</p>
   </div>
-</div>
+<details class="static-readings"><summary>Read the observations and failure states</summary><h3>Reading A — an unsupported causal story</h3><p>Institutions swept the highs <span class="unver">to fill short orders</span> and are now <span class="unver">driving price down</span>. The move up was <span class="unver">fake</span> — <span class="unver">the real move</span> is the one that followed.</p><h3>Reading B — observations and an invalidation</h3><p>Price reached beyond an obvious pool and did not sustain above it. Structure is intact, and this is consistent with continuation lower. It is invalidated by a close back above <span class="mono">EQH1</span>.</p><p>Neither reading establishes what happens next. A story can change lot size without adding chart evidence.</p></details></section>
 
 ---
 ## The claim, and the honest version of it

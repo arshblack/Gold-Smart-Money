@@ -9,8 +9,8 @@ reading_time: 10
 last_reviewed: 2026-08-16
 status: public
 prerequisites: []
-previous_title: "What a Sweep Does Not Prove"
-previous_url: /learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/
+previous_title: "The Sweep That Isn't: Wick, Close, Follow-Through"
+previous_url: "/learn/tracks/hunt-liquidity/sweep-that-isnt/"
 next_title: "The Journal Entry You Write Before the Trade"
 next_url: /learn/tracks/master-the-mind/pre-trade-journal/
 ---
@@ -35,54 +35,45 @@ Two facts about the instrument itself, from primary sources:
 Hold on to that second fact. It comes back.
 
 ---
-<div class="market-lab">
-  <header>
-    <div>
-      <small>Clock lab</small>
-      <strong>The window is not one fixed clock time</strong>
+<section class="learning-lab" id="labD">
+  <div class="lab-h">
+    <p class="kick">Lab D · The killzone clock <span class="src">RL-KZN-02</span></p>
+    <h2>Same setup, different hour</h2>
+    <p>Compare two clock relationships. These simplified session bands illustrate the London–New York gap, not exact trading hours for every venue.</p>
+  </div>
+  <div class="lab-body">
+    <div class="controls">
+      <span class="clabel">Daylight saving</span>
+      <div class="seg" id="Ddst" role="group" aria-label="DST state">
+        <button type="button" data-d="normal" aria-pressed="true">Aligned · gap 5h</button>
+        <button type="button" data-d="mis" aria-pressed="false">Misaligned · gap 4h</button>
+      </div>
     </div>
-    <span>2026 DST example</span>
-  </header>
-  <div class="lab-stage" aria-label="Schematic timeline showing Asia, London, New York, overlap, LBMA auctions, and daylight saving misalignment periods.">
-    <svg viewBox="0 0 820 360" role="img">
-      <line class="lab-grid" x1="70" y1="90" x2="750" y2="90"/>
-      <line class="lab-grid" x1="70" y1="160" x2="750" y2="160"/>
-      <line class="lab-grid" x1="70" y1="230" x2="750" y2="230"/>
-      <text class="lab-label" x="72" y="62">London local day</text>
-      <rect class="lab-zone" x="118" y="92" width="190" height="42"/>
-      <rect class="lab-zone" x="286" y="150" width="250" height="42"/>
-      <rect class="lab-zone" x="454" y="208" width="250" height="42"/>
-      <text class="lab-label gold" x="138" y="120">Asia</text>
-      <text class="lab-label aqua" x="310" y="178">London</text>
-      <text class="lab-label aqua" x="476" y="236">New York</text>
-      <rect x="454" y="150" width="82" height="100" fill="rgba(63,224,197,.09)" stroke="rgba(63,224,197,.32)" stroke-width="1"/>
-      <text class="lab-label aqua" x="438" y="286">Overlap changes when clocks shift</text>
-      <line class="lab-line" x1="384" y1="78" x2="384" y2="262"/>
-      <text class="lab-label gold" x="356" y="76">10:30 LBMA</text>
-      <line class="lab-line" x1="560" y1="78" x2="560" y2="262"/>
-      <text class="lab-label gold" x="530" y="76">15:00 LBMA</text>
-      <path class="lab-path" d="M110 318 H310"/>
-      <path class="lab-sweep" d="M310 318 H420"/>
-      <path class="lab-path" d="M420 318 H704"/>
-      <text class="lab-label rust" x="314" y="304">8-29 Mar: 4h gap</text>
-      <text class="lab-label rust" x="514" y="304">25 Oct-1 Nov: 4h gap</text>
-    </svg>
+    <div class="tl" id="Dtl" aria-hidden="true">
+      <div style="left:54.1667%;width:12.5%" class="ovl" id="Dovl"></div>
+      <div class="band asia" style="left:0%;width:37.5%">Asia · 00–09</div>
+      <div class="band lon" style="left:33.3%;width:33.3%">London · 08–16</div>
+      <div style="left:54.1667%;width:33.3333%" class="band ny" id="Dny">New York · 13–21</div>
+      <div class="tlaxis"></div>
+      <div class="hourlab" style="left:0%">00</div>
+      <div class="hourlab" style="left:25%">06</div>
+      <div class="hourlab" style="left:50%">12</div>
+      <div class="hourlab" style="left:75%">18</div>
+      <div class="hourlab" style="left:100%">24</div>
+    </div><p id="Dsummary">Illustrative London-local session bands: Asia 00–09, London 08–16, New York 13–21.</p>
+    <div class="clocks">
+      <div class="clk"><span>London local</span><b>08:00</b></div>
+      <div class="clk"><span>UTC</span><b id="Dutc">07:00</b></div>
+      <div class="clk"><span>Broker · UTC+2 (example)</span><b id="Dbrk">09:00</b></div>
+    </div>
+    <div aria-live="polite" role="status" class="dstflag" id="Ddstf">Aligned summer example: London is UTC+1, New York UTC−4. Gap: 5 hours.</div>
+    <div class="cmp">
+      <div class="c sup"><div class="t">09:40 London · ordinary Tuesday</div><p>Three-part test passes. Participation typically elevated. Session context <b style="color:var(--aquab)">supports</b> the read.</p></div>
+      <div class="c weak"><div id="Dcpi" class="t">13:25 London · 5 min before CPI</div><p>Same shape, same pass. But the next ten minutes belong to a number nobody has seen. Session context <b style="color:var(--amber)">weakens</b> it.</p></div>
+    </div>
+    <p class="honest"><b>Review annually.</b> <span id="Dreview">Last editorial review: 2026. Verify the rules and your broker offset each year.</span> The <span id="Dyear">2026</span> misalignment windows run from the clock changes on <span id="Dspring">8–29 Mar</span> and <span id="Dautumn">25 Oct–1 Nov</span>. The broker offset is an example — derive your own in MT5.</p>
   </div>
-  <div class="lab-steps">
-    <details open>
-      <summary>London local</summary>
-      <p>Useful for the session itself and the LBMA auction references.</p>
-    </details>
-    <details>
-      <summary>UTC</summary>
-      <p>Useful for comparison, but the London window moves against UTC when the UK changes clocks.</p>
-    </details>
-    <details>
-      <summary>Broker server</summary>
-      <p>The only clock your MT5 candles actually use. Derive it, do not assume it.</p>
-    </details>
-  </div>
-</div>
+<details class="static-readings"><summary>Read the observations and failure states</summary><p>The aligned summer example has a five-hour London–New York gap. At London 08:00, UTC is 07:00 and the hypothetical UTC+2 broker is 09:00. During the clock-change gaps, UTC is 08:00 and that same example broker reads 10:00.</p><p>A release at 08:30 New York is 13:30 London when aligned, 12:30 when misaligned. Five minutes before it is 13:25 or 12:25 respectively. These are hypothetical comparisons, not today’s calendar. The clock alone establishes no edge.</p><p>Sources: <a href="https://www.gov.uk/when-do-the-clocks-change">UK clock changes</a>, <a href="https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst">US DST rules</a>, <a href="https://www.bls.gov/schedule/news_release/cpi.htm">BLS CPI calendar — verify each release</a>.</p></details></section>
 
 ---
 ## The problem with "London opens at 8"

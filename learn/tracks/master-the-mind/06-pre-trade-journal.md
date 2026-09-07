@@ -26,47 +26,37 @@ A rule is useful only if it can be broken in a way you could later detect. *I wi
 Same test applies to everything in this lesson. If an entry cannot be scored against your own record, it is a diary, not a journal.
 
 ---
-<div class="market-lab">
-  <header>
-    <div>
-      <small>Journal lab</small>
-      <strong>A setup should survive being written down</strong>
-    </div>
-    <span>Before entry</span>
-  </header>
-  <div class="journal-card">
-    <div class="journal-row">
-      <span>Setup</span>
-      <p>H1 bias down. M15 reached `EQH1`; wick and close passed. Follow-through pending.</p>
-    </div>
-    <div class="journal-row">
-      <span>Invalidation</span>
-      <p>M15 close back above `EQH1`. H1 close above `HH1` invalidates the broader read.</p>
-    </div>
-    <div class="journal-row">
-      <span>Why now</span>
-      <p>Level marked before approach. London active. No high-impact release inside the horizon.</p>
-    </div>
-    <div class="journal-row">
-      <span>Do not take if</span>
-      <p>Follow-through does not arrive, or price stalls inside the prior range.</p>
-    </div>
+<section class="learning-lab" id="labE">
+  <div class="lab-h">
+    <p class="kick">Lab E · Pre-trade journal <span class="src">RL-MND-06</span></p>
+    <h2>Some setups don’t survive being written down</h2>
+    <p>Tick each field to document this schematic example. Leave invalidation blank and the entry shows what is missing. This exercise is not saved and does not place a trade.</p>
   </div>
-  <div class="lab-steps">
-    <details open>
-      <summary>Readable</summary>
-      <p>Another trader can understand what you were waiting for.</p>
-    </details>
-    <details>
-      <summary>Scorable</summary>
-      <p>The record can later prove whether you followed your own decision.</p>
-    </details>
-    <details>
-      <summary>Protective</summary>
-      <p>The trade that cannot fill the invalidation field is stopped before it becomes money.</p>
-    </details>
+  <div class="lab-body">
+    <div id="Ejrows"><label data-on="0" class="jrow"><input disabled aria-label="1 · Setup" type="checkbox"><span class="jl"><span class="f">1 · Setup</span>H1 bias down; M15 reached into EQH1 pool</span></label><label data-on="0" class="jrow invf"><input disabled aria-label="2 · Invalidation" type="checkbox"><span class="jl"><span class="f">2 · Invalidation · gate</span>M15 close back above EQH1</span></label><label data-on="0" class="jrow"><input disabled aria-label="3 · Why now" type="checkbox"><span class="jl"><span class="f">3 · Why now</span>Level marked at 06:00, before approach</span></label><label data-on="0" class="jrow"><input disabled aria-label="4 · Session / calendar" type="checkbox"><span class="jl"><span class="f">4 · Session / calendar</span>London, 40 min in. No high-impact data.</span></label><label data-on="0" class="jrow"><input disabled aria-label="5 · Risk" type="checkbox"><span class="jl"><span class="f">5 · Risk</span>My chosen risk budget; size calculated using my broker’s symbol specification</span></label><label data-on="0" class="jrow"><input disabled aria-label="6 · What would stop me" type="checkbox"><span class="jl"><span class="f">6 · What would stop me</span>Follow-through absent — third time this week</span></label></div>
+    <div aria-live="polite" role="status" class="jbtn" id="Ebtn" data-state="blocked">This setup isn’t ready — no invalidation</div>
+    <p class="honest"><b>Field 6 is the one people skip.</b> Write the strongest argument against the setup before entry, then check whether it changes your decision.</p>
   </div>
-</div>
+<details class="static-readings"><summary>Read the observations and failure states</summary><p>Missing invalidation: this setup is not ready. With invalidation but incomplete fields: finish documenting. With all six fields: setup is documented. Documentation is not permission to trade and cannot promise an outcome.</p></details></section>
+
+<section class="learning-lab" id="road-sec">
+  <div class="lab-h">
+    <p class="kick">Diagram · Roadmap <span class="src">what a plan is</span></p>
+    <h2>Anatomy of a pre-trade plan</h2>
+    <p>A plan is a route from where you are to a decision you can review later. There’s no perfect template — but writing it down can make the reasoning easier to review, and surfaces the setups that shouldn’t be taken.</p>
+  </div>
+  <div class="lab-body">
+    <div class="road">
+      <div class="rnode"><div class="rt"><span class="f">1 · Setup</span>What you see, in plain words, with the timeframe.</div></div>
+      <div class="rnode gate"><div class="rt"><span class="f">2 · Invalidation — the gate</span>The price or condition that makes it wrong.</div><p>Hard to fill? That difficulty is the plan earning its keep.</p></div>
+      <div class="rnode"><div class="rt"><span class="f">3 · Why now</span>What makes this moment different from the last four hours.</div></div>
+      <div class="rnode"><div class="rt"><span class="f">4 · Session &amp; calendar</span>Which window — and whether scheduled news sits inside it.</div></div>
+      <div class="rnode"><div class="rt"><span class="f">5 · Risk</span>The size you derived from your own broker’s numbers.</div></div>
+      <div class="rnode"><div class="rt"><span class="f">6 · What would stop me</span>The strongest argument against — written before entry.</div></div>
+    </div>
+    <p class="roadnote">A route, not a promise. It describes a decision, never a prediction — and some setups don’t survive being written down. That’s the plan working.</p>
+  </div>
+</section>
 
 ---
 ## The problem with the post-trade journal

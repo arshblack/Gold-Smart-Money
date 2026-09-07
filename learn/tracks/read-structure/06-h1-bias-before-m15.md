@@ -10,8 +10,8 @@ last_reviewed: 2026-08-16
 revision: "Gate 1 — schematic labels replace price levels; invalidation vs. exit clarified"
 status: public
 prerequisites: []
-next_title: "The Sweep That Isn't: Wick, Close, Follow-Through"
-next_url: /learn/tracks/hunt-liquidity/sweep-that-isnt/
+next_title: "What a Sweep Does Not Prove"
+next_url: "/learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/"
 ---
 # H1 Bias Before M15 Execution
 
@@ -33,45 +33,35 @@ On your own chart that last clause is a number. In this lesson it stays a label 
 The specialist vocabulary — break of structure, change of character, displacement — is a compression of that sentence, not a replacement for it. If you find yourself unable to state a bias in plain English, the terminology is covering a gap rather than filling one.
 
 ---
-<div class="market-lab">
-  <header>
-    <div>
-      <small>Structure lab</small>
-      <strong>H1 decides context before M15 searches for timing</strong>
-    </div>
-    <span>Labels, not signals</span>
-  </header>
-  <div class="lab-stage" aria-label="Schematic showing H1 higher highs and higher lows above HL1, with M15 pullback noise inside the higher-timeframe bias.">
-    <svg viewBox="0 0 820 360" role="img">
-      <line class="lab-grid" x1="60" y1="80" x2="760" y2="80"/>
-      <line class="lab-grid" x1="60" y1="145" x2="760" y2="145"/>
-      <line class="lab-grid" x1="60" y1="210" x2="760" y2="210"/>
-      <line class="lab-grid" x1="60" y1="275" x2="760" y2="275"/>
-      <text class="lab-label gold" x="76" y="50">H1 structure</text>
-      <path class="lab-path" d="M90 260 C150 190, 196 226, 242 166 S338 190, 392 112 S492 138, 560 76"/>
-      <line class="lab-line" x1="122" y1="210" x2="715" y2="210"/>
-      <text class="lab-label gold" x="630" y="196">HL1 invalidation level</text>
-      <circle cx="242" cy="166" r="5" fill="#3FE0C5"/><text class="lab-label aqua" x="232" y="148">HH1</text>
-      <circle cx="338" cy="190" r="5" fill="#E9C97A"/><text class="lab-label gold" x="328" y="228">HL1</text>
-      <circle cx="560" cy="76" r="5" fill="#3FE0C5"/><text class="lab-label aqua" x="546" y="58">HH2</text>
-      <rect class="lab-zone" x="528" y="122" width="190" height="128"/>
-      <text class="lab-label" x="548" y="148">M15 pullback</text>
-      <path class="lab-sweep" d="M548 166 C580 196, 604 174, 632 205 S686 176, 716 220"/>
-    </svg>
+<section class="learning-lab" id="labC">
+  <div class="lab-h">
+    <p class="kick">Lab C · H1 bias before M15 <span class="src">RL-STR-06</span></p>
+    <h2>The same candles, two conclusions</h2>
+    <p>An M15 run of lower highs looks bearish alone. Add the H1 it sits inside, and it’s a pullback. Direction was never M15’s to set.</p>
   </div>
-  <div class="bias-panels">
-    <div class="bias-panel">
-      <small>H1 sentence</small>
-      <strong>Bullish while above HL1</strong>
-      <p>The higher-timeframe read is valid until the named structural level is lost on H1.</p>
+  <div class="lab-body">
+    <div class="controls">
+      <span class="clabel">Context</span>
+      <div class="seg aq" id="Cctx" role="group" aria-label="Context">
+        <button type="button" data-x="off" aria-pressed="false">Without H1</button>
+        <button type="button" data-x="on" aria-pressed="true">With H1</button>
+      </div>
     </div>
-    <div class="bias-panel">
-      <small>M15 task</small>
-      <strong>Wait for conditions</strong>
-      <p>The lower timeframe does not create the bias. It only gives or withholds a reason to act.</p>
+    <div class="twin">
+      <div class="pane live" id="CpaneM"><div class="pt">M15 · execution</div><svg id="CsvgM" viewBox="0 0 320 220" role="img" aria-label="M15 lower highs"><line stroke-width="1.4" stroke="#C9CCD4" y2="81" x2="52.4" y1="42" x1="52.4" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="6.5" width="24.991999999999997" y="68" x="39.903999999999996" /><line stroke-width="1.4" stroke="#C9CCD4" y2="107" x2="109.19999999999999" y1="55" x1="109.19999999999999" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="26" width="24.991999999999997" y="74.5" x="96.704" /><line stroke-width="1.4" stroke="#C9CCD4" y2="133" x2="166" y1="81" x1="166" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="26" width="24.991999999999997" y="100.5" x="153.504" /><line stroke-width="1.4" stroke="#C9CCD4" y2="152.5" x2="222.79999999999998" y1="107" x1="222.79999999999998" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="19.5" width="24.991999999999997" y="126.5" x="210.30399999999997" /><line stroke-width="1.4" stroke="#C9CCD4" y2="172" x2="279.6" y1="126.5" x1="279.6" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="13" width="24.991999999999997" y="146" x="267.10400000000004" /></svg></div>
+      <div class="pane live" id="CpaneH"><div class="pt">H1 · context</div><svg id="CsvgH" viewBox="0 0 320 220" role="img" aria-label="H1 uptrend containing the M15 pullback"><rect rx="6" stroke-width="1" stroke-dasharray="3 4" stroke="#3FE0C5" fill="rgba(63,224,197,.13)" height="182" width="170.39999999999998" y="16" x="137.6" /><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="148.36363636363637" x2="308" y1="148.36363636363637" x1="24" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="142.36363636363637" x="308">HL1</text><line stroke-width="1.4" stroke="#C9CCD4" y2="181.45454545454544" x2="52.4" y1="115.27272727272727" x1="52.4" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="41.363636363636374" width="24.991999999999997" y="123.54545454545453" x="39.903999999999996" /><line stroke-width="1.4" stroke="#C9CCD4" y2="140.0909090909091" x2="109.19999999999999" y1="57.363636363636346" x1="109.19999999999999" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="49.636363636363626" width="24.991999999999997" y="73.9090909090909" x="96.704" /><line stroke-width="1.4" stroke="#C9CCD4" y2="115.27272727272727" x2="166" y1="49.090909090909065" x1="166" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="33.09090909090909" width="24.991999999999997" y="73.9090909090909" x="153.504" /><line stroke-width="1.4" stroke="#C9CCD4" y2="148.36363636363637" x2="222.79999999999998" y1="90.45454545454544" x1="222.79999999999998" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="24.818181818181813" width="24.991999999999997" y="107" x="210.30399999999997" /><line stroke-width="1.4" stroke="#C9CCD4" y2="156.63636363636363" x2="279.6" y1="98.72727272727272" x1="279.6" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="24.818181818181813" width="24.991999999999997" y="107" x="267.10400000000004" /></svg></div>
+    </div>
+    <p aria-live="polite" role="status" class="capC" id="Ccap">Zoom out: those M15 candles are the <b style="color:var(--aquab)">pullback</b> inside an H1 uptrend, resting on <span class="mono">HL1</span>. The bias was up the whole time.</p>
+    <div class="honest" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+      <b>Wick vs close at <span class="mono">HL1</span>:</b>
+      <div class="seg" id="Cwc" role="group" aria-label="Invalidation test">
+        <button type="button" data-w="wick" aria-pressed="true">wick through</button>
+        <button type="button" data-w="close" aria-pressed="false">close through</button>
+      </div>
+      <span aria-live="polite" role="status" id="Cwcv" style="font-family:var(--mono);font-size:12px">Bias holds — a wick traded beyond HL1 but closed back above.</span>
     </div>
   </div>
-</div>
+<details class="static-readings"><summary>Read the observations and failure states</summary><p>M15 shows lower highs in this schematic. H1 places them inside a pullback. An H1 wick below HL1 that closes back above keeps this read intact; an H1 close below HL1 invalidates it. Context does not guarantee continuation.</p></details></section>
 
 ---
 ## Why two timeframes and not one

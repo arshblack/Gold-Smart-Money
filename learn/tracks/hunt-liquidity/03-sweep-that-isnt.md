@@ -9,10 +9,10 @@ reading_time: 9
 last_reviewed: 2026-08-16
 status: public
 prerequisites: []
-previous_title: "H1 Bias Before M15 Execution"
-previous_url: /learn/tracks/read-structure/h1-bias-before-m15/
-next_title: "What a Sweep Does Not Prove"
-next_url: /learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/
+previous_title: "What a Sweep Does Not Prove"
+previous_url: "/learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/"
+next_title: "When the London Window Matters"
+next_url: "/learn/tracks/time-the-killzone/when-london-matters/"
 ---
 # The Sweep That Isn't: Wick, Close, Follow-Through
 
@@ -21,66 +21,82 @@ next_url: /learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/
 **Prerequisite.** Hunt Liquidity lessons 1 and 2, plus structure labelling from Read Structure. The recap below covers the minimum.
 
 ---
-<div class="market-lab">
-  <header>
-    <div>
-      <small>Interactive market lab</small>
-      <strong>A sweep is a sequence, not one candle</strong>
+<section class="learning-lab" id="animSweep">
+  <div class="lab-h">
+    <p class="kick">Diagram · Animation <span class="src">motion that teaches</span></p>
+    <h2>A sweep, forming</h2>
+    <p>The shape builds in three beats: price reaches beyond the level, closes back below, then something follows. Press replay to watch it again.</p>
+  </div>
+  <div class="lab-body">
+    <div class="stage"><svg id="SWsvg" viewBox="0 0 520 240" role="img" aria-label="Animated candle reaching above EQH1 then closing back below, with follow-through"><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="82.16000000000001" x2="504" y1="82.16000000000001" x1="30" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="76.16000000000001" x="504">EQH1</text><line stroke-width="1.6" stroke="#C9CCD4" y2="161.12" x2="180" y1="44.56" x1="180" /><rect stroke-width="1.6" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="1.5" width="26" y="149.84" x="167" /><line stroke-linecap="round" stroke-width="3.4" stroke="#E9C97A" y2="44.56" x2="180" y1="82.16000000000001" x1="180" /><circle fill="#F4E3B0" r="3.4" cy="44.56" cx="180" /><line stroke-width="2.4" stroke="#3FE0C5" y2="149.84" x2="198" y1="149.84" x1="162" /><g opacity="1"><line stroke-width="1.4" stroke="#878D9C" y2="187.44" x2="252" y1="149.84" x1="252" /><rect stroke="#878D9C" fill="#878D9C" rx="1.5" height="22.560000000000002" width="22" y="157.36" x="241" /></g><g opacity="1"><line stroke-width="1.4" stroke="#878D9C" y2="210" x2="314" y1="176.16" x1="314" /><rect stroke="#878D9C" fill="#878D9C" rx="1.5" height="22.559999999999974" width="22" y="179.92000000000002" x="303" /></g><line opacity="0.85" stroke-dasharray="2 4" stroke-width="2" stroke="#3FE0C5" y2="202.48" x2="322" y1="149.84" x1="198" /></svg></div>
+    <div class="playrow"><button type="button" class="btn" id="SWplay">▶ Replay</button><span class="caption" id="SWcap">reached beyond · closed back below · followed through</span></div>
+  </div>
+<details class="static-readings"><summary>Read the observations and failure states</summary><p>The still frame shows a completed shape. A wick that never reaches beyond EQH1 is not a sweep; a close above it is a breakout; no follow-through means setup expiry. Explore all four cases in the sweep lab below.</p></details></section>
+
+<section class="learning-lab" id="labA">
+  <div class="lab-h">
+    <p class="kick">Lab A · Liquidity sweep <span class="src">RL-LIQ-03</span></p>
+    <h2>Wick, close, follow-through</h2>
+    <p>Step through the three parts. Then switch candidate — three of the four <em>fail</em> a different part, and the failures are the lesson.</p>
+  </div>
+  <div class="lab-body">
+    <div class="controls">
+      <span class="clabel">Candidate</span>
+      <div class="seg" id="Acand" role="group" aria-label="Candidate">
+        <button type="button" data-c="A" aria-pressed="true">A · passes</button>
+        <button type="button" data-c="B" aria-pressed="false">B · fails wick</button>
+        <button type="button" data-c="C" aria-pressed="false">C · fails close</button>
+        <button type="button" data-c="D" aria-pressed="false">D · fails follow</button>
+      </div>
     </div>
-    <span>Schematic XAUUSD</span>
-  </header>
-  <div class="lab-stage" aria-label="Animated schematic of a liquidity sweep above equal highs, close back below the level, and follow-through lower.">
-    <svg viewBox="0 0 820 360" role="img">
-      <line class="lab-grid" x1="60" y1="80" x2="760" y2="80"/>
-      <line class="lab-grid" x1="60" y1="145" x2="760" y2="145"/>
-      <line class="lab-grid" x1="60" y1="210" x2="760" y2="210"/>
-      <line class="lab-grid" x1="60" y1="275" x2="760" y2="275"/>
-      <rect class="lab-zone" x="108" y="88" width="226" height="20"/>
-      <line class="lab-line" x1="86" y1="98" x2="758" y2="98"/>
-      <text class="lab-label gold" x="94" y="84">EQH1 / resting liquidity</text>
-      <path class="lab-path" d="M80 215 C128 168, 166 204, 206 154 S286 182, 318 111"/>
-      <path class="lab-sweep" d="M318 111 C350 72, 384 54, 418 78 C452 104, 468 126, 492 142"/>
-      <path class="lab-path" d="M492 142 C536 190, 570 178, 604 214 S684 236, 738 286"/>
-      <g class="lab-candle c1">
-        <line x1="270" y1="126" x2="270" y2="182" stroke="#3FE0C5" stroke-width="2"/>
-        <rect x="262" y="144" width="16" height="28" fill="#3FE0C5"/>
-      </g>
-      <g class="lab-candle c2">
-        <line x1="340" y1="82" x2="340" y2="162" stroke="#E0683F" stroke-width="2"/>
-        <rect x="332" y="104" width="16" height="44" fill="#E0683F"/>
-        <text class="lab-label rust" x="360" y="64">1 wick beyond</text>
-      </g>
-      <g class="lab-candle c3">
-        <line x1="416" y1="54" x2="416" y2="158" stroke="#E0683F" stroke-width="2"/>
-        <rect x="408" y="84" width="16" height="54" fill="#E0683F"/>
-        <text class="lab-label gold" x="438" y="126">2 close back inside</text>
-      </g>
-      <g class="lab-candle c4">
-        <line x1="545" y1="148" x2="545" y2="226" stroke="#3FE0C5" stroke-width="2"/>
-        <rect x="537" y="168" width="16" height="40" fill="#3FE0C5"/>
-      </g>
-      <g class="lab-candle c5">
-        <line x1="650" y1="202" x2="650" y2="288" stroke="#3FE0C5" stroke-width="2"/>
-        <rect x="642" y="220" width="16" height="52" fill="#3FE0C5"/>
-        <text class="lab-label aqua" x="574" y="318">3 follow-through away</text>
-      </g>
-    </svg>
+    <div class="stage"><svg id="Asvg" viewBox="0 0 660 320" role="img" aria-label="Schematic candles testing a sweep of level EQH1"><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="119" x2="644" y1="119" x1="40" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="113" x="644">EQH1</text><line stroke-width="1.4" stroke="#C9CCD4" y2="233" x2="73.55555555555556" y1="185.5" x1="73.55555555555556" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="9.5" width="26" y="214" x="60.55555555555556" /><line stroke-width="1.4" stroke="#C9CCD4" y2="237.75" x2="140.66666666666669" y1="199.75" x1="140.66666666666669" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="19" width="26" y="204.5" x="127.66666666666669" /><line stroke-width="1.4" stroke="#C9CCD4" y2="214" x2="207.77777777777777" y1="176" x1="207.77777777777777" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="4.75" width="26" y="204.5" x="194.77777777777777" /><line stroke-width="1.4" stroke="#C9CCD4" y2="218.75" x2="274.8888888888889" y1="161.75" x1="274.8888888888889" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="23.75" width="26" y="185.5" x="261.8888888888889" /><line stroke-width="1.4" stroke="#C9CCD4" y2="195" x2="342" y1="152.25" x1="342" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="171.25" x="329" /><line stroke-width="1.4" stroke="#C9CCD4" y2="180.75" x2="409.11111111111114" y1="81" x1="409.11111111111114" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="157" x="396.11111111111114" /><line stroke-linecap="round" stroke-width="3.4" stroke="#E9C97A" y2="81" x2="409.11111111111114" y1="119" x1="409.11111111111114" /><circle fill="#F4E3B0" r="3.4" cy="81" cx="409.11111111111114" /><line stroke-width="2.2" stroke="#3FE0C5" y2="157" x2="426.11111111111114" y1="157" x1="392.11111111111114" /><line stroke-width="1.4" stroke="#878D9C" y2="195" x2="476.22222222222223" y1="152.25" x1="476.22222222222223" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="33.25" width="26" y="157" x="463.22222222222223" /><line stroke-width="1.4" stroke="#878D9C" y2="233" x2="543.3333333333334" y1="185.5" x1="543.3333333333334" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="38" width="26" y="190.25" x="530.3333333333334" /><line stroke-width="1.4" stroke="#878D9C" y2="266.25" x2="610.4444444444445" y1="223.5" x1="610.4444444444445" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="28.5" width="26" y="228.25" x="597.4444444444445" /><line opacity="0.85" stroke-dasharray="2 4" stroke-width="2" stroke="#3FE0C5" y2="256.75" x2="610.4444444444445" y1="157" x1="476.22222222222223" /></svg></div>
+    <div class="controls">
+      <span class="clabel">Reveal</span>
+      <div class="seg aq" id="Astep" role="group" aria-label="Step">
+        <button type="button" data-s="1" aria-pressed="false">1 · wick</button>
+        <button type="button" data-s="2" aria-pressed="false">2 · close</button>
+        <button type="button" data-s="3" aria-pressed="true">3 · follow-through</button>
+      </div>
+    </div>
+    <div class="verdict">
+      <div class="parts" id="Aparts">
+        <span class="part" data-p="wick" data-s="pass"><b>Wick</b> <em id="Awv">reached beyond</em></span>
+        <span class="part" data-p="close" data-s="pass"><b>Close</b> <em id="Acv">closed back below</em></span>
+        <span class="part" data-p="follow" data-s="pass"><b>Follow-through</b> <em id="Afv">moved away</em></span>
+      </div>
+      <p aria-live="polite" role="status" class="vtext" id="Averdict"><span class="tag pass">Passes all three</span>Wick beyond <span class="mono">EQH1</span>, close back below, and price moved down and away. A complete three-part observation — which is not the same as a guarantee.</p>
+    </div>
+    <p class="honest"><b>No entry rule here.</b> The test is qualitative on purpose — no candle counts, no timing constants. What transfers is the reasoning behind each part, not a number that would be wrong on your feed anyway.</p>
   </div>
-  <div class="lab-steps">
-    <details open>
-      <summary>Part 1 · Wick</summary>
-      <p>Price must trade beyond the marked level. Near the level is not a sweep.</p>
-    </details>
-    <details>
-      <summary>Part 2 · Close</summary>
-      <p>The candle must close back inside the level on the timeframe chosen before the setup.</p>
-    </details>
-    <details>
-      <summary>Part 3 · Follow-through</summary>
-      <p>Movement away from the level is what separates an observation from a candidate setup.</p>
-    </details>
+<details class="static-readings"><summary>Read the observations and failure states</summary><h3>Candidate A</h3><svg viewBox="0 0 660 320" role="img" aria-label="Schematic candles testing a sweep of level EQH1"><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="119" x2="644" y1="119" x1="40" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="113" x="644">EQH1</text><line stroke-width="1.4" stroke="#C9CCD4" y2="233" x2="73.55555555555556" y1="185.5" x1="73.55555555555556" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="9.5" width="26" y="214" x="60.55555555555556" /><line stroke-width="1.4" stroke="#C9CCD4" y2="237.75" x2="140.66666666666669" y1="199.75" x1="140.66666666666669" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="19" width="26" y="204.5" x="127.66666666666669" /><line stroke-width="1.4" stroke="#C9CCD4" y2="214" x2="207.77777777777777" y1="176" x1="207.77777777777777" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="4.75" width="26" y="204.5" x="194.77777777777777" /><line stroke-width="1.4" stroke="#C9CCD4" y2="218.75" x2="274.8888888888889" y1="161.75" x1="274.8888888888889" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="23.75" width="26" y="185.5" x="261.8888888888889" /><line stroke-width="1.4" stroke="#C9CCD4" y2="195" x2="342" y1="152.25" x1="342" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="171.25" x="329" /><line stroke-width="1.4" stroke="#C9CCD4" y2="180.75" x2="409.11111111111114" y1="81" x1="409.11111111111114" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="157" x="396.11111111111114" /><line stroke-linecap="round" stroke-width="3.4" stroke="#E9C97A" y2="81" x2="409.11111111111114" y1="119" x1="409.11111111111114" /><circle fill="#F4E3B0" r="3.4" cy="81" cx="409.11111111111114" /><line stroke-width="2.2" stroke="#3FE0C5" y2="157" x2="426.11111111111114" y1="157" x1="392.11111111111114" /><line stroke-width="1.4" stroke="#878D9C" y2="195" x2="476.22222222222223" y1="152.25" x1="476.22222222222223" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="33.25" width="26" y="157" x="463.22222222222223" /><line stroke-width="1.4" stroke="#878D9C" y2="233" x2="543.3333333333334" y1="185.5" x1="543.3333333333334" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="38" width="26" y="190.25" x="530.3333333333334" /><line stroke-width="1.4" stroke="#878D9C" y2="266.25" x2="610.4444444444445" y1="223.5" x1="610.4444444444445" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="28.5" width="26" y="228.25" x="597.4444444444445" /><line opacity="0.85" stroke-dasharray="2 4" stroke-width="2" stroke="#3FE0C5" y2="256.75" x2="610.4444444444445" y1="157" x1="476.22222222222223" /></svg><p><span class="tag pass">Passes all three</span>Wick beyond <span class="mono">EQH1</span>, close back below, and price moved down and away. A complete three-part observation — which is not the same as a guarantee.</p><h3>Candidate B</h3><svg viewBox="0 0 660 320" role="img" aria-label="Schematic candles testing a sweep of level EQH1"><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="119" x2="644" y1="119" x1="40" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="113" x="644">EQH1</text><line stroke-width="1.4" stroke="#C9CCD4" y2="233" x2="73.55555555555556" y1="185.5" x1="73.55555555555556" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="9.5" width="26" y="214" x="60.55555555555556" /><line stroke-width="1.4" stroke="#C9CCD4" y2="237.75" x2="140.66666666666669" y1="199.75" x1="140.66666666666669" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="19" width="26" y="204.5" x="127.66666666666669" /><line stroke-width="1.4" stroke="#C9CCD4" y2="214" x2="207.77777777777777" y1="176" x1="207.77777777777777" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="4.75" width="26" y="204.5" x="194.77777777777777" /><line stroke-width="1.4" stroke="#C9CCD4" y2="218.75" x2="274.8888888888889" y1="161.75" x1="274.8888888888889" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="23.75" width="26" y="185.5" x="261.8888888888889" /><line stroke-width="1.4" stroke="#C9CCD4" y2="195" x2="342" y1="152.25" x1="342" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="171.25" x="329" /><line stroke-width="1.4" stroke="#C9CCD4" y2="180.75" x2="409.11111111111114" y1="128.5" x1="409.11111111111114" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="157" x="396.11111111111114" /><line stroke-width="2.2" stroke="#3FE0C5" y2="157" x2="426.11111111111114" y1="157" x1="392.11111111111114" /><line stroke-width="1.4" stroke="#878D9C" y2="195" x2="476.22222222222223" y1="152.25" x1="476.22222222222223" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="33.25" width="26" y="157" x="463.22222222222223" /><line stroke-width="1.4" stroke="#878D9C" y2="233" x2="543.3333333333334" y1="185.5" x1="543.3333333333334" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="38" width="26" y="190.25" x="530.3333333333334" /><line stroke-width="1.4" stroke="#878D9C" y2="266.25" x2="610.4444444444445" y1="223.5" x1="610.4444444444445" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="28.5" width="26" y="228.25" x="597.4444444444445" /></svg><p><span class="tag fail">Fails part 1 — the wick</span>The rejection looks <em>better</em> than A’s — and price never touched the orders above <span class="mono">EQH1</span>. The most seductive failure of the four: the prettiest candle is the one that isn’t a sweep at all.</p><h3>Candidate C</h3><svg viewBox="0 0 660 320" role="img" aria-label="Schematic candles testing a sweep of level EQH1"><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="119" x2="644" y1="119" x1="40" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="113" x="644">EQH1</text><line stroke-width="1.4" stroke="#C9CCD4" y2="233" x2="73.55555555555556" y1="185.5" x1="73.55555555555556" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="9.5" width="26" y="214" x="60.55555555555556" /><line stroke-width="1.4" stroke="#C9CCD4" y2="237.75" x2="140.66666666666669" y1="199.75" x1="140.66666666666669" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="19" width="26" y="204.5" x="127.66666666666669" /><line stroke-width="1.4" stroke="#C9CCD4" y2="214" x2="207.77777777777777" y1="176" x1="207.77777777777777" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="4.75" width="26" y="204.5" x="194.77777777777777" /><line stroke-width="1.4" stroke="#C9CCD4" y2="218.75" x2="274.8888888888889" y1="161.75" x1="274.8888888888889" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="23.75" width="26" y="185.5" x="261.8888888888889" /><line stroke-width="1.4" stroke="#C9CCD4" y2="195" x2="342" y1="152.25" x1="342" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="171.25" x="329" /><line stroke-width="1.4" stroke="#C9CCD4" y2="176" x2="409.11111111111114" y1="71.5" x1="409.11111111111114" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="76" width="26" y="95.25" x="396.11111111111114" /><line stroke-linecap="round" stroke-width="3.4" stroke="#E9C97A" y2="71.5" x2="409.11111111111114" y1="119" x1="409.11111111111114" /><circle fill="#F4E3B0" r="3.4" cy="71.5" cx="409.11111111111114" /><line stroke-width="2.2" stroke="#E0683F" y2="95.25" x2="426.11111111111114" y1="95.25" x1="392.11111111111114" /><line stroke-width="1.4" stroke="#878D9C" y2="100" x2="476.22222222222223" y1="62" x1="476.22222222222223" /><rect stroke-width="1.4" stroke="#878D9C" fill="#12151E" rx="1.5" height="23.75" width="26" y="71.5" x="463.22222222222223" /><line stroke-width="1.4" stroke="#878D9C" y2="81" x2="543.3333333333334" y1="47.75" x1="543.3333333333334" /><rect stroke-width="1.4" stroke="#878D9C" fill="#12151E" rx="1.5" height="14.25" width="26" y="57.25" x="530.3333333333334" /><line stroke-width="1.4" stroke="#878D9C" y2="71.5" x2="610.4444444444445" y1="43" x1="610.4444444444445" /><rect stroke-width="1.4" stroke="#878D9C" fill="#12151E" rx="1.5" height="4.75" width="26" y="52.5" x="597.4444444444445" /><line opacity="0.85" stroke-dasharray="2 4" stroke-width="2" stroke="#E0683F" y2="52.5" x2="610.4444444444445" y1="95.25" x1="476.22222222222223" /></svg><p><span class="tag fail">Fails part 2 — the close</span>Price closed <em>above</em> the level. Read forwards, at the time, this is a breakout — a different event. Calling it a failed sweep later, once it came back, is the backwards reasoning the test exists to prevent.</p><h3>Candidate D</h3><svg viewBox="0 0 660 320" role="img" aria-label="Schematic candles testing a sweep of level EQH1"><line opacity="0.9" stroke-dasharray="6 5" stroke-width="1.4" stroke="#E9C97A" y2="119" x2="644" y1="119" x1="40" /><text font-size="12" font-family="IBM Plex Mono,monospace" fill="#F4E3B0" text-anchor="end" y="113" x="644">EQH1</text><line stroke-width="1.4" stroke="#C9CCD4" y2="233" x2="73.55555555555556" y1="185.5" x1="73.55555555555556" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="9.5" width="26" y="214" x="60.55555555555556" /><line stroke-width="1.4" stroke="#C9CCD4" y2="237.75" x2="140.66666666666669" y1="199.75" x1="140.66666666666669" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="19" width="26" y="204.5" x="127.66666666666669" /><line stroke-width="1.4" stroke="#C9CCD4" y2="214" x2="207.77777777777777" y1="176" x1="207.77777777777777" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#C9CCD4" rx="1.5" height="4.75" width="26" y="204.5" x="194.77777777777777" /><line stroke-width="1.4" stroke="#C9CCD4" y2="218.75" x2="274.8888888888889" y1="161.75" x1="274.8888888888889" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="23.75" width="26" y="185.5" x="261.8888888888889" /><line stroke-width="1.4" stroke="#C9CCD4" y2="195" x2="342" y1="152.25" x1="342" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="171.25" x="329" /><line stroke-width="1.4" stroke="#C9CCD4" y2="180.75" x2="409.11111111111114" y1="81" x1="409.11111111111114" /><rect stroke-width="1.4" stroke="#C9CCD4" fill="#12151E" rx="1.5" height="14.25" width="26" y="157" x="396.11111111111114" /><line stroke-linecap="round" stroke-width="3.4" stroke="#E9C97A" y2="81" x2="409.11111111111114" y1="119" x1="409.11111111111114" /><circle fill="#F4E3B0" r="3.4" cy="81" cx="409.11111111111114" /><line stroke-width="2.2" stroke="#3FE0C5" y2="157" x2="426.11111111111114" y1="157" x1="392.11111111111114" /><line stroke-width="1.4" stroke="#878D9C" y2="171.25" x2="476.22222222222223" y1="142.75" x1="476.22222222222223" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="4.75" width="26" y="157" x="463.22222222222223" /><line stroke-width="1.4" stroke="#878D9C" y2="176" x2="543.3333333333334" y1="147.5" x1="543.3333333333334" /><rect stroke-width="1.4" stroke="#878D9C" fill="#878D9C" rx="1.5" height="4.75" width="26" y="161.75" x="530.3333333333334" /><line stroke-width="1.4" stroke="#878D9C" y2="176" x2="610.4444444444445" y1="152.25" x1="610.4444444444445" /><rect stroke-width="1.4" stroke="#878D9C" fill="#12151E" rx="1.5" height="9.5" width="26" y="157" x="597.4444444444445" /><line opacity="0.85" stroke-dasharray="2 4" stroke-width="2" stroke="#878D9C" y2="157" x2="610.4444444444445" y1="157" x1="476.22222222222223" /></svg><p><span class="tag expire">Fails part 3 — follow-through</span>Textbook shape — then hours of chop inside the range. The setup <b>expired</b>. Not a loss, not a missed trade, not evidence the test failed. A test that returns “nothing here” is doing its job.</p></details></section>
+
+<section class="learning-lab" id="dtree-sec">
+  <div class="lab-h">
+    <p class="kick">Diagram · Decision flow <span class="src">the honest version</span></p>
+    <h2>Before you act: the tree that can’t say “buy”</h2>
+    <p>The popular flowchart ends in <em>BUY</em> or <em>SELL</em>. This one can’t — a chart doesn’t prove that much. Most branches end in <em>wait</em>, and that is the entire point.</p>
   </div>
-</div>
+  <div class="lab-body">
+    <div class="dtree">
+      <div class="drow">
+        <div class="q">Did price trade <b>beyond</b> the level — not just near it?<span class="qk">the wick · EQH1</span></div>
+        <div class="no say"><span class="rk">No</span><b>Not a sweep.</b> The orders above were never reached. Whatever happened next, this wasn’t it.</div>
+      </div>
+      <div class="yes">↓ yes</div>
+      <div class="drow">
+        <div class="q">Did the candle <b>close back below</b> it?<span class="qk">the close</span></div>
+        <div class="no amber"><span class="rk">No — it closed above</span><b>A breakout.</b> A different event, read forwards. Calling it a failed sweep later is backwards reasoning.</div>
+      </div>
+      <div class="yes">↓ yes</div>
+      <div class="drow">
+        <div class="q">Did <b>anything follow</b> — movement away from the level?<span class="qk">follow-through</span></div>
+        <div class="no say"><span class="rk">No — it drifted</span><b>Setup expired.</b> Not a loss, not a missed trade. A test that returns “nothing here” is doing its job.</div>
+      </div>
+      <div class="yes">↓ yes</div>
+      <div class="endp"><b>A research setup.</b> Size for uncertainty, write the invalidation before entry, and check the session and calendar.<span class="neg">Still not a signal to buy — only a read worth acting on with care.</span></div>
+    </div>
+  </div>
+</section>
 
 ---
 ## Recap: what you need from lessons 1 and 2

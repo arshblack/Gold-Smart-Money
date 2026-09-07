@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none}
 @media(max-width:640px){.w{padding:0 22px}}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important}}
 
@@ -474,6 +474,8 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
   .brand{font-size:13.5px}
 }
 </style>
+<link rel="stylesheet" href="assets/learning-labs.css">
+<noscript><style>.rv{opacity:1;transform:none}.burger{display:none}.mobile-menu{display:flex;position:static;flex-wrap:wrap}.mobile-menu a{padding:8px}nav{position:relative}</style></noscript>
 </head>
 <body>
 
@@ -484,30 +486,21 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <svg class="mk" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#E9C97A" stroke-width="1.2"/><circle cx="16" cy="16" r="9" stroke="#3FE0C5" stroke-width="1" stroke-dasharray="3 3"/><circle cx="16" cy="16" r="3" fill="#E9C97A"/></svg>
       <span>Refined</span>&nbsp;<b>Liquidity</b>
     </a>
-    <div class="nlinks">
-      <a href="learn/start-here/">Start Here</a>
-      <a href="#gold-desk">Gold Desk</a>
-      <a href="learn/">Learn</a>
-      <a href="gold-notes/">Gold Notes</a>
-      <a href="#automation">Automation</a>
-    </div>
+    <div class="nlinks"><a href="start/">Start Here</a>
+<a href="#gold-desk">Gold Desk</a>
+<a href="learn/">Learn</a>
+<a href="gold-notes/">Notes</a>
+<a href="#community">Community</a></div>
     <div class="nav-cta">
-      <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="join">Join the Community →</a>
+      <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="join">Join the Matrix →</a>
       <button class="burger" id="burger" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMenu()">☰</button>
     </div>
   </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="learn/start-here/" onclick="toggleMenu()">Start Here</a>
-    <a href="#gold-desk" onclick="toggleMenu()">Gold Desk</a>
-    <a href="#cycle" onclick="toggleMenu()">The Cycle</a>
-    <a href="#methodology" onclick="toggleMenu()">Methodology</a>
-    <a href="#automation" onclick="toggleMenu()">Automation</a>
-    <a href="learn/" onclick="toggleMenu()">Learn</a>
-    <a href="gold-notes/" onclick="toggleMenu()">Gold Notes</a>
-    <a href="tracker/" onclick="toggleMenu()">30-Day Tracker</a>
-    <a href="#founder" onclick="toggleMenu()">Founder</a>
-    <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener">Join the Community →</a>
-  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="start/">Start Here</a>
+<a href="#gold-desk">Gold Desk</a>
+<a href="learn/">Learn</a>
+<a href="gold-notes/">Notes</a>
+<a href="#community">Community</a></div>
 </nav>
 
 <!-- HERO -->
@@ -532,11 +525,9 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <span class="l1 rv">REFINED</span>
       <span class="l2 rv" style="transition-delay:.08s">Liquidity</span>
     </h1>
-    <p class="hsub rv" style="transition-delay:.16s">
-      Study how liquidity moves <span class="gold">gold</span> — the accumulation, the sweep, the confirmation and expansion — through a <b>research framework being engineered and forward-tested in public.</b>
-    </p>
+    <p class="hsub rv">Learn to read gold the way it actually moves — one honest concept at a time.<br><span>A beginner-friendly method, with the research forward-tested in public. Not signals. Not a guarantee.</span></p>
     <div class="hcta rv" style="transition-delay:.24s">
-      <a href="learn/start-here/" class="btn btn-p">Start Learning <span class="ar">→</span></a>
+      <a href="#start" class="btn btn-p">Start Here <span class="ar">→</span></a>
       <a href="gold-notes/" class="btn btn-g">Read Gold Notes <span class="ar">→</span></a>
     </div>
     <div class="hmeta rv" style="transition-delay:.32s">
@@ -548,36 +539,42 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
   <div class="hscroll"><span>Scroll</span><i></i></div>
 </header>
 
-<section class="onboard" aria-label="Choose your starting point">
-  <div class="w onboard-grid">
-    <a class="onboard-link" href="learn/start-here/">
-      <small>01 · New to trading</small>
-      <strong>Learn the mechanics</strong>
-      <p>XAUUSD, pips and points, lot size, entry, stop loss, take profit, and the MT5 demo checklist.</p>
-      <span>Open Gold Foundations →</span>
-    </a>
-    <a class="onboard-link" href="learn/">
-      <small>02 · Know the basics</small>
-      <strong>Follow five lessons</strong>
-      <p>Use the curated public route through structure, liquidity, session timing, and the execution record.</p>
-      <span>Open the learning route →</span>
-    </a>
-    <a class="onboard-link" href="gold-notes/">
-      <small>03 · Answer one question</small>
-      <strong>Read Gold Notes</strong>
-      <p>Use concise, sourced articles for XAUUSD mechanics, terminology, and the forces that move gold.</p>
-      <span>Open the reading desk →</span>
-    </a>
-    <a class="onboard-link" href="#gold-desk">
-      <small>04 · Follow the research</small>
-      <strong>Watch the Gold Desk</strong>
-      <p>See market context, system state, and the boundary between a potential setup and an EA-confirmed trade.</p>
-      <span>View system state →</span>
-    </a>
-  </div>
-</section>
+<section id="start" aria-labelledby="start-title"><div class="w">
+<div class="shead"><div class="ey">Your first visit</div><h2 id="start-title">Start Here</h2><p class="intro">New to gold? You don't need to understand everything on this page. You need to know where to begin. Here's the order.</p></div>
+<p class="start-note">Foundations is Planned. Begin with step 2 today; the existing <a href="learn/start-here/">short mechanics guide</a> is also available while the full series is prepared.</p>
+<ol class="start-path"><li><div aria-label="Step 1: Foundations, Planned" class="start-card"><small>Step 1 · Planned</small><h3>Learn the basics</h3><p>Pips, lot size, stops, targets, sessions — the mechanics every later lesson quietly assumes.</p><strong>Foundations — coming first</strong></div></li><li><a href="learn/tracks/read-structure/h1-bias-before-m15/" class="start-card"><small>Step 2 · Available now</small><h3>Read market structure</h3><p>Trend, higher highs and lows, and the discipline of labelling a chart the same way twice.</p><strong>Read Structure →</strong></a></li><li><a href="learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/" class="start-card"><small>Step 3 · Available now</small><h3>Understand liquidity</h3><p>What a sweep is — and, first, what it does not prove. Start here with the honest version; the confident-sounding lessons read better in its light.</p><strong>Hunt Liquidity →</strong></a></li><li><a href="learn/tracks/time-the-killzone/when-london-matters/" class="start-card"><small>Step 4 · Available now</small><h3>Time the session</h3><p>London, New York, news windows — and why the same setup isn't the same probability at 09:40 and five minutes before CPI.</p><strong>Time the Killzone →</strong></a></li><li><a href="#gold-desk" class="start-card"><small>Step 5 · Available now</small><h3>Watch the Desk</h3><p>How a research idea becomes an EA-confirmed record — and how the pre-trade journal is that same discipline done by hand.</p><strong>Gold Desk →</strong></a></li></ol>
+<p class="start-note">At step 3, read the limits first, then <a href="learn/tracks/hunt-liquidity/sweep-that-isnt/">the three ways a sweep fails</a> and <a href="#cycle">the Signature Pattern</a>. At step 5, pair the Desk with <a href="learn/tracks/master-the-mind/pre-trade-journal/">the pre-trade journal</a>.</p>
+<p class="start-note">That's the whole map. Begin at step 2 while Foundations is being prepared, then walk it in order — nothing here asks you to trade.</p>
+</div></section>
+<section id="positioning" aria-label="What this is and is not"><div class="w positioning-grid"><div><h2>Learn, observe, document.</h2><p>Plain explanations, chart studies and a research forward test in public.</p></div><div><h2>No signals. No guarantees.</h2><p>A chart pattern is something to study. It cannot promise a trade outcome. Research is not execution.</p></div></div></section>
 
 <!-- GOLD DESK -->
+
+
+<!-- CYCLE ENGINE (signature) -->
+
+
+<!-- METHODOLOGY -->
+
+
+<!-- AUTOMATION -->
+
+
+<!-- GOLD NOTES -->
+
+
+<!-- CURRICULUM -->
+
+
+<!-- COMMUNITY -->
+
+
+<!-- FOUNDER -->
+
+
+<!-- FINAL CTA -->
+
+
 <section id="gold-desk">
   <div class="w">
     <div class="desk-head">
@@ -585,7 +582,7 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <div class="ey rv">Gold Desk · Public Research View</div>
         <h2 class="rv">Live chart.<br><em>Honest system model.</em></h2>
       </div>
-      <p class="desk-intro rv">The TradingView chart below is live or feed-delayed according to each viewer's market entitlement. The adjacent MetaTrader panel is an educational model of the EA workflow, not live account telemetry. MT5 remains the authority for actual execution and realized results.</p>
+      <p class="desk-intro rv">The TradingView chart below is live or feed-delayed according to each viewer's market entitlement. The chart is real; whether it's live or slightly delayed depends on your own data access. The adjacent MetaTrader panel is an educational model of the EA workflow, not live account telemetry. MT5 remains the authority for actual execution and realized results.</p>
     </div>
     <div class="desk-strip rv" aria-label="System overview">
       <div class="desk-stat"><small>Instrument</small><strong class="gd" id="statusSymbol">XAUUSD · Gold</strong></div>
@@ -644,9 +641,9 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
           <p id="statusDetail">Use the lifecycle below to inspect each stage. This panel explains the reporting logic; it does not claim that the EA is currently entering or monitoring a New York setup.</p>
         </div>
         <div class="state-list">
-          <div class="state-row"><span>Risk / trade</span><b class="gd">$100 fixed · demo</b></div>
-          <div class="state-row"><span>Daily cap</span><b>$400</b></div>
-          <div class="state-row"><span>Research cap</span><b>$800</b></div>
+
+
+
           <div class="state-row"><span>Telegram</span><b class="aq" id="statusTelegram">EA-only lifecycle</b></div>
         </div>
         <div class="mt5-monitor" aria-label="Illustrative MT5 workflow panel">
@@ -668,20 +665,107 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <p class="desk-note">This schematic teaches the decision flow. It will be labelled live only after a sanitized, timestamped MT5 endpoint is connected. <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">Review the public engineering notes</a>.</p>
       </aside>
     </div>
-    <div class="lifecycle rv" aria-label="Public signal lifecycle">
-      <button class="life-step active" type="button" data-life="research"><small>01</small><strong>Research setup</strong><span>View state</span></button>
-      <button class="life-step" type="button" data-life="confirmed"><small>02</small><strong>EA confirmed</strong><span>View state</span></button>
-      <button class="life-step" type="button" data-life="t1"><small>03</small><strong>T1 protected</strong><span>View state</span></button>
-      <button class="life-step" type="button" data-life="t2"><small>04</small><strong>T2 managed</strong><span>View state</span></button>
-      <button class="life-step" type="button" data-life="closed"><small>05</small><strong>T3 / closed</strong><span>View state</span></button>
-      <button class="life-step" type="button" data-life="archived"><small>06</small><strong>Evidence archived</strong><span>View state</span></button>
+    <section class="learning-lab" id="labF">
+  <div class="lab-h">
+    <p class="kick">Lab F · Setup lifecycle <span class="src">Gold Desk · vocabulary</span></p>
+    <h2>How research becomes a public record</h2>
+    <p>Click a stage. This publishes the <em>vocabulary</em> so trade updates are legible — not how the EA sequences or decides anything.</p>
+  </div>
+  <div class="lab-body">
+    <div class="flow" id="Fflow" role="group" aria-label="Lifecycle stages"><button type="button" aria-pressed="true" class="stg"><span class="n">01</span>Research setup</button><button type="button" aria-pressed="false" class="stg"><span class="n">02</span>EA confirmed</button><button type="button" aria-pressed="false" class="stg"><span class="n">03</span>T1 protected</button><button type="button" aria-pressed="false" class="stg"><span class="n">04</span>T2 managed</button><button type="button" aria-pressed="false" class="stg"><span class="n">05</span>T3 / closed</button><button type="button" aria-pressed="false" class="stg"><span class="n">06</span>Evidence archived</button></div>
+    <div aria-live="polite" role="status" class="stgx" id="Fx">A setup identified on TradingView or in analysis. An observation to examine, outside the EA execution record.</div>
+    <div class="states">
+      <span class="stt">break-even = stop moved to entry</span>
+      <span class="stt">partial close = part of the position taken off</span>
+      <span class="stt">invalidation = the read no longer holds</span>
+      <span class="stt">setup expiry = conditions met, follow-through didn’t</span>
     </div>
+    <p class="honest"><b>Research is not execution.</b> A setup enters this record only when the MT5 EA confirms a trade. A record of what the system did — not a claim about what it will do.</p>
+  </div>
+<details class="static-readings"><summary>Read the observations and failure states</summary><ol><li><strong>Research setup</strong>: A setup identified on TradingView or in analysis. An observation to examine, outside the EA execution record.</li><li><strong>EA confirmed</strong>: The MT5 Expert Advisor confirms execution. This is the line where research becomes part of the public record.</li><li><strong>T1 protected</strong>: A reporting label for a confirmed first objective or protection event. It does not promise that a target will be reached or specify a stop change.</li><li><strong>T2 managed</strong>: A label for a confirmed management event. Read the actual update for what changed; no management rule is implied here.</li><li><strong>T3 / closed</strong>: The final stage, or the position closes. The outcome is recorded either way — including when it’s a loss.</li><li><strong>Evidence archived</strong>: The completed record is archived, timestamped. A record of what the system did — never a claim about what it will do.</li></ol><p>A setup can expire or invalidate before execution. A confirmed position can close at a loss without reaching any target. These are vocabulary labels, not a mandatory sequence.</p><p>Break-even describes a stop level; spread, fees and slippage can still produce a net loss.</p></details></section>
     <p class="data-note rv">TradingView widget data may be real-time or delayed depending on the selected market feed and viewer entitlements. It is independent from the broker prices used by the MT5 EA. The lifecycle and MT5 interface shown here are explanatory, not current account status. A future live state requires a sanitized, timestamped Cloudflare endpoint.</p>
   </div>
-</section>
-
-<!-- CYCLE ENGINE (signature) -->
-<section id="cycle">
+<div class="w desk-resources"><a class="start-card" href="tracker/"><small>Available now · Inside the Gold Desk</small><h3>30-day discipline tracker</h3><p>Document the process, including skipped setups and invalidations.</p><strong>Open tracker →</strong></a><a href="#automation">Read about the EA forward test →</a></div><details class="w"><summary>More about the tracker</summary><section id="tracker-intro">
+  <div class="aurora2"></div>
+  <div class="final-in rv">
+    <h2>Make your process <em>visible.</em></h2>
+    <p>Learn the method in public, then make your own process visible with the free 30-day discipline tracker.</p>
+    <div class="hcta" style="margin-top:30px">
+      <a href="tracker/" class="btn btn-p" style="font-size:15px;padding:16px 30px">Start the 30-day tracker <span class="ar">→</span></a>
+      <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="btn btn-g" style="font-size:15px;padding:16px 30px">Enter the Matrix <span class="ar">↗</span></a>
+    </div>
+  </div>
+</section></details></section><section id="visual-labs"><div class="w"><div class="shead"><div class="ey">Observe it. Change it. Explain it.</div><h2>Visual Labs</h2><p class="intro">Each lab includes the case that fails. Structural labels stand in for prices; nothing here asks you to trade.</p></div><div class="labs-directory"><a class="start-card" href="learn/tracks/hunt-liquidity/what-a-sweep-does-not-prove/#labB"><small>Available now · Visual lab</small><h3>What a sweep does not prove</h3><strong>Open lab →</strong></a><a class="start-card" href="learn/tracks/hunt-liquidity/sweep-that-isnt/#labA"><small>Available now · Visual lab</small><h3>The three ways a sweep fails</h3><strong>Open lab →</strong></a><a class="start-card" href="learn/tracks/read-structure/h1-bias-before-m15/#labC"><small>Available now · Visual lab</small><h3>H1 bias before M15</h3><strong>Open lab →</strong></a><a class="start-card" href="learn/tracks/time-the-killzone/when-london-matters/#labD"><small>Available now · Visual lab</small><h3>Session timing and DST</h3><strong>Open lab →</strong></a><a class="start-card" href="learn/tracks/master-the-mind/pre-trade-journal/#labE"><small>Available now · Visual lab</small><h3>The pre-trade journal</h3><strong>Open lab →</strong></a><a class="start-card" href="#labF"><small>Available now · Desk vocabulary</small><h3>The trade lifecycle</h3><strong>Explore the reporting stages →</strong></a></div></div></section><section id="curriculum">
+  <div class="w">
+    <div class="shead rv">
+      <div class="ey">The Four Tracks</div>
+      <h2>The Four <em>Tracks.</em></h2>
+      <p class="intro">Follow Start Here for the beginner order, or choose a track below. Five complete previews are Available now. Foundations is Planned.</p>
+    </div>
+    <div class="cur-grid rv">
+      <a class="cur-card" href="learn/tracks/read-structure/">
+        <div class="cur-top"><span class="cur-no">01</span><span class="cur-tag">Foundation</span></div>
+        <h3>Read Structure</h3>
+        <p>Build H1 context before searching for an M15 setup. Learn what structure supports and what it cannot predict.</p>
+        <div class="cur-foot"><span>6 lessons · 1 Available now</span><span class="open">Open track →</span></div>
+      </a>
+      <a class="cur-card" href="learn/tracks/hunt-liquidity/">
+        <div class="cur-top"><span class="cur-no">02</span><span class="cur-tag">Intermediate</span></div>
+        <h3>Hunt Liquidity</h3>
+        <p>Study equal highs and lows, sweeps, follow-through, failed setups, and the limits of chart inference.</p>
+        <div class="cur-foot"><span>5 lessons · 2 Available now</span><span class="open">Open track →</span></div>
+      </a>
+      <a class="cur-card" href="learn/tracks/time-the-killzone/">
+        <div class="cur-top"><span class="cur-no">03</span><span class="cur-tag">Intermediate</span></div>
+        <h3>Time the Killzone</h3>
+        <p>Use London, New York, news timing, and daylight saving as context rather than a promise of movement.</p>
+        <div class="cur-foot"><span>4 lessons · 1 Available now</span><span class="open">Open track →</span></div>
+      </a>
+      <a class="cur-card" href="learn/tracks/master-the-mind/">
+        <div class="cur-top"><span class="cur-no">04</span><span class="cur-tag">Ongoing</span></div>
+        <h3>Master the Mind</h3>
+        <p>Risk rules, journaling and the self-reviews that keep your decisions reviewable after a bad day.</p>
+        <div class="cur-foot"><span>7 lessons · 1 Available now</span><span class="open">Open track →</span></div>
+      </a>
+    </div>
+    <div class="cur-note">Foundations · Planned. <a href="learn/start-here/">Short mechanics guide · Available now</a>. Full track planned for The Matrix member beta. <a href="#methodology">Explore the Three Pillars →</a></div>
+  </div>
+<details id="methodology" class="w"><summary>The Three Pillars</summary>
+  <div class="w">
+    <div class="shead rv">
+      <div class="ey">The Methodology · Three Pillars</div>
+      <h2>Three contexts shape a reading.<br>We teach all <em>three.</em></h2>
+      <p class="intro">Structure defines context. Liquidity identifies areas worth observing. Timing filters when conditions deserve attention. Open a pillar for the evidence and its limits.</p>
+    </div>
+    <div class="pillars rv">
+      <button type="button" class="pillar" onclick="openPillar('structure')" aria-haspopup="dialog">
+        <div class="pnum">PILLAR I</div>
+        <div class="ptitle">Structure <span class="ar">→</span></div>
+        <div class="ptag">Read the blueprint</div>
+        <p>Higher highs and higher lows for bullish, the inverse for bearish. It describes recent price behaviour; it cannot predict the next move.</p>
+        <ul><li>Break of Structure (BOS)</li><li>Change of Character (CHoCH)</li><li>Order Blocks &amp; Fair Value Gaps</li></ul>
+      </button>
+      <button type="button" class="pillar" onclick="openPillar('liquidity')" aria-haspopup="dialog">
+        <div class="pnum">PILLAR II</div>
+        <div class="ptitle">Liquidity <span class="ar">→</span></div>
+        <div class="ptag">Observe the level</div>
+        <p>Large orders need resting liquidity to fill against. Price often reaches beyond obvious highs and lows before reversing; the pattern is observable, the intent behind it is not.</p>
+        <ul><li>Equal highs / lows as targets</li><li>Sweep observations</li><li>Wick, close and failure states</li></ul>
+      </button>
+      <button type="button" class="pillar" onclick="openPillar('timing')" aria-haspopup="dialog">
+        <div class="pnum">PILLAR III</div>
+        <div class="ptitle">Timing <span class="ar">→</span></div>
+        <div class="ptag">Read the session context</div>
+        <p>London and New York often bring higher activity, but the clock is context, not an edge by itself. Session timing helps filter when a setup is worth studying.</p>
+        <ul><li>London open · local time matters</li><li>New York open · data calendar matters</li><li>Overlap shifts with DST</li></ul>
+      </button>
+    </div>
+    <div class="formula rv">
+      <span class="fk">Structure</span> + <span class="fg">Liquidity</span> + <span class="fr">Timing</span> = <span style="color:var(--gold)">the Cycle</span>
+      <span class="tag">Refined Liquidity · XAUUSD</span>
+    </div>
+  </div>
+</details><details id="cycle" class="w"><summary>The Signature Pattern</summary>
   <div class="w">
     <div class="cycle-wrap">
       <div class="stage" id="stage">
@@ -708,10 +792,10 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
         <div class="hint"><i></i> Tap a phase to explore</div>
       </div>
       <div class="cyc-info">
-        <div class="ey rv">The Signature · One Repeating Pattern</div>
+        <div class="ey rv">Signature Pattern · An observation</div><p>A sequence that recurs on gold charts — a reach beyond a level, rejection, expansion — and the specific conditions under which it fails. Targets are staged, not promised.</p>
         <div class="cyc-step rv" id="cStep" style="margin-top:18px">Phase 01 / 05</div>
         <h3 class="rv" id="cTitle">Accumulation</h3>
-        <div class="ph-sub rv" id="cSub">Smart money builds a position quietly</div>
+        <div class="ph-sub rv" id="cSub">Range-building before expansion</div>
         <p class="rv" id="cBody">Price coils in a tight range. Tick activity can build while attention fades. This is where the next setup starts to form, but the chart alone cannot tell you who is building it.</p>
         <div class="cyc-nav rv" id="cNav"></div>
         <div class="cyc-meta rv">
@@ -722,64 +806,16 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       </div>
     </div>
   </div>
-</section>
-
-<!-- METHODOLOGY -->
-<section id="methodology">
-  <div class="w">
-    <div class="shead rv">
-      <div class="ey">The Methodology · Three Pillars</div>
-      <h2>Three forces decide every trade.<br>We teach all <em>three.</em></h2>
-      <p class="intro">Structure defines context. Liquidity identifies areas worth observing. Timing filters when conditions deserve attention. Open a pillar for the evidence and its limits.</p>
-    </div>
-    <div class="pillars rv">
-      <button type="button" class="pillar" onclick="openPillar('structure')" aria-haspopup="dialog">
-        <div class="pnum">PILLAR I</div>
-        <div class="ptitle">Structure <span class="ar">→</span></div>
-        <div class="ptag">Read the blueprint</div>
-        <p>Higher highs and higher lows for bullish, the inverse for bearish. Structure is the market showing its hand before it moves.</p>
-        <ul><li>Break of Structure (BOS)</li><li>Change of Character (CHoCH)</li><li>Order Blocks &amp; Fair Value Gaps</li></ul>
-      </button>
-      <button type="button" class="pillar" onclick="openPillar('liquidity')" aria-haspopup="dialog">
-        <div class="pnum">PILLAR II</div>
-        <div class="ptitle">Liquidity <span class="ar">→</span></div>
-        <div class="ptag">Follow the smart money</div>
-        <p>Large orders need resting liquidity to fill against. Price often reaches beyond obvious highs and lows before reversing; the pattern is observable, the intent behind it is not.</p>
-        <ul><li>Equal highs / lows as targets</li><li>Stop-hunt mechanics</li><li>Sweep → reversal entries</li></ul>
-      </button>
-      <button type="button" class="pillar" onclick="openPillar('timing')" aria-haspopup="dialog">
-        <div class="pnum">PILLAR III</div>
-        <div class="ptitle">Timing <span class="ar">→</span></div>
-        <div class="ptag">Strike in the killzone</div>
-        <p>London and New York often bring higher activity, but the clock is context, not an edge by itself. Session timing helps filter when a setup is worth studying.</p>
-        <ul><li>London open · local time matters</li><li>New York open · data calendar matters</li><li>Overlap shifts with DST</li></ul>
-      </div>
-    </div>
-    <div class="formula rv">
-      <span class="fk">Structure</span> + <span class="fg">Liquidity</span> + <span class="fr">Timing</span> = <span style="color:var(--gold)">the Cycle</span>
-      <span class="tag">Refined Liquidity · XAUUSD</span>
-    </div>
-  </div>
-</section>
-
-<!-- AUTOMATION -->
-<section id="automation">
+</details></section><section id="automation">
   <div class="w">
     <div class="auto-grid">
       <div class="auto-l">
         <div class="ey rv">The Tool · MMM EA</div>
         <h2 class="rv">The methodology,<br><em>automated.</em></h2>
         <p class="rv">The MMM Expert Advisor converts the research framework into repeatable execution rules on MetaTrader 5. It is currently being evaluated through controlled demo forward testing. Public architecture and testing notes are open; proprietary implementation and credentials remain private.</p>
-        <div class="codeblock rv">
-          <span class="cm">// the cycle, in logic</span><br>
-          <span class="kw">IF</span> structure == HH/HL  →  bias = <span class="go">BULLISH</span><br>
-          <span class="kw">IF</span> liquidity_sweep + CHoCH  →  confirmation++<br>
-          <span class="kw">IF</span> session == London | NY  →  <span class="go">EXECUTE()</span><br>
-          risk = FIXED_RESEARCH_RISK   ·   targets = <span class="go">T1 / T2 / T3</span><br>
-          <span class="cm">→ else: wait for next cycle ✓</span>
-        </div>
+        <div class="codeblock rv"><p>The pieces relate like this: structure sets direction, a liquidity event asks for confirmation, and session context decides whether it's worth acting on. How the EA weighs them is not published.</p></div>
         <div class="feat-list rv">
-          <div class="feat"><span class="fi">01</span><div><h4>Risk guard, always on</h4><p>Hard daily-loss cap and per-trade risk ceiling. The account survives the bad days.</p></div></div>
+          <div class="feat"><span class="fi">01</span><div><h4>Risk guard, always on</h4><p>Hard research risk controls. Risk controls limit intended exposure; losses and slippage remain possible.</p></div></div>
           <div class="feat"><span class="fi">02</span><div><h4>Session-aware</h4><p>London and New York are evaluated as research windows while Asia remains visible as liquidity context.</p></div></div>
           <div class="feat"><span class="fi">03</span><div><h4>Gold specialist</h4><p>The current engineering, forward test and community reporting are focused exclusively on XAUUSD.</p></div></div>
         </div>
@@ -791,11 +827,11 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
             <div class="con-row"><span class="con-k">ENGINE</span><span class="con-v gd">DEMO FORWARD TEST<span class="con-cursor"></span></span></div>
             <div class="con-row"><span class="con-k">METHOD</span><span class="con-v">ICT / SMC liquidity cycle</span></div>
             <div class="con-row"><span class="con-k">SYMBOL</span><span class="con-v">XAUUSD · Gold spot</span></div>
-            <div class="con-row"><span class="con-k">RISK / TRADE</span><span class="con-v gd">$100 · DEMO</span></div>
-            <div class="con-row"><span class="con-k">DAILY CAP</span><span class="con-v">$400</span></div>
-            <div class="con-row"><span class="con-k">SESSION FILTER</span><span class="con-v">London + NY killzone</span></div>
+
+
+
             <div class="con-row"><span class="con-k">PUBLIC RECORD</span><span class="con-v aq">EA EVENTS ONLY</span></div>
-            <div class="con-row"><span class="con-k">STATE</span><span class="con-v aq">MONITORING GOLD</span></div>
+            <div class="con-row"><span class="con-k">STATE</span><span class="con-v aq">ILLUSTRATIVE MODEL</span></div>
           </div>
         </div>
         <div class="gh rv">
@@ -809,16 +845,13 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       </div>
     </div>
   </div>
-</section>
-
-<!-- GOLD NOTES -->
-<section id="gold-notes">
+</section><section id="gold-notes">
   <div class="w">
     <div class="notes-home-head">
       <div>
         <div class="ey rv">Gold Notes · Search-led education</div>
         <h2 class="rv">One clear question.<br><em>One useful answer.</em></h2>
-      </button>
+      </div>
       <p class="rv">Gold Notes is the public reading desk: plain-language answers for traders who are not ready for a full course track yet. Each note continues into the right lesson when the foundation is clear.</p>
     </div>
     <div class="notes-home-ledger rv">
@@ -834,56 +867,15 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     </div>
     <div class="notes-home-foot rv"><p>Articles answer search questions. Lessons teach the method. TradingView marks research context. MT5 remains the execution record.</p><a href="gold-notes/">Open all Gold Notes →</a></div>
   </div>
-</section>
-
-<!-- CURRICULUM -->
-<section id="curriculum">
-  <div class="w">
-    <div class="shead rv">
-      <div class="ey">Learning Path · Five Lessons Live</div>
-      <h2>From confused to <em>composed.</em></h2>
-      <p class="intro">Start with Gold Foundations, then move through four method tracks. Five complete previews are live now; beta labels show what is mapped but not yet published.</p>
-    </div>
-    <div class="cur-grid rv">
-      <a class="cur-card" href="learn/tracks/read-structure/">
-        <div class="cur-top"><span class="cur-no">01</span><span class="cur-tag">Foundation</span></div>
-        <h3>Read Structure</h3>
-        <p>Build H1 context before searching for an M15 setup. Learn what structure supports and what it cannot predict.</p>
-        <div class="cur-foot"><span>1 live · 5 beta</span><span class="open">Open track →</span></div>
-      </a>
-      <a class="cur-card" href="learn/tracks/hunt-liquidity/">
-        <div class="cur-top"><span class="cur-no">02</span><span class="cur-tag">Intermediate</span></div>
-        <h3>Hunt Liquidity</h3>
-        <p>Study equal highs and lows, sweeps, follow-through, failed setups, and the limits of chart inference.</p>
-        <div class="cur-foot"><span>2 live · 3 beta</span><span class="open">Open track →</span></div>
-      </a>
-      <a class="cur-card" href="learn/tracks/time-the-killzone/">
-        <div class="cur-top"><span class="cur-no">03</span><span class="cur-tag">Intermediate</span></div>
-        <h3>Time the Killzone</h3>
-        <p>Use London, New York, news timing, and daylight saving as context rather than a promise of movement.</p>
-        <div class="cur-foot"><span>1 live · 3 beta</span><span class="open">Open track →</span></div>
-      </a>
-      <a class="cur-card" href="learn/tracks/master-the-mind/">
-        <div class="cur-top"><span class="cur-no">04</span><span class="cur-tag">Ongoing</span></div>
-        <h3>Master the Mind</h3>
-        <p>Risk rules, journaling and the self-reviews that make your edge survive a bad day.</p>
-        <div class="cur-foot"><span>1 live · 6 beta</span><span class="open">Open track →</span></div>
-      </a>
-    </div>
-    <div class="cur-note">Need the mechanics first? <a href="learn/start-here/">Start with Gold Foundations</a>. Remaining method lessons are planned for The Matrix member beta.</div>
-  </div>
-</section>
-
-<!-- COMMUNITY -->
-<section id="community">
+</section><section id="community">
   <div class="w">
     <div class="comm-grid">
       <div class="comm-l">
         <div class="ey rv">Community · Learning · Live Access</div>
         <h2 class="rv">Learn the cycle.<br>Trade it in <em>company.</em></h2>
         <p class="rv">Join traders learning the Refined Liquidity method together. Follow gold education, controlled EA forward-test updates, honest invalidations and the evidence trail behind each confirmed setup.</p>
-        <div class="comm-feats rv">
-          <div class="cfeat"><span class="n">01</span><div><h4>Daily teaching</h4><p>Plain-language breakdowns of structure, liquidity and timing — one concept at a time.</p></div></div>
+        <div class="lane"><strong>Education</strong><p>Lesson explanations and journal exercises. A teaching post is never a call to act.</p></div><div class="lane ea"><strong>EA forward test</strong><p>EA-confirmed execution and management events only. Research ideas stay outside this record.</p></div><div class="comm-feats rv">
+          <div class="cfeat"><span class="n">01</span><div><h4>Ongoing teaching</h4><p>Plain-language breakdowns of structure, liquidity and timing — one concept at a time.</p></div></div>
           <div class="cfeat"><span class="n">02</span><div><h4>Public engineering</h4><p>Follow the architecture, testing discipline and dated improvements without exposing private strategy parameters.</p></div></div>
           <div class="cfeat"><span class="n">03</span><div><h4>Psychology &amp; journaling</h4><p>Discipline check-ins and review habits. The mind must match the method.</p></div></div>
           <div class="cfeat"><span class="n">04</span><div><h4>Built for two homes</h4><p>A community rooted between Southern Africa and Europe — your timezone, your context.</p></div></div>
@@ -892,13 +884,13 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       <div class="join-card rv">
         <div class="jc-badge"><span class="pip"></span> The Matrix · Open free during beta</div>
         <div class="jc-title">Enter the Matrix</div>
-        <p class="jc-sub">Step inside the community on Telegram — daily gold breakdowns, the Liquidity Cycle method, and the traders learning it with you.</p>
+        <p class="jc-sub">Step inside the community on Telegram — ongoing teaching, EA-confirmed updates, psychology and journaling.</p>
         <div class="jc-items">
-          <div class="jc-item">Daily Liquidity Cycle teaching on XAUUSD</div>
+          <div class="jc-item">Ongoing Liquidity Cycle teaching on XAUUSD</div>
           <div class="jc-item">EA-confirmed entries and lifecycle updates</div>
           <div class="jc-item">Structured gold education and academy curriculum</div>
           <div class="jc-item">Trading psychology &amp; journaling habits</div>
-          <div class="jc-item">Weekly forward-test evidence and engineering notes</div>
+          <div class="jc-item">Dated forward-test evidence and engineering notes</div>
         </div>
         <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="jc-cta">
           <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
@@ -909,9 +901,8 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
     </div>
   </div>
 </section>
-
-<!-- FOUNDER -->
-<section id="founder">
+<!-- FOOTER -->
+<footer><details id="founder" class="founder-about"><summary>About the founder · Arshly Phiri</summary>
   <div class="w">
     <div class="founder-wrap">
       <div class="fphoto rv">
@@ -928,37 +919,21 @@ footer{border-top:1px solid var(--line2);padding:40px 0;background:var(--bg)}
       </div>
     </div>
   </div>
-</section>
-
-<!-- FINAL CTA -->
-<section id="final">
-  <div class="aurora2"></div>
-  <div class="final-in rv">
-    <h2>Trade the <em>cycle,</em><br>not the noise.</h2>
-    <p>Learn the method in public, then make your own process visible with the free 30-day discipline tracker.</p>
-    <div class="hcta" style="margin-top:30px">
-      <a href="tracker/" class="btn btn-p" style="font-size:15px;padding:16px 30px">Start the 30-day tracker <span class="ar">→</span></a>
-      <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener" class="btn btn-g" style="font-size:15px;padding:16px 30px">Enter the Matrix <span class="ar">↗</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
+</details>
   <div class="w foot-in">
     <div class="foot-l">
       <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#E9C97A" stroke-width="1.2"/><circle cx="16" cy="16" r="3" fill="#E9C97A"/></svg>
       Refined Liquidity · Arshly Phiri · Education + Automation
     </div>
     <div class="foot-links">
-      <a href="#cycle">Cycle</a><a href="#curriculum">Curriculum</a><a href="gold-notes/">Gold Notes</a>
+      <a href="#start">Start Here</a><a href="#founder">About</a><a href="#methodology">Methodology</a><a href="#automation">Automation</a><a href="#cycle">Cycle</a><a href="#curriculum">Curriculum</a><a href="gold-notes/">Gold Notes</a>
       <a href="tracker/">30-Day Tracker</a>
       <a href="https://github.com/arshblack/MMM-REFINED-Liquidity-Cycle" target="_blank" rel="noopener">GitHub</a>
       <a href="https://t.me/+C0YWOPmOFu02YmVk" target="_blank" rel="noopener">Telegram</a>
       <a href="https://www.instagram.com/refinedliquidity/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
-  <p class="disc">Refined Liquidity is an educational platform. Nothing here is financial advice, a signal service, or a guarantee of profit. Trading XAUUSD and leveraged FX carries significant risk of capital loss. Past or simulated performance does not indicate future results. © 2026 Refined Liquidity.</p>
+  <p class="disc" id="disclaimer">Refined Liquidity is an educational platform. Nothing here is financial advice, a signal service, or a guarantee of profit. Trading XAUUSD and leveraged FX carries significant risk of capital loss. Past or simulated performance does not indicate future results. © 2026 Refined Liquidity.</p>
 </footer>
 
 <!-- MODALS -->
@@ -1000,73 +975,13 @@ async function loadSystemStatus(){
 }
 loadSystemStatus();
 
-const lifecycleStates={
-  research:{
-    state:'Research setup',
-    badge:'TradingView context',
-    headline:'Research setup forming',
-    detail:'TradingView can mark context: EMA direction, visible liquidity and possible FVG areas. This is a watch state only; no Telegram signal is published here.',
-    telegram:'No public signal'
-  },
-  confirmed:{
-    state:'EA confirmed',
-    badge:'MT5 authority',
-    headline:'EA-confirmed entry',
-    detail:'The setup becomes public only after the MT5 EA confirms execution. This protects the channel from research ideas being mistaken for trade calls.',
-    telegram:'Entry lifecycle update'
-  },
-  t1:{
-    state:'T1 protected',
-    badge:'Risk reduced',
-    headline:'First target protected',
-    detail:'The public update can tell members that the first objective has been reached or risk has been reduced. The message stays focused on trade state, not hype.',
-    telegram:'Protection update'
-  },
-  t2:{
-    state:'T2 managed',
-    badge:'Position management',
-    headline:'Second target managed',
-    detail:'If the move continues, the system can report partial management and continuation logic. The goal is transparency without exposing private account details.',
-    telegram:'Management update'
-  },
-  closed:{
-    state:'Closed',
-    badge:'Result recorded',
-    headline:'Trade closed or final target reached',
-    detail:'Once the EA closes the position, the channel can publish the result summary for the EA trade. Manual scale-ins stay outside the signal record.',
-    telegram:'Result update'
-  },
-  archived:{
-    state:'Evidence archived',
-    badge:'Public record',
-    headline:'Evidence archived for review',
-    detail:'The final state is a clean record: setup, execution, management and result. That gives the community a repeatable audit trail instead of random screenshots.',
-    telegram:'Archive summary'
-  }
-};
-
-function setLifecycleState(key){
-  const item=lifecycleStates[key];
-  if(!item)return;
-  document.querySelectorAll('.life-step').forEach(step=>step.classList.toggle('active',step.dataset.life===key));
-  const put=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value};
-  put('statusState',item.state);
-  put('statusBadge',item.badge);
-  put('statusHeadline',item.headline);
-  put('statusDetail',item.detail);
-  put('statusTelegram',item.telegram);
-}
-document.querySelectorAll('.life-step[data-life]').forEach(step=>{
-  step.addEventListener('click',()=>setLifecycleState(step.dataset.life));
-});
-
 /* ---------- CYCLE ENGINE ---------- */
 const phases=[
  {t:'Accumulation', s:'Range-building before expansion', b:'Price coils in a tight range. Tick activity can build while attention fades. This is where the next setup starts to form, but the chart alone cannot tell you who is building it.'},
- {t:'Manipulation', s:'The stop-run before the move', b:'Price spikes through an obvious level — equal highs or lows — triggering stops and tempting breakout traders. It can look like the move; the skill is waiting for evidence after the sweep.'},
- {t:'Confirmation', s:'The market shows its hand', b:'After the sweep, price rejects and shifts character — a CHoCH then a Break of Structure. This is the cycle confirming direction. The EA waits for exactly this sequence before it will execute.'},
+ {t:'Manipulation', s:'The stop-run before the move', b:'Price extends beyond an obvious level — equal highs or lows. Stops may be nearby; the chart cannot identify participants or motives. It can look like the move; the skill is waiting for evidence after the sweep.'},
+ {t:'Confirmation', s:'The market shows its hand', b:'After the sweep, price rejects and shifts character — a CHoCH then a Break of Structure. This can support a directional reading without establishing what happens next. This is a chart interpretation; how the EA evaluates a setup is not published.'},
  {t:'Expansion', s:'The directional move develops', b:'With liquidity taken and structure confirmed, price can expand toward the next pool. This is the phase where the trade plan manages T1, T2 and the possibility of a larger continuation without assuming the extension must happen.'},
- {t:'Reset', s:'The cycle closes and reloads', b:'Momentum fades into a new range. Risk comes off, the books rebalance, and a fresh accumulation quietly begins. Discipline here — knowing the cycle is over — is what protects the gains from the last one.'}
+ {t:'Reset', s:'The cycle closes and reloads', b:'Momentum fades into a new range. The prior read may no longer apply; a new range needs its own evidence. Discipline here — knowing the cycle is over — is what protects the gains from the last one.'}
 ];
 const ringNodes=document.getElementById('cNodes');
 const CX=220,CY=220,RAD=150;
@@ -1102,8 +1017,8 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches) animateFlow();
 
 const cNav=document.getElementById('cNav');
 phases.forEach((p,i)=>{
-  const c=document.createElement('div');c.className='cyc-chip'+(i===0?' on':'');c.textContent=p.t;
-  c.onclick=()=>{userTouch();setPhase(i)};cNav.appendChild(c);
+  const c=document.createElement('button');c.type='button';c.className='cyc-chip'+(i===0?' on':'');c.textContent=p.t;
+  c.setAttribute('aria-pressed',String(i===0));c.onclick=()=>{userTouch();setPhase(i)};cNav.appendChild(c);
 });
 let curPhase=0;
 function setPhase(i){
@@ -1113,7 +1028,7 @@ function setPhase(i){
   document.getElementById('cSub').textContent=p.s;
   document.getElementById('cBody').textContent=p.b;
   document.getElementById('coreNum').textContent=String(i+1).padStart(2,'0');
-  document.querySelectorAll('.cyc-chip').forEach((c,j)=>c.classList.toggle('on',j===i));
+  document.querySelectorAll('.cyc-chip').forEach((c,j)=>{c.classList.toggle('on',j===i);c.setAttribute('aria-pressed',String(j===i));});
   document.querySelectorAll('.cnode').forEach((n,j)=>n.classList.toggle('on',j===i));
   // progress arc to this phase
   const frac=i/(phases.length-1||1);
@@ -1173,7 +1088,7 @@ const CL={aqua:'#3FE0C5',gold:'#E9C97A',rust:'#E0683F',grid:'rgba(255,255,255,.1
 /* ============ PILLAR DETAIL DATA ============ */
 const pillarData={
  structure:`<h2>Structure</h2><span class="ptg">Read the market's blueprint</span>
-   <p>Market structure is the market telling you its intent before it moves. Higher highs with higher lows is a bullish trend; lower highs with lower lows is bearish. Read it first — everything else is built on top.</p>
+   <p>Market structure describes recent price behaviour; it does not reveal intent or predict the next move. Higher highs with higher lows is a bullish trend; lower highs with lower lows is bearish. Read it first — everything else is built on top.</p>
    <div class="chart-box"><strong>Higher highs / higher lows = uptrend</strong>
      <svg viewBox="0 0 560 180" style="width:100%">
        <line x1="30" y1="150" x2="540" y2="150" stroke="${CL.grid}"/>
@@ -1186,9 +1101,9 @@ const pillarData={
        <text x="285" y="172" text-anchor="middle" font-size="11" fill="${CL.mut}" font-family="monospace">UPTREND → BULLISH BIAS</text>
      </svg></div>
    <h3>What you'll be able to do</h3>
-   <ul><li>Mark swing highs and lows on any timeframe in seconds</li><li>Call a Break of Structure (BOS) the moment it confirms momentum</li><li>Read a Change of Character (CHoCH) before the trend flips</li><li>Locate order blocks and fair value gaps as precision entry zones</li></ul>
+   <ul><li>Mark swing highs and lows on any timeframe in seconds</li><li>Call a Break of Structure (BOS) the moment it confirms momentum</li><li>Read a Change of Character (CHoCH) as a possible warning</li><li>Mark order blocks and fair value gaps as areas of interest</li></ul>
    <p class="modal-foot">Pillar I of the Refined Liquidity method.</p>`,
- liquidity:`<h2>Liquidity</h2><span class="ptg">Follow the smart money</span>
+ liquidity:`<h2>Liquidity</h2><span class="ptg">Observe the level</span>
    <p>Large orders need counterparties. Price often extends beyond obvious stops above equal highs or below equal lows, then either rejects or continues. The sequence is observable; the motive is not.</p>
    <div class="chart-box"><strong>The sweep &amp; reversal</strong>
      <svg viewBox="0 0 560 210" style="width:100%">
@@ -1199,13 +1114,13 @@ const pillarData={
        <text x="282" y="30" text-anchor="middle" font-size="11" fill="${CL.rust}" font-family="monospace">② sweep</text>
        <rect x="270" y="36" width="50" height="28" fill="rgba(224,104,63,.12)" stroke="${CL.rust}" stroke-dasharray="3 3"/>
        <polyline fill="none" stroke="${CL.aqua}" stroke-width="2.6" points="344,72 366,140 392,128 430,160 470,138 510,176"/>
-       <text x="430" y="106" text-anchor="middle" font-size="11" fill="${CL.aqua}" font-family="monospace">③ reversal → entry</text>
-       <circle cx="366" cy="140" r="5" fill="${CL.aqua}"/><text x="366" y="160" text-anchor="middle" font-size="10" fill="${CL.aqua}" font-family="monospace">ENTRY</text>
+       <text x="430" y="106" text-anchor="middle" font-size="11" fill="${CL.aqua}" font-family="monospace">③ movement away</text>
+       <circle cx="366" cy="140" r="5" fill="${CL.aqua}"/><text x="366" y="160" text-anchor="middle" font-size="10" fill="${CL.aqua}" font-family="monospace">OBSERVED</text>
      </svg></div>
    <h3>What you'll be able to do</h3>
-   <ul><li>Identify equal highs / lows where stops are resting</li><li>Tell a real breakout from a liquidity grab</li><li>Plan an entry, invalidation and multiple structural targets</li><li>Stop donating your stop-loss to the next candle</li></ul>
+   <ul><li>Mark equal highs / lows where resting orders may cluster</li><li>Tell a real breakout from a liquidity grab</li><li>Plan an entry, invalidation and multiple structural targets</li><li>Record failed sweeps and invalidations</li></ul>
    <p class="modal-foot">Pillar II of the Refined Liquidity method.</p>`,
- timing:`<h2>Timing</h2><span class="ptg">Strike in the killzone</span>
+ timing:`<h2>Timing</h2><span class="ptg">Read the session context</span>
    <p>Volatility is not constant. London and New York often produce more activity, while the overlap can create faster expansion and sharper invalidation. Session context is recorded as evidence; it does not guarantee that a setup will succeed.</p>
    <div class="chart-box"><strong>Session context profile</strong>
      <svg viewBox="0 0 560 180" style="width:100%">
@@ -1267,6 +1182,15 @@ const courseData={
    <p class="modal-foot">Full track planned for The Matrix member beta.</p>`
 };
 setPhase(0);
+function revealHash(){
+  const target=document.getElementById(location.hash.slice(1));
+  if(target?.tagName==='DETAILS'){target.open=true;target.scrollIntoView();dispatchEvent(new Event('resize'));}
+}
+addEventListener('hashchange',revealHash);revealHash();
+document.getElementById('cycle').addEventListener('toggle',()=>dispatchEvent(new Event('resize')));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('mobileMenu').classList.contains('open')){toggleMenu();document.getElementById('burger').focus();}});
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>{if(document.getElementById('mobileMenu').classList.contains('open'))toggleMenu();}));
 </script>
+<script src="assets/learning-labs.js" defer></script>
 </body>
 </html>
